@@ -26,7 +26,7 @@ class ImmobilienScoutSpider(scrapy.Spider):
             # If price is None we know this is not a normal listing, but a project still in progress or an ad so we
             # continue. If the length of the address is <= 2, we know we didn't get a street address and so ignore this
             # iteration.
-            if not price or len(address) <= 2:
+            if price is None or len(address) <= 2:
                 continue
 
             sqm = flatdata.xpath('.//dd[@class="font-nowrap font-highlight font-tabular"]/text()').getall()[1].split()[0]
