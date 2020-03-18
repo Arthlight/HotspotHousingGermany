@@ -3,13 +3,14 @@
 }
 
 .jumbotron {
+    height: 400px;
     color: black;
     padding-top: var(--jumbotron-padding-y);
     padding-bottom: var(--jumbotron-padding-y);
-    margin-bottom: 0;
-    background-image: url("https://media.giphy.com/media/LoD35wNjb0EXR8Hfh3/source.gif");
+    margin-bottom: 80px;
+    background-image: url("https://media.giphy.com/media/KVZWZQoS0yqfIiTAKq/giphy.mp4");
     background-size: auto;
-
+    background-position: center;
 }
 
 @media (min-width: 768px) {
@@ -24,16 +25,22 @@
 }
 
 body {
-    background-image: url("https://cdn.discordapp.com/attachments/426000147831586817/689220955888943216/black_gradient.png");
+    background-image: url("https://wallpaperplay.com/walls/full/2/0/7/15810.jpg");
 }
 
 .jumbotron-heading {
+    padding-bottom: 10px;
     font-weight: 300;
 }
 
 .jumbotron .container {
+    padding-top: 30px;
     max-width: 40rem;
     background: rgba(255, 255, 255, 0.8);
+}
+
+.jumbotron .container p {
+    padding-bottom: 30px;
 }
 
 .lead {
@@ -52,3 +59,8 @@ footer p {
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.card-text {
+    color: black;
+}
+
