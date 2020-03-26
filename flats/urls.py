@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import HomePageView
-
+from flats.views import BerlinPageView, MunichPageView, HamburgPageView
 
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='home')
+    path('berlin/', BerlinPageView.as_view(), name='berlin'),
+    path('munich/', MunichPageView.as_view(), name='munich'),
+    path('hamburg/', HamburgPageView.as_view(), name='hamburg'),
 ]
