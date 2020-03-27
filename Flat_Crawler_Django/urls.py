@@ -20,5 +20,5 @@ from flats.views import HomePageView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
-    path('/flats', include('flats.urls')),
+    path('flats/', include('flats.urls')),
 ]
