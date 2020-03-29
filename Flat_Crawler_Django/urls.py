@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
     path('flats/', include('flats.urls')),
+    path('stats/', include('flat_statistics.urls'))
 ]

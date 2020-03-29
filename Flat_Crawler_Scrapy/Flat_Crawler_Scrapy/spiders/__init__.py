@@ -1,5 +1,4 @@
 import scrapy
-import pandas
 from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
 
@@ -56,7 +55,7 @@ class ImmobilienScoutSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
 
-class Housinganywhere(scrapy.Spider):
+class HousinganywhereSpider(scrapy.Spider):
     name = 'Housinganywhere'
 
     start_urls = [
@@ -97,6 +96,7 @@ class Housinganywhere(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
 
-#process = CrawlerProcess()
-#process.crawl(ImmobilienScoutSpider)
-#process.start()
+process = CrawlerProcess()
+process.crawl(ImmobilienScoutSpider)
+process.crawl(HousinganywhereSpider)
+process.start()

@@ -20,10 +20,20 @@
 <body class="text-center">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto"></header>
+    <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Statistics</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="{% url 'stats_berlin' %}">Berlin</a>
+            <a class="nav-link" href="{% url 'stats_munich' %}">Munich</a>
+            <a class="nav-link" href="{% url 'stats_hamburg' %}">Hamburg</a>
+          </nav>
+        </div>
+    </header>
     <main role="main" class="inner cover">
         <h1 class="cover-heading">HotspotHousing</h1>
-        <p class="lead subtext">This is a comprehensive overview over the latest offers by two of the leading german flat websites. Enjoy!</p>
+        <p class="lead subtext">This is a comprehensive overview of the latest offers by two of the leading german
+            flat websites. Enjoy!</p>
         <p class="lead">
             <a href="{% url 'berlin' %}" class="btn btn-lg btn-secondary"> Berlin </a>
             <a href="{% url 'hamburg' %}" class="btn btn-lg btn-secondary">Hamburg</a>
