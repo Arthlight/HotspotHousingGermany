@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
+import os
 
 
 class ImmobilienScoutSpider(scrapy.Spider):
@@ -96,7 +97,12 @@ class HousinganywhereSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
 
-process = CrawlerProcess()
-process.crawl(ImmobilienScoutSpider)
-process.crawl(HousinganywhereSpider)
-process.start()
+def start_crawling():
+    #process = CrawlerProcess()
+    #process.crawl(ImmobilienScoutSpider)
+    #process.crawl(HousinganywhereSpider)
+    #process.start()
+    print(os.getcwd())
+
+    #TODO: try adding more directories to syspath, otherwise try splitting the app and do it with containers
+    #TODO: evtl auch probieren die relevanten files zu flatcrawlerdjango directory zu adden
