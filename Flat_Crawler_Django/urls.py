@@ -16,7 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from flats.views import HomePageView
-from Flat_Crawler_Scrapy.Flat_Crawler_Scrapy.spiders import start_crawling
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +23,4 @@ urlpatterns = [
     path('flats/', include('flats.urls')),
     path('stats/', include('flat_statistics.urls'))
 ]
-
-start_crawling()
 
