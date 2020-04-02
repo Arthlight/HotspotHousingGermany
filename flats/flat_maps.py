@@ -1,17 +1,16 @@
 import folium
 import _sqlite3
-import os
+from flats import flat_maps_data
 
-connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db')
-cursor = connection.cursor()
 
-cursor.execute("""SELECT * FROM flat_data WHERE city='Berlin'""")
-rows = cursor.fetchall()
+munich_data = flat_maps_data.get_data_for_munich()
+hamburg_data = flat_maps_data.get_data_for_hamburg()
+berlin_data = flat_maps_data.get_data_for_berlin()
+
 
 berlin_map = folium.Map(location=[52.520008, 13.404954], zoom_start=11)
-berlin_map.save('templates/berlin.html')
 
-for data in rows:
+for data in berlin_data:
     # This is what is going to be displayed on the marker
     marker_html = """
                   <h4><a href={url} target='_blank'>Original listing</a></h4>
@@ -24,17 +23,30 @@ for data in rows:
                     <li>Mean price per Sqm in {area}: {mean: .2f} &euro;</li>
                     <li>Difference: {difference: .2f} &euro;</li>
                   <ul>
-                  """.format()
-# TODO: FILL IN THE FORMAT METHOD
+                  """.format(
+                  street=data.street,
+                  price=data.price,
+                  sqm=data.sqm,
+                  rooms=data.rooms,
+                  psqm=...,
+                  mean=...,
+                  difference=...,
+                  )
 
-cursor.execute("""SELECT * FROM flat_data WHERE city='Hamburg'""")
-rows = cursor.fetchall()
+    lat, long = flat_maps_data.get_lat_long_()
+    folium.Marker(
+        location=(lat,long),
+        popup=marker_html,
+        tooltip='Click for more info',
+        icon=...,
+    ).add_to(berlin_map)
+
+berlin_map.save('templates/berlin.html')
+
 
 hamburg_map = folium.Map(location=[53.551086, 9.993682], zoom_start=11)
 hamburg_map.save('templates/hamburg.html')
 
-cursor.execute("""SELECT * FROM flat_data WHERE city='Münnchen'""")
-rows = cursor.fetchall()
 
 munich_map = folium.Map(location=[48.137154, 11.576124], zoom_start=11)
 munich_map.save('templates/munich.html')
