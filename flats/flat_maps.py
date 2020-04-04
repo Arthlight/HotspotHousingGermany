@@ -3,9 +3,9 @@ import _sqlite3
 from flats import flat_maps_data
 
 
-munich_data = flat_maps_data.get_data_for_munich()
-hamburg_data = flat_maps_data.get_data_for_hamburg()
-berlin_data = flat_maps_data.get_data_for_berlin()
+munich_data = flat_maps_data.data_for_munich()
+hamburg_data = flat_maps_data.data_for_hamburg()
+berlin_data = flat_maps_data.data_for_berlin()
 
 
 berlin_map = folium.Map(location=[52.520008, 13.404954], zoom_start=11)
@@ -24,10 +24,11 @@ for data in berlin_data:
                     <li>Difference: {difference: .2f} &euro;</li>
                   <ul>
                   """.format(
-                  street=data.street,
-                  price=data.price,
-                  sqm=data.sqm,
-                  rooms=data.rooms,
+                  street=data[2],
+                  price=data[0],
+                  sqm=data[1],
+                  rooms=data[5],
+                  url=data[6],
                   psqm=...,
                   mean=...,
                   difference=...,
