@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'flats.apps.FlatsConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

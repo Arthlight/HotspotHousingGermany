@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ac29190e284d4ac8af12df6422a469ae {
+                #map_810459fb7c4f4ed685636d4dff09b8a2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_ac29190e284d4ac8af12df6422a469ae" ></div>
+            <div class="folium-map" id="map_810459fb7c4f4ed685636d4dff09b8a2" ></div>
         
 </body>
 <script>    
     
-            var map_ac29190e284d4ac8af12df6422a469ae = L.map(
-                "map_ac29190e284d4ac8af12df6422a469ae",
+            var map_810459fb7c4f4ed685636d4dff09b8a2 = L.map(
+                "map_810459fb7c4f4ed685636d4dff09b8a2",
                 {
                     center: [48.137154, 11.576124],
                     crs: L.CRS.EPSG3857,
@@ -55,9 +55,240 @@
 
         
     
-            var tile_layer_7b810d2c2444433e8e09ce29f6ada26b = L.tileLayer(
+            var tile_layer_8305280cceed4f7789115ac675782730 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_ac29190e284d4ac8af12df6422a469ae);
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var marker_af0c4f54846a420f83b87acb563278ad = L.marker(
+                [48.1697238, 11.5868294],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_fa175b6d568b4899a0dc33cd4f14ef65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_af0c4f54846a420f83b87acb563278ad.setIcon(icon_fa175b6d568b4899a0dc33cd4f14ef65);
+        
+    
+        var popup_af1244cd41124712b19849a186c98a32 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26554533d7264236a5e3b5413f17d56b = $(`<div id="html_26554533d7264236a5e3b5413f17d56b" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/104486980 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Leopoldstr. 150</li>                     <li>Price: 2.450 € &euro;</li>                     <li>Sqm: 93,38 &#13217;</li>                     <li>Rooms: 2,5</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Schwabing:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_af1244cd41124712b19849a186c98a32.setContent(html_26554533d7264236a5e3b5413f17d56b);
+        
+
+        marker_af0c4f54846a420f83b87acb563278ad.bindPopup(popup_af1244cd41124712b19849a186c98a32)
+        ;
+
+        
+    
+    
+            marker_af0c4f54846a420f83b87acb563278ad.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a4bd185bb484465966846fa5c48cbdf = L.marker(
+                [48.11488645, 11.5710317552961],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_e923bfcf0a7f492da4e14b7331699289 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8a4bd185bb484465966846fa5c48cbdf.setIcon(icon_e923bfcf0a7f492da4e14b7331699289);
+        
+    
+        var popup_bda223b2ffc44591856ac6ec4de4b87a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1cd051780c70474fbd2f5712b28cb576 = $(`<div id="html_1cd051780c70474fbd2f5712b28cb576" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116447103 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Konradinstraße 10</li>                     <li>Price: 994,10 € &euro;</li>                     <li>Sqm: 28,1 &#13217;</li>                     <li>Rooms: 1</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Untergiesing:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_bda223b2ffc44591856ac6ec4de4b87a.setContent(html_1cd051780c70474fbd2f5712b28cb576);
+        
+
+        marker_8a4bd185bb484465966846fa5c48cbdf.bindPopup(popup_bda223b2ffc44591856ac6ec4de4b87a)
+        ;
+
+        
+    
+    
+            marker_8a4bd185bb484465966846fa5c48cbdf.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9cde3c37cc0d41b39048c907c22f4d90 = L.marker(
+                [48.0959539, 11.5090984],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_135cfa85789541c88c915b40b87160b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9cde3c37cc0d41b39048c907c22f4d90.setIcon(icon_135cfa85789541c88c915b40b87160b2);
+        
+    
+        var popup_6270e7818d1e4bb3bc82552245dc6a97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7a99a5586794acebe5156af3b7e432a = $(`<div id="html_e7a99a5586794acebe5156af3b7e432a" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115779902 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Straße 26</li>                     <li>Price: 1.368,78 € &euro;</li>                     <li>Sqm: 79,58 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_6270e7818d1e4bb3bc82552245dc6a97.setContent(html_e7a99a5586794acebe5156af3b7e432a);
+        
+
+        marker_9cde3c37cc0d41b39048c907c22f4d90.bindPopup(popup_6270e7818d1e4bb3bc82552245dc6a97)
+        ;
+
+        
+    
+    
+            marker_9cde3c37cc0d41b39048c907c22f4d90.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_740d578054234af5ab28ed293788413b = L.marker(
+                [48.0959539, 11.5090984],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_444f499c49614183bab6673070ad5f48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_740d578054234af5ab28ed293788413b.setIcon(icon_444f499c49614183bab6673070ad5f48);
+        
+    
+        var popup_08c46857fe394bd39d85fd505390463e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03a21ae0e8ae4cabb6b81fa6096ad9df = $(`<div id="html_03a21ae0e8ae4cabb6b81fa6096ad9df" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115779283 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Straße 26</li>                     <li>Price: 1.404,38 € &euro;</li>                     <li>Sqm: 81,65 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_08c46857fe394bd39d85fd505390463e.setContent(html_03a21ae0e8ae4cabb6b81fa6096ad9df);
+        
+
+        marker_740d578054234af5ab28ed293788413b.bindPopup(popup_08c46857fe394bd39d85fd505390463e)
+        ;
+
+        
+    
+    
+            marker_740d578054234af5ab28ed293788413b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7f1456b8a41a40208d01f5fe64906b74 = L.marker(
+                [48.1724502, 11.5655619],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_937c6b26cbc64e709a7283deb359da9d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7f1456b8a41a40208d01f5fe64906b74.setIcon(icon_937c6b26cbc64e709a7283deb359da9d);
+        
+    
+        var popup_50550571bf8a44ada5a5b3e1b8f3c827 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6d2a8ea83684bfdb6bded83b2a7977f = $(`<div id="html_f6d2a8ea83684bfdb6bded83b2a7977f" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116357731 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Schleißheimer Str. 258</li>                     <li>Price: 1.397,54 € &euro;</li>                     <li>Sqm: 55,15 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Schwabing-West:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_50550571bf8a44ada5a5b3e1b8f3c827.setContent(html_f6d2a8ea83684bfdb6bded83b2a7977f);
+        
+
+        marker_7f1456b8a41a40208d01f5fe64906b74.bindPopup(popup_50550571bf8a44ada5a5b3e1b8f3c827)
+        ;
+
+        
+    
+    
+            marker_7f1456b8a41a40208d01f5fe64906b74.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c = L.marker(
+                [48.1832875, 11.5632444],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_cddca365ad344b878c8c8da43f83621a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.setIcon(icon_cddca365ad344b878c8c8da43f83621a);
+        
+    
+        var popup_c14ec66f01be4ddf963d9a969fcbb314 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6110069fb807497d87f3b7e15ea9e1e3 = $(`<div id="html_6110069fb807497d87f3b7e15ea9e1e3" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116607973 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Riesenfeldstr. 72</li>                     <li>Price: 1.600,70 € &euro;</li>                     <li>Sqm: 103,59 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Milbertshofen:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_c14ec66f01be4ddf963d9a969fcbb314.setContent(html_6110069fb807497d87f3b7e15ea9e1e3);
+        
+
+        marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.bindPopup(popup_c14ec66f01be4ddf963d9a969fcbb314)
+        ;
+
+        
+    
+    
+            marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6ad694f7bb74f31a53004675f45a747 = L.marker(
+                [48.0959539, 11.5090984],
+                {}
+            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+        
+    
+            var icon_81757d55706a4a42b6a9947ef614bbcc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c6ad694f7bb74f31a53004675f45a747.setIcon(icon_81757d55706a4a42b6a9947ef614bbcc);
+        
+    
+        var popup_bdfd892623b04299b4a9463fcddb86fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e08ac365832d46029c89684fe3fd2ec7 = $(`<div id="html_e08ac365832d46029c89684fe3fd2ec7" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/104048751 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Str. 26</li>                     <li>Price: 1.009,54 € &euro;</li>                     <li>Sqm: 59,56 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_bdfd892623b04299b4a9463fcddb86fc.setContent(html_e08ac365832d46029c89684fe3fd2ec7);
+        
+
+        marker_c6ad694f7bb74f31a53004675f45a747.bindPopup(popup_bdfd892623b04299b4a9463fcddb86fc)
+        ;
+
+        
+    
+    
+            marker_c6ad694f7bb74f31a53004675f45a747.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>

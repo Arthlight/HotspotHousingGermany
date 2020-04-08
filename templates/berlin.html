@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_533fc9b6f9124f79a31371e8b83aa037 {
+                #map_e1e26e40d52f4a6783ab40f19001187d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,19 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_533fc9b6f9124f79a31371e8b83aa037" ></div>
+            <div class="folium-map" id="map_e1e26e40d52f4a6783ab40f19001187d" ></div>
         
 </body>
 <script>    
     
-            var map_533fc9b6f9124f79a31371e8b83aa037 = L.map(
-                "map_533fc9b6f9124f79a31371e8b83aa037",
+            var map_e1e26e40d52f4a6783ab40f19001187d = L.map(
+                "map_e1e26e40d52f4a6783ab40f19001187d",
                 {
                     center: [52.520008, 13.404954],
                     crs: L.CRS.EPSG3857,
@@ -55,9 +58,345 @@
 
         
     
-            var tile_layer_c3a24cd0fe26426da8f9ce5b77ba5a9b = L.tileLayer(
+            var tile_layer_bf1cb2d79d5d440ab19158ffa607ac48 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_533fc9b6f9124f79a31371e8b83aa037);
+            ).addTo(map_e1e26e40d52f4a6783ab40f19001187d);
+        
+    
+            var marker_cluster_cdd30942b2954618918448bf474d886c = L.markerClusterGroup(
+                {}
+            );
+            map_e1e26e40d52f4a6783ab40f19001187d.addLayer(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var marker_9ed99478ffab48af8abdfff128baf737 = L.marker(
+                [52.5240055, 13.4180496],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_a59e554d44204b78a7ea103b3215d264 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9ed99478ffab48af8abdfff128baf737.setIcon(icon_a59e554d44204b78a7ea103b3215d264);
+        
+    
+        var popup_ae070eb55cdf404585647ae511070fb2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b07ac02bd9e64acd99a4fc212a1ab091 = $(`<div id="html_b07ac02bd9e64acd99a4fc212a1ab091" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/79468594 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Otto-Braun Strasse 67</li>                     <li>Price: 3.390 € &euro;</li>                     <li>Sqm: 55 &#13217;</li>                     <li>Rooms: 4</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Mitte (Mitte):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_ae070eb55cdf404585647ae511070fb2.setContent(html_b07ac02bd9e64acd99a4fc212a1ab091);
+        
+
+        marker_9ed99478ffab48af8abdfff128baf737.bindPopup(popup_ae070eb55cdf404585647ae511070fb2)
+        ;
+
+        
+    
+    
+            marker_9ed99478ffab48af8abdfff128baf737.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1fd1bafd409b4d71946bd9aa16503820 = L.marker(
+                [52.5081402, 13.4067698],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_74bca484c7b3498aa25e13924924274f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1fd1bafd409b4d71946bd9aa16503820.setIcon(icon_74bca484c7b3498aa25e13924924274f);
+        
+    
+        var popup_437547ffeb1e415da480c6f9fada2bab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f85f1b5d7a314a7b957f6bfd83f4e88c = $(`<div id="html_f85f1b5d7a314a7b957f6bfd83f4e88c" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115478066 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Stallschreiberstraße 27</li>                     <li>Price: 1.799 € &euro;</li>                     <li>Sqm: 95,8 &#13217;</li>                     <li>Rooms: 4</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Mitte (Mitte):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_437547ffeb1e415da480c6f9fada2bab.setContent(html_f85f1b5d7a314a7b957f6bfd83f4e88c);
+        
+
+        marker_1fd1bafd409b4d71946bd9aa16503820.bindPopup(popup_437547ffeb1e415da480c6f9fada2bab)
+        ;
+
+        
+    
+    
+            marker_1fd1bafd409b4d71946bd9aa16503820.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b634035ff4c4feda8e3f9df7d3302f6 = L.marker(
+                [52.4359279, 13.5726702],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_38027cae7ef340588ebd53ed70aab6aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3b634035ff4c4feda8e3f9df7d3302f6.setIcon(icon_38027cae7ef340588ebd53ed70aab6aa);
+        
+    
+        var popup_40b899b71dc34c0984c63826a695f7c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_75f4aa178ea4451b9e97836085fa03a0 = $(`<div id="html_75f4aa178ea4451b9e97836085fa03a0" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116648458 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Grünauer Straße 129d</li>                     <li>Price: 1.053 € &euro;</li>                     <li>Sqm: 105,76 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Köpenick (Köpenick):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_40b899b71dc34c0984c63826a695f7c9.setContent(html_75f4aa178ea4451b9e97836085fa03a0);
+        
+
+        marker_3b634035ff4c4feda8e3f9df7d3302f6.bindPopup(popup_40b899b71dc34c0984c63826a695f7c9)
+        ;
+
+        
+    
+    
+            marker_3b634035ff4c4feda8e3f9df7d3302f6.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1597810632a3441baf19c8629d5662ea = L.marker(
+                [52.5981001, 13.3809978],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_0167cf3c8cd84a7783de6fd17bd9c77c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1597810632a3441baf19c8629d5662ea.setIcon(icon_0167cf3c8cd84a7783de6fd17bd9c77c);
+        
+    
+        var popup_ef02552f743e41f29c6176fd39168ff1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cebd5d936c264eeba12bd380bdeb2dc5 = $(`<div id="html_cebd5d936c264eeba12bd380bdeb2dc5" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116794274 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Nesselweg 17</li>                     <li>Price: 800 € &euro;</li>                     <li>Sqm: 66,49 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Rosenthal (Pankow):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_ef02552f743e41f29c6176fd39168ff1.setContent(html_cebd5d936c264eeba12bd380bdeb2dc5);
+        
+
+        marker_1597810632a3441baf19c8629d5662ea.bindPopup(popup_ef02552f743e41f29c6176fd39168ff1)
+        ;
+
+        
+    
+    
+            marker_1597810632a3441baf19c8629d5662ea.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b5d072b9587435bb7869ec25a3f27bd = L.marker(
+                [52.5981001, 13.3809978],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_1e4d6fecd10140dcb11d3aceb6cda402 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5b5d072b9587435bb7869ec25a3f27bd.setIcon(icon_1e4d6fecd10140dcb11d3aceb6cda402);
+        
+    
+        var popup_392d5462f8014ebabe2a3762be937db8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce4b0d4972444910a7618a3c1da655c8 = $(`<div id="html_ce4b0d4972444910a7618a3c1da655c8" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116794179 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Nesselweg 17</li>                     <li>Price: 770 € &euro;</li>                     <li>Sqm: 56,57 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Rosenthal (Pankow):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_392d5462f8014ebabe2a3762be937db8.setContent(html_ce4b0d4972444910a7618a3c1da655c8);
+        
+
+        marker_5b5d072b9587435bb7869ec25a3f27bd.bindPopup(popup_392d5462f8014ebabe2a3762be937db8)
+        ;
+
+        
+    
+    
+            marker_5b5d072b9587435bb7869ec25a3f27bd.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a78dc42e23aa43be99ea54c00a7dc9b6 = L.marker(
+                [52.4288557, 13.2974219295381],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_26b70840a51d492db9e03f52d757df79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a78dc42e23aa43be99ea54c00a7dc9b6.setIcon(icon_26b70840a51d492db9e03f52d757df79);
+        
+    
+        var popup_c786bbfabc72401cbcd71b8e6af6b0ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bb1b75b0ba1459d87f0762724a1bd84 = $(`<div id="html_1bb1b75b0ba1459d87f0762724a1bd84" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/117041654 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Sophie-Taeuber-Arp-Weg 1a</li>                     <li>Price: 1.417,67 € &euro;</li>                     <li>Sqm: 101,24 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Lichterfelde (Steglitz):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_c786bbfabc72401cbcd71b8e6af6b0ae.setContent(html_1bb1b75b0ba1459d87f0762724a1bd84);
+        
+
+        marker_a78dc42e23aa43be99ea54c00a7dc9b6.bindPopup(popup_c786bbfabc72401cbcd71b8e6af6b0ae)
+        ;
+
+        
+    
+    
+            marker_a78dc42e23aa43be99ea54c00a7dc9b6.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_50c373b096bc48d8ae5b9896fa2c5949 = L.marker(
+                [52.5111368, 13.3823385],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_84047ca728bc4c69bbf96f8fa2d2dfb5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_50c373b096bc48d8ae5b9896fa2c5949.setIcon(icon_84047ca728bc4c69bbf96f8fa2d2dfb5);
+        
+    
+        var popup_95487a7f40f74abd8a0d93878982a9f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_40388c2f464c408d920907d064c19b35 = $(`<div id="html_40388c2f464c408d920907d064c19b35" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116233771 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Voßstraße 34</li>                     <li>Price: 858,78 € &euro;</li>                     <li>Sqm: 24,73 &#13217;</li>                     <li>Rooms: 1</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Mitte (Mitte):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_95487a7f40f74abd8a0d93878982a9f6.setContent(html_40388c2f464c408d920907d064c19b35);
+        
+
+        marker_50c373b096bc48d8ae5b9896fa2c5949.bindPopup(popup_95487a7f40f74abd8a0d93878982a9f6)
+        ;
+
+        
+    
+    
+            marker_50c373b096bc48d8ae5b9896fa2c5949.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77ae67e3b45544029cb9dd44f11d5560 = L.marker(
+                [52.5103365, 13.3838415],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_1537300c78ba4db5b113d0beb2f9f8db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_77ae67e3b45544029cb9dd44f11d5560.setIcon(icon_1537300c78ba4db5b113d0beb2f9f8db);
+        
+    
+        var popup_6d2007d32dc74f918aba34baa12f39ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3283c5efa134416191222add57fc7dae = $(`<div id="html_3283c5efa134416191222add57fc7dae" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/117013875 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Wilhelmstr. 96</li>                     <li>Price: 1.153,98 € &euro;</li>                     <li>Sqm: 64,11 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Mitte (Mitte):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_6d2007d32dc74f918aba34baa12f39ec.setContent(html_3283c5efa134416191222add57fc7dae);
+        
+
+        marker_77ae67e3b45544029cb9dd44f11d5560.bindPopup(popup_6d2007d32dc74f918aba34baa12f39ec)
+        ;
+
+        
+    
+    
+            marker_77ae67e3b45544029cb9dd44f11d5560.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cb0343a7e8984bda99f27c1fdd475868 = L.marker(
+                [52.4999487, 13.3246068],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_25734daaa0ac49c5a3f4794debd5a3b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb0343a7e8984bda99f27c1fdd475868.setIcon(icon_25734daaa0ac49c5a3f4794debd5a3b1);
+        
+    
+        var popup_6ea24be403644e5ca6ffba9aa576f6ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b47eaa7684d48e2ae94268ef64e88df = $(`<div id="html_0b47eaa7684d48e2ae94268ef64e88df" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116467183 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Lietzenburger Str. 101</li>                     <li>Price: 2.460,44 € &euro;</li>                     <li>Sqm: 115,84 &#13217;</li>                     <li>Rooms: 2,5</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Wilmersdorf (Wilmersdorf):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_6ea24be403644e5ca6ffba9aa576f6ee.setContent(html_0b47eaa7684d48e2ae94268ef64e88df);
+        
+
+        marker_cb0343a7e8984bda99f27c1fdd475868.bindPopup(popup_6ea24be403644e5ca6ffba9aa576f6ee)
+        ;
+
+        
+    
+    
+            marker_cb0343a7e8984bda99f27c1fdd475868.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ce059176279c435f8752d25bc1192de1 = L.marker(
+                [52.5173367, 13.4158783],
+                {}
+            ).addTo(marker_cluster_cdd30942b2954618918448bf474d886c);
+        
+    
+            var icon_6ccbd01f45454070aadec5449b942f6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ce059176279c435f8752d25bc1192de1.setIcon(icon_6ccbd01f45454070aadec5449b942f6c);
+        
+    
+        var popup_516de702ecd04129a5fd825119e26e10 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec711166993a4671b5451e35ff27ba75 = $(`<div id="html_ec711166993a4671b5451e35ff27ba75" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115694512 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Voltairestraße 11</li>                     <li>Price: 3.265,42 € &euro;</li>                     <li>Sqm: 143,54 &#13217;</li>                     <li>Rooms: 3,5</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Mitte (Mitte):  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_516de702ecd04129a5fd825119e26e10.setContent(html_ec711166993a4671b5451e35ff27ba75);
+        
+
+        marker_ce059176279c435f8752d25bc1192de1.bindPopup(popup_516de702ecd04129a5fd825119e26e10)
+        ;
+
+        
+    
+    
+            marker_ce059176279c435f8752d25bc1192de1.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>

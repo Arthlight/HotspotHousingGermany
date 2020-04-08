@@ -39,6 +39,10 @@ class ImmobilienScoutSpider(scrapy.Spider):
                     flatdata.xpath('.//button[@aria-label="zum Merkzettel hinzufügen"]/@data-id').get()
             )
 
+            # Special case for street:
+            if ';' in street:
+                street = street.split(';')[0]
+
             # Store the data in item containers instead of regular dicts in order to get access to their richer
             # interface, which supports tracking items to find memory leaks and allows customizing serialization
             flat_items['price'] = price

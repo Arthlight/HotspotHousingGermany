@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a5e7e9902c23444fb43c03231d185177 {
+                #map_595d6b85a24d45ddbb4b784dbdd12fb0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_a5e7e9902c23444fb43c03231d185177" ></div>
+            <div class="folium-map" id="map_595d6b85a24d45ddbb4b784dbdd12fb0" ></div>
         
 </body>
 <script>    
     
-            var map_a5e7e9902c23444fb43c03231d185177 = L.map(
-                "map_a5e7e9902c23444fb43c03231d185177",
+            var map_595d6b85a24d45ddbb4b784dbdd12fb0 = L.map(
+                "map_595d6b85a24d45ddbb4b784dbdd12fb0",
                 {
                     center: [53.551086, 9.993682],
                     crs: L.CRS.EPSG3857,
@@ -55,9 +55,240 @@
 
         
     
-            var tile_layer_7685570f315c4ffd8c3e136bc927a5fc = L.tileLayer(
+            var tile_layer_43b6ee2f9941410cb4feb6a468a1a395 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_a5e7e9902c23444fb43c03231d185177);
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var marker_24b848802d584b16abb86adbce3c00a9 = L.marker(
+                [53.58109625, 9.75249539057591],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_ea1e05b507e7478f815c93d4be10fcb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_24b848802d584b16abb86adbce3c00a9.setIcon(icon_ea1e05b507e7478f815c93d4be10fcb7);
+        
+    
+        var popup_fca90961695b437b9bc4b811a8d65b00 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a84d9a9bc64f4e1a9aa72a08518f3f78 = $(`<div id="html_a84d9a9bc64f4e1a9aa72a08518f3f78" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115270530 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Nagelshof 19a</li>                     <li>Price: 1.080 € &euro;</li>                     <li>Sqm: 90 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Rissen:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_fca90961695b437b9bc4b811a8d65b00.setContent(html_a84d9a9bc64f4e1a9aa72a08518f3f78);
+        
+
+        marker_24b848802d584b16abb86adbce3c00a9.bindPopup(popup_fca90961695b437b9bc4b811a8d65b00)
+        ;
+
+        
+    
+    
+            marker_24b848802d584b16abb86adbce3c00a9.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f362959ab64e468e8dcafd6cf744a53b = L.marker(
+                [53.5824169, 9.7546014],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_1e41a658df774f93bec5ff3f130f3e84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f362959ab64e468e8dcafd6cf744a53b.setIcon(icon_1e41a658df774f93bec5ff3f130f3e84);
+        
+    
+        var popup_57253f670b9540e49811f8677cb883fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_366ca004342942b4a20782617080ca3b = $(`<div id="html_366ca004342942b4a20782617080ca3b" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115270777 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Wedeler Landstr. 56a</li>                     <li>Price: 1.081 € &euro;</li>                     <li>Sqm: 94 &#13217;</li>                     <li>Rooms: 4</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Rissen:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_57253f670b9540e49811f8677cb883fb.setContent(html_366ca004342942b4a20782617080ca3b);
+        
+
+        marker_f362959ab64e468e8dcafd6cf744a53b.bindPopup(popup_57253f670b9540e49811f8677cb883fb)
+        ;
+
+        
+    
+    
+            marker_f362959ab64e468e8dcafd6cf744a53b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6400640114a5467a9d7af92ea37554e6 = L.marker(
+                [53.5851717, 9.9295174],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_ec3df49f78ea47409f155351f81c775c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6400640114a5467a9d7af92ea37554e6.setIcon(icon_ec3df49f78ea47409f155351f81c775c);
+        
+    
+        var popup_6f8f08ef63b74ecbaf53583bfeaa2dfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0289bac5b9e3450ea89655221d3abc96 = $(`<div id="html_0289bac5b9e3450ea89655221d3abc96" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/101102339 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Warnstedtstraße  59 R</li>                     <li>Price: 1.251 € &euro;</li>                     <li>Sqm: 92,18 &#13217;</li>                     <li>Rooms: 3,5</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Stellingen:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_6f8f08ef63b74ecbaf53583bfeaa2dfb.setContent(html_0289bac5b9e3450ea89655221d3abc96);
+        
+
+        marker_6400640114a5467a9d7af92ea37554e6.bindPopup(popup_6f8f08ef63b74ecbaf53583bfeaa2dfb)
+        ;
+
+        
+    
+    
+            marker_6400640114a5467a9d7af92ea37554e6.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_334c7033f1c44196a0389d44ca242cb5 = L.marker(
+                [53.54328725, 9.9956455112691],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_3bbaf5b456834121b23899e5c79fb45c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_334c7033f1c44196a0389d44ca242cb5.setIcon(icon_3bbaf5b456834121b23899e5c79fb45c);
+        
+    
+        var popup_4db6b26f643e44efa030cd1a6708b535 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be529b351bad4d5498ffb5128765d021 = $(`<div id="html_be529b351bad4d5498ffb5128765d021" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116771585 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Am Sandtorkai 46</li>                     <li>Price: 890 € &euro;</li>                     <li>Sqm: 20 &#13217;</li>                     <li>Rooms: 1</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in HafenCity:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_4db6b26f643e44efa030cd1a6708b535.setContent(html_be529b351bad4d5498ffb5128765d021);
+        
+
+        marker_334c7033f1c44196a0389d44ca242cb5.bindPopup(popup_4db6b26f643e44efa030cd1a6708b535)
+        ;
+
+        
+    
+    
+            marker_334c7033f1c44196a0389d44ca242cb5.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_023fbc3a9b35458f99126059b9450ecd = L.marker(
+                [53.54328725, 9.9956455112691],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_8bf732f87624448f81e6b3b8669d5a95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_023fbc3a9b35458f99126059b9450ecd.setIcon(icon_8bf732f87624448f81e6b3b8669d5a95);
+        
+    
+        var popup_ec9b2996f9ff4bbc9cde7e29ad736a7d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba147da1fcaf43f7b8b678fa9ca7fbd2 = $(`<div id="html_ba147da1fcaf43f7b8b678fa9ca7fbd2" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116771762 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Am Sandtorkai 46</li>                     <li>Price: 990 € &euro;</li>                     <li>Sqm: 25 &#13217;</li>                     <li>Rooms: 1</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in HafenCity:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_ec9b2996f9ff4bbc9cde7e29ad736a7d.setContent(html_ba147da1fcaf43f7b8b678fa9ca7fbd2);
+        
+
+        marker_023fbc3a9b35458f99126059b9450ecd.bindPopup(popup_ec9b2996f9ff4bbc9cde7e29ad736a7d)
+        ;
+
+        
+    
+    
+            marker_023fbc3a9b35458f99126059b9450ecd.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_32c4010fab71463a99824eaef5fc5ae5 = L.marker(
+                [53.5614532, 9.9382145],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_f65bfd9e561e4ddf9273ec32dd2906b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_32c4010fab71463a99824eaef5fc5ae5.setIcon(icon_f65bfd9e561e4ddf9273ec32dd2906b0);
+        
+    
+        var popup_dd1de30280a5444e89ab24bb2daa0c7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d032d442728479eb070dc19a2c82063 = $(`<div id="html_0d032d442728479eb070dc19a2c82063" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116793672 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Helga-Feddersen-Twiete 4</li>                     <li>Price: 1.390 € &euro;</li>                     <li>Sqm: 87 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Altona-Nord:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_dd1de30280a5444e89ab24bb2daa0c7c.setContent(html_0d032d442728479eb070dc19a2c82063);
+        
+
+        marker_32c4010fab71463a99824eaef5fc5ae5.bindPopup(popup_dd1de30280a5444e89ab24bb2daa0c7c)
+        ;
+
+        
+    
+    
+            marker_32c4010fab71463a99824eaef5fc5ae5.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd50288721254bbc9c342f18c37afbc8 = L.marker(
+                [53.5856031, 10.0214159],
+                {}
+            ).addTo(map_595d6b85a24d45ddbb4b784dbdd12fb0);
+        
+    
+            var icon_19e2a0d6c481499491e953020f8f0a3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bd50288721254bbc9c342f18c37afbc8.setIcon(icon_19e2a0d6c481499491e953020f8f0a3f);
+        
+    
+        var popup_2f16db69eb2943d0a22d445d9ce03de0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3dbe26035624af494f9e81fde4f8ecc = $(`<div id="html_d3dbe26035624af494f9e81fde4f8ecc" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/112355683 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Stammannstraße 3</li>                     <li>Price: 1.300 € &euro;</li>                     <li>Sqm: 61 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Winterhude:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
+            popup_2f16db69eb2943d0a22d445d9ce03de0.setContent(html_d3dbe26035624af494f9e81fde4f8ecc);
+        
+
+        marker_bd50288721254bbc9c342f18c37afbc8.bindPopup(popup_2f16db69eb2943d0a22d445d9ce03de0)
+        ;
+
+        
+    
+    
+            marker_bd50288721254bbc9c342f18c37afbc8.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
         
 </script>
