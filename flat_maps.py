@@ -1,14 +1,14 @@
 import folium
 from folium.plugins import MarkerCluster
 import flat_maps_data
-import flat_maps_comp
 
-#TODO: Fix error for custom icon, maybe converting it to a byte array or something
-custom_icon = folium.features.CustomIcon(icon_image='images/FoliumIcon.png', icon_size=(5, 5))
+
+
 berlin_map = folium.Map(location=[52.520008, 13.404954], zoom_start=11)
 berlin_cluster = MarkerCluster()
 for data in flat_maps_data.data_for_berlin():
     print("Entered for loop")
+
 
     marker_html = """
                   <h4><a href={url} target='_blank'>Original listing</a></h4>
@@ -39,7 +39,7 @@ for data in flat_maps_data.data_for_berlin():
         location=(lat,long),
         popup=marker_html,
         tooltip='Click for more info',
-        icon=folium.Icon(color='blue', icon=custom_icon)
+        icon=folium.Icon(color='darkblue', icon='home', prefix='fa')
     ).add_to(berlin_cluster)
 
     print("Next iteration about to begin")
@@ -77,7 +77,7 @@ for data in flat_maps_data.data_for_hamburg():
         location=(lat,long),
         popup=marker_html,
         tooltip='Click for more info',
-        icon=folium.Icon(color='blue', icon='leaf')
+        icon=folium.Icon(color='blue', icon='fahome', prefix='fa')
     ).add_to(hamburg_map)
 
 hamburg_map.save('templates/hamburg.html')
@@ -113,7 +113,7 @@ for data in flat_maps_data.data_for_munich():
         location=(lat,long),
         popup=marker_html,
         tooltip='Click for more info',
-        icon=folium.Icon(color='blue', icon='leaf')
+        icon=folium.Icon(color='blue', icon='home', prefix='fa')
     ).add_to(munich_map)
 
 munich_map.save('templates/munich.html')

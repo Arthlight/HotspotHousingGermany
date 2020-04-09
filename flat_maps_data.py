@@ -10,13 +10,12 @@ import time
 connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db')
 cursor = connection.cursor()
 
-#TODO: Move the cursor.execute statements to a different function and set it there once for every traversal
-#TODO: otherwise it would get executed everytime the function gets called
+
 def data_for_berlin():
     cursor.execute("""SELECT * FROM flat_data WHERE city='Berlin'""")
 
     print("before fetch")
-    for row in cursor.fetchmany(10):
+    for row in cursor.fetchmany(20):
         print("fetch")
         yield row
 
@@ -27,7 +26,7 @@ def data_for_berlin():
 def data_for_munich():
     cursor.execute("""SELECT * FROM flat_data WHERE city='München'""")
 
-    for row in cursor.fetchall():
+    for row in cursor.fetchmany(20):
         yield row
 
 
@@ -37,7 +36,7 @@ def data_for_munich():
 def data_for_hamburg():
     cursor.execute("""SELECT * FROM flat_data WHERE city='Hamburg'""")
 
-    for row in cursor.fetchall():
+    for row in cursor.fetchmany(20):
         yield row
 
 
@@ -57,6 +56,7 @@ def get_lat_long_(street):
 
     # I can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
     # ( 60 requests per minute )
+    # TODO: Maybe put this in a try except block in case there are errors with the api or connection
     time.sleep(2)
     response = requests.get(url=url, params=data)
     decoded_response = json.loads(response.content)

@@ -1,6 +1,7 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
+import utils.number_counter
 
 
 
@@ -39,9 +40,17 @@ class ImmobilienScoutSpider(scrapy.Spider):
                     flatdata.xpath('.//button[@aria-label="zum Merkzettel hinzufügen"]/@data-id').get()
             )
 
+            # TODO: ADD A SPECIAL CASE FOR PRICE ( REMOVE A TRAILING EURO SYMBOL )
+
+            # Special case for area:
+            if utils.number_counter.more_than_one_number(area):
+                continue
+
             # Special case for street:
             if ';' in street:
                 street = street.split(';')[0]
+
+
 
             # Store the data in item containers instead of regular dicts in order to get access to their richer
             # interface, which supports tracking items to find memory leaks and allows customizing serialization
