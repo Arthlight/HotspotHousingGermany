@@ -1,8 +1,6 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
-import utils.number_counter
-
 
 
 class ImmobilienScoutSpider(scrapy.Spider):
@@ -40,15 +38,21 @@ class ImmobilienScoutSpider(scrapy.Spider):
                     flatdata.xpath('.//button[@aria-label="zum Merkzettel hinzufügen"]/@data-id').get()
             )
 
-            # TODO: ADD A SPECIAL CASE FOR PRICE ( REMOVE A TRAILING EURO SYMBOL )
+            # Special case for price
+            price = price.replace('€', '')
+            price = price.replace('.', '')
+            price = price.replace(',', '.')
 
             # Special case for area:
-            if utils.number_counter.more_than_one_number(area):
+            if any(char.isdigit() for char in area):
                 continue
 
             # Special case for street:
             if ';' in street:
                 street = street.split(';')[0]
+
+            # Special case for sqm
+            sqm = sqm.replace(',', '.')
 
 
 
