@@ -15,7 +15,7 @@ def data_for_berlin() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='Berlin'""")
 
     print("before fetch")
-    for row in cursor.fetchmany(20):
+    for row in cursor.fetchmany(100):
         print("fetch")
         yield row
 
@@ -23,14 +23,14 @@ def data_for_berlin() -> tuple:
 def data_for_munich() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='München'""")
 
-    for row in cursor.fetchmany(20):
+    for row in cursor.fetchmany(100):
         yield row
 
 
 def data_for_hamburg() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='Hamburg'""")
 
-    for row in cursor.fetchmany(20):
+    for row in cursor.fetchmany(100):
         yield row
 
 

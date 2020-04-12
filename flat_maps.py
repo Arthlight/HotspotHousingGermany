@@ -2,7 +2,6 @@ import folium
 from folium.plugins import MarkerCluster
 import flat_maps_data
 import flat_maps_comp
-import utils.computations
 
 
 def display_berlin_data():
@@ -13,7 +12,7 @@ def display_berlin_data():
         print("Entered for loop")
 
         mean_price_area = all_areas_data.get_mean(data[3], data[2])
-        difference = utils.computations.get_difference(mean_price_area, data[0])
+        difference = abs(mean_price_area - data[0])
 
         # TODO: Try to make the marker as good looking as poosible, maybe even with in-line css
         # TODO: If you can't figure out how to format the HTML properly, look into folium marker docs and tutorials etc
@@ -60,7 +59,7 @@ def display_hamburg_data():
     for data in flat_maps_data.data_for_hamburg():
 
         mean_price_area = all_areas_data.get_mean(data[3], data[2])
-        difference = utils.computations.get_difference(mean_price_area, data[0])
+        difference = abs(mean_price_area - data[0])
 
         marker_html = """
                     <h4><a href={url} target='_blank'>Original listing</a></h4>
@@ -102,7 +101,7 @@ def display_munich_data():
     for data in flat_maps_data.data_for_munich():
 
         mean_price_area = all_areas_data.get_mean(data[3], data[2])
-        difference = utils.computations.get_difference(mean_price_area, data[0])
+        difference = abs(mean_price_area - data[0])
 
         marker_html = """
                     <h4><a href={url} target='_blank'>Original listing</a></h4>

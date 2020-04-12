@@ -20,6 +20,8 @@ class FlatData:
                 current_hash_table[area] = (1, int(price))
 
     def get_mean(self, area: str, city: str) -> float:
+        # TODO: The error that occurs occurs here, not in the method above, and is likely being caused in flat_maps.py here:
+        # TODO: mean_price_area = all_areas_data.get_mean(data[3], data[2])
         current_hash_table = self.all_city_hash_tables.get(city)
 
         count, price = current_hash_table.get(area)

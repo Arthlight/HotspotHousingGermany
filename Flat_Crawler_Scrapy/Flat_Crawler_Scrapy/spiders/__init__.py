@@ -41,7 +41,8 @@ class ImmobilienScoutSpider(scrapy.Spider):
             # Special case for price
             price = price.replace('€', '')
             price = price.replace('.', '')
-            price = price.replace(',', '.')
+            if ',' in price:
+                price = price.split(',')[0]
 
             # Special case for area:
             if any(char.isdigit() for char in area):
@@ -53,8 +54,6 @@ class ImmobilienScoutSpider(scrapy.Spider):
 
             # Special case for sqm
             sqm = sqm.replace(',', '.')
-
-
 
             # Store the data in item containers instead of regular dicts in order to get access to their richer
             # interface, which supports tracking items to find memory leaks and allows customizing serialization

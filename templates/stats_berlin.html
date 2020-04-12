@@ -1,1 +1,26 @@
-<h1>stats berlin</h1>
+{% extends 'base_for_stats.html' %}
+
+<script>
+    {% block jquery %}
+    var endpoint = 'stats/berlin/data';
+
+    $.ajax({
+        method: "GET",
+        url: endpoint,
+        success: function(data){
+            console.log(data)
+        },
+        error: function (error_data) {
+            console.log(error_data)
+        }
+    });
+    {% endblock jquery %}
+
+</script>
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+        <h1>First try</h1>
+    </div>
+</div>
+{% endblock content %}
