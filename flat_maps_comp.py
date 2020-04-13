@@ -27,6 +27,10 @@ class FlatData:
         count, price = current_hash_table.get(area)
         return count / price
 
+    def avrg_sqm_for_area(self, area):
+        # TODO: Implement a method to gather all the prices for an area and divide it by the accumulated sum of sqmeters
+        pass
+
 
 def get_area_data() -> FlatData:
     data_for_all_cities = FlatData()

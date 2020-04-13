@@ -13,6 +13,7 @@ def display_berlin_data():
 
         mean_price_area = all_areas_data.get_mean(data[3], data[2])
         difference = abs(mean_price_area - data[0])
+        price_per_sqm = data[0] / data[1]
 
         # TODO: Try to make the marker as good looking as poosible, maybe even with in-line css
         # TODO: If you can't figure out how to format the HTML properly, look into folium marker docs and tutorials etc
@@ -33,7 +34,7 @@ def display_berlin_data():
             sqm=data[1],
             rooms=data[5],
             url=data[6],
-            psqm=6.69,
+            psqm=price_per_sqm,
             area=data[3],
             mean=mean_price_area,
             difference=difference,
