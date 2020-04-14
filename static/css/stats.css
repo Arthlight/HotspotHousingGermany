@@ -1,0 +1,10 @@
+.wrapper {
+background: rgb(80,74,182);
+background: linear-gradient(90deg, rgba(80,74,182,1) 0%, rgba(44,17,125,1) 37%, rgba(61,32,147,1) 100%);
+
+
+}
+
+.d-flex {
+    padding-top: 50px;
+}

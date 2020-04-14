@@ -20,13 +20,13 @@
         });
 
         function setChartData() {
-            var ctx = document.getElementById('myChart');
+            var ctx = document.getElementById('FlatDataChart');
             var myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'horizontalBar',
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'Mean Price per Sqm',
+                        label: 'Mean Price per sqm in area',
                         data: defaultData,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -61,9 +61,9 @@
     {% endblock jquery %}
 </script>
 {% block content %}
-    <div class="row">
-        <div class="col-sm-12">
-            <canvas id="myChart" width="400" height="400"></canvas>
+    <div class="d-flex justify-content-center">
+        <div class="col-sm-8 my-auto">
+            <canvas id="FlatDataChart" width="400" height="400"></canvas>
         </div>
     </div>
 {% endblock content %}

@@ -11,7 +11,7 @@ def display_berlin_data():
     for data in flat_maps_data.data_for_berlin():
         print("Entered for loop")
 
-        mean_price_area = all_areas_data.get_mean(data[3], data[2])
+        mean_price_area = all_areas_data.get_mean(data[3], data[4])
         difference = abs(mean_price_area - data[0])
         price_per_sqm = data[0] / data[1]
 
@@ -59,7 +59,7 @@ def display_hamburg_data():
     hamburg_map = folium.Map(location=[53.551086, 9.993682], zoom_start=11)
     for data in flat_maps_data.data_for_hamburg():
 
-        mean_price_area = all_areas_data.get_mean(data[3], data[2])
+        mean_price_area = all_areas_data.get_mean(data[3], data[4])
         difference = abs(mean_price_area - data[0])
 
         marker_html = """
@@ -101,7 +101,7 @@ def display_munich_data():
     munich_map = folium.Map(location=[48.137154, 11.576124], zoom_start=11)
     for data in flat_maps_data.data_for_munich():
 
-        mean_price_area = all_areas_data.get_mean(data[3], data[2])
+        mean_price_area = all_areas_data.get_mean(data[3], data[4])
         difference = abs(mean_price_area - data[0])
 
         marker_html = """
