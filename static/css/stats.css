@@ -1,10 +1,9 @@
 .wrapper {
-background: rgb(80,74,182);
-background: linear-gradient(90deg, rgba(80,74,182,1) 0%, rgba(44,17,125,1) 37%, rgba(61,32,147,1) 100%);
-
+background: rgb(5,41,144);
+background: linear-gradient(90deg, rgba(5,41,144,1) 0%, rgba(28,70,157,1) 73%, rgba(32,106,147,1) 100%);
 
 }
 
 .d-flex {
-    padding-top: 50px;
+    padding-top: 80px;
 }

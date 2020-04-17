@@ -25,10 +25,13 @@ class FlatData:
         current_hash_table = self.all_city_hash_tables.get(city)
 
         count, price = current_hash_table.get(area)
-        return count / price
+        return price / count
 
-    def avrg_sqm_for_area(self, area):
+    def compute_avrg_sqm_for_area(self, area):
         # TODO: Implement a method to gather all the prices for an area and divide it by the accumulated sum of sqmeters
+        pass
+
+    def get_avrg_sqm(self, area, city):
         pass
 
 
@@ -36,18 +39,21 @@ def get_area_data() -> FlatData:
     data_for_all_cities = FlatData()
 
     for munich_data in flat_maps_data.data_for_munich():
+        print('in get munich')
         area = munich_data[3]
         price = munich_data[0]
         city = munich_data[4]
         data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
     for berlin_data in flat_maps_data.data_for_berlin():
+        print('in get berlin')
         area = berlin_data[3]
         price = berlin_data[0]
         city = berlin_data[4]
         data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
     for hamburg_data in flat_maps_data.data_for_hamburg():
+        print('in get hamburg')
         area = hamburg_data[3]
         price = hamburg_data[0]
         city = hamburg_data[4]

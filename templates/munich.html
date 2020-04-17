@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_810459fb7c4f4ed685636d4dff09b8a2 {
+                #map_d7aa80400cf24c33b35279b10a52b0c6 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,19 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_810459fb7c4f4ed685636d4dff09b8a2" ></div>
+            <div class="folium-map" id="map_d7aa80400cf24c33b35279b10a52b0c6" ></div>
         
 </body>
 <script>    
     
-            var map_810459fb7c4f4ed685636d4dff09b8a2 = L.map(
-                "map_810459fb7c4f4ed685636d4dff09b8a2",
+            var map_d7aa80400cf24c33b35279b10a52b0c6 = L.map(
+                "map_d7aa80400cf24c33b35279b10a52b0c6",
                 {
                     center: [48.137154, 11.576124],
                     crs: L.CRS.EPSG3857,
@@ -55,104 +58,44 @@
 
         
     
-            var tile_layer_8305280cceed4f7789115ac675782730 = L.tileLayer(
+            var tile_layer_ecf316ba7c104f2caabf4cb36dfc9ad1 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+            ).addTo(map_d7aa80400cf24c33b35279b10a52b0c6);
         
     
-            var marker_af0c4f54846a420f83b87acb563278ad = L.marker(
-                [48.1697238, 11.5868294],
+            var marker_cluster_309fc00d620748c697a342cc5377e67b = L.markerClusterGroup(
                 {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
-        
-    
-            var icon_fa175b6d568b4899a0dc33cd4f14ef65 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_af0c4f54846a420f83b87acb563278ad.setIcon(icon_fa175b6d568b4899a0dc33cd4f14ef65);
+            map_d7aa80400cf24c33b35279b10a52b0c6.addLayer(marker_cluster_309fc00d620748c697a342cc5377e67b);
         
     
-        var popup_af1244cd41124712b19849a186c98a32 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_26554533d7264236a5e3b5413f17d56b = $(`<div id="html_26554533d7264236a5e3b5413f17d56b" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/104486980 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Leopoldstr. 150</li>                     <li>Price: 2.450 € &euro;</li>                     <li>Sqm: 93,38 &#13217;</li>                     <li>Rooms: 2,5</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Schwabing:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_af1244cd41124712b19849a186c98a32.setContent(html_26554533d7264236a5e3b5413f17d56b);
-        
-
-        marker_af0c4f54846a420f83b87acb563278ad.bindPopup(popup_af1244cd41124712b19849a186c98a32)
-        ;
-
-        
-    
-    
-            marker_af0c4f54846a420f83b87acb563278ad.bindTooltip(
-                `<div>
-                     Click for more info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_8a4bd185bb484465966846fa5c48cbdf = L.marker(
-                [48.11488645, 11.5710317552961],
-                {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
-        
-    
-            var icon_e923bfcf0a7f492da4e14b7331699289 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_8a4bd185bb484465966846fa5c48cbdf.setIcon(icon_e923bfcf0a7f492da4e14b7331699289);
-        
-    
-        var popup_bda223b2ffc44591856ac6ec4de4b87a = L.popup({"maxWidth": "100%"});
-
-        
-            var html_1cd051780c70474fbd2f5712b28cb576 = $(`<div id="html_1cd051780c70474fbd2f5712b28cb576" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116447103 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Konradinstraße 10</li>                     <li>Price: 994,10 € &euro;</li>                     <li>Sqm: 28,1 &#13217;</li>                     <li>Rooms: 1</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Untergiesing:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_bda223b2ffc44591856ac6ec4de4b87a.setContent(html_1cd051780c70474fbd2f5712b28cb576);
-        
-
-        marker_8a4bd185bb484465966846fa5c48cbdf.bindPopup(popup_bda223b2ffc44591856ac6ec4de4b87a)
-        ;
-
-        
-    
-    
-            marker_8a4bd185bb484465966846fa5c48cbdf.bindTooltip(
-                `<div>
-                     Click for more info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_9cde3c37cc0d41b39048c907c22f4d90 = L.marker(
+            var marker_ab8a54062fe54ac0a3f566f35b10fc01 = L.marker(
                 [48.0959539, 11.5090984],
                 {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
         
     
-            var icon_135cfa85789541c88c915b40b87160b2 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_299d5108eb58458eaa36c50d711fb6aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
             );
-            marker_9cde3c37cc0d41b39048c907c22f4d90.setIcon(icon_135cfa85789541c88c915b40b87160b2);
+            marker_ab8a54062fe54ac0a3f566f35b10fc01.setIcon(icon_299d5108eb58458eaa36c50d711fb6aa);
         
     
-        var popup_6270e7818d1e4bb3bc82552245dc6a97 = L.popup({"maxWidth": "100%"});
+        var popup_665fe90e3c1542309e0da087c7661499 = L.popup({"maxWidth": "100%"});
 
         
-            var html_e7a99a5586794acebe5156af3b7e432a = $(`<div id="html_e7a99a5586794acebe5156af3b7e432a" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115779902 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Straße 26</li>                     <li>Price: 1.368,78 € &euro;</li>                     <li>Sqm: 79,58 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_6270e7818d1e4bb3bc82552245dc6a97.setContent(html_e7a99a5586794acebe5156af3b7e432a);
+            var html_ef01bc1704834830840fd8d1f9fb685a = $(`<div id="html_ef01bc1704834830840fd8d1f9fb685a" style="width: 100.0%; height: 100.0%;">                                   <li>Constanze-Hallgarten-Straße 26</li>             <li>Price: 1368 &euro;</li>             <li>Sqm: 79.58 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  17.19 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference: -119.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115779902 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_665fe90e3c1542309e0da087c7661499.setContent(html_ef01bc1704834830840fd8d1f9fb685a);
         
 
-        marker_9cde3c37cc0d41b39048c907c22f4d90.bindPopup(popup_6270e7818d1e4bb3bc82552245dc6a97)
+        marker_ab8a54062fe54ac0a3f566f35b10fc01.bindPopup(popup_665fe90e3c1542309e0da087c7661499)
         ;
 
         
     
     
-            marker_9cde3c37cc0d41b39048c907c22f4d90.bindTooltip(
+            marker_ab8a54062fe54ac0a3f566f35b10fc01.bindTooltip(
                 `<div>
                      Click for more info
                  </div>`,
@@ -160,32 +103,32 @@
             );
         
     
-            var marker_740d578054234af5ab28ed293788413b = L.marker(
+            var marker_cadcb424d7c54822818faea91ac886fc = L.marker(
                 [48.0959539, 11.5090984],
                 {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
         
     
-            var icon_444f499c49614183bab6673070ad5f48 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_1c33276755a04a038234f48126efdbf8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
             );
-            marker_740d578054234af5ab28ed293788413b.setIcon(icon_444f499c49614183bab6673070ad5f48);
+            marker_cadcb424d7c54822818faea91ac886fc.setIcon(icon_1c33276755a04a038234f48126efdbf8);
         
     
-        var popup_08c46857fe394bd39d85fd505390463e = L.popup({"maxWidth": "100%"});
+        var popup_fd878a2708384b1ea058404dfadb3881 = L.popup({"maxWidth": "100%"});
 
         
-            var html_03a21ae0e8ae4cabb6b81fa6096ad9df = $(`<div id="html_03a21ae0e8ae4cabb6b81fa6096ad9df" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/115779283 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Straße 26</li>                     <li>Price: 1.404,38 € &euro;</li>                     <li>Sqm: 81,65 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_08c46857fe394bd39d85fd505390463e.setContent(html_03a21ae0e8ae4cabb6b81fa6096ad9df);
+            var html_1f25158fa57c446c9f77bb1a4263ebe4 = $(`<div id="html_1f25158fa57c446c9f77bb1a4263ebe4" style="width: 100.0%; height: 100.0%;">                                   <li>Constanze-Hallgarten-Straße 26</li>             <li>Price: 1404 &euro;</li>             <li>Sqm: 81.65 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  17.20 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference: -83.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115779283 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_fd878a2708384b1ea058404dfadb3881.setContent(html_1f25158fa57c446c9f77bb1a4263ebe4);
         
 
-        marker_740d578054234af5ab28ed293788413b.bindPopup(popup_08c46857fe394bd39d85fd505390463e)
+        marker_cadcb424d7c54822818faea91ac886fc.bindPopup(popup_fd878a2708384b1ea058404dfadb3881)
         ;
 
         
     
     
-            marker_740d578054234af5ab28ed293788413b.bindTooltip(
+            marker_cadcb424d7c54822818faea91ac886fc.bindTooltip(
                 `<div>
                      Click for more info
                  </div>`,
@@ -193,32 +136,65 @@
             );
         
     
-            var marker_7f1456b8a41a40208d01f5fe64906b74 = L.marker(
+            var marker_090944d3f8b541dda0a19486ceb75966 = L.marker(
+                [48.12843225, 11.5923886275693],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_9a3ea9eb419f424588d48ee500690d4e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_090944d3f8b541dda0a19486ceb75966.setIcon(icon_9a3ea9eb419f424588d48ee500690d4e);
+        
+    
+        var popup_c7ec8cf83ab54daca1e332632f3e34f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6664c67f394b403e95653b33d64174c5 = $(`<div id="html_6664c67f394b403e95653b33d64174c5" style="width: 100.0%; height: 100.0%;">                                   <li>Gallmayerstr. 13</li>             <li>Price: 1041 &euro;</li>             <li>Sqm: 29.29 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  35.54 &euro;</li>             <li>Mean price in Haidhausen:  2547.00 &euro;</li>             <li>Difference: -1506.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117144456 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_c7ec8cf83ab54daca1e332632f3e34f0.setContent(html_6664c67f394b403e95653b33d64174c5);
+        
+
+        marker_090944d3f8b541dda0a19486ceb75966.bindPopup(popup_c7ec8cf83ab54daca1e332632f3e34f0)
+        ;
+
+        
+    
+    
+            marker_090944d3f8b541dda0a19486ceb75966.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d0122c7de69448ca6032dac0331a474 = L.marker(
                 [48.1724502, 11.5655619],
                 {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
         
     
-            var icon_937c6b26cbc64e709a7283deb359da9d = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_3627e4a5ca2041bcb4e932b3c7db0b7a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
             );
-            marker_7f1456b8a41a40208d01f5fe64906b74.setIcon(icon_937c6b26cbc64e709a7283deb359da9d);
+            marker_2d0122c7de69448ca6032dac0331a474.setIcon(icon_3627e4a5ca2041bcb4e932b3c7db0b7a);
         
     
-        var popup_50550571bf8a44ada5a5b3e1b8f3c827 = L.popup({"maxWidth": "100%"});
+        var popup_402d71c13fe040c1b3924ccc757cdcb4 = L.popup({"maxWidth": "100%"});
 
         
-            var html_f6d2a8ea83684bfdb6bded83b2a7977f = $(`<div id="html_f6d2a8ea83684bfdb6bded83b2a7977f" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116357731 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Schleißheimer Str. 258</li>                     <li>Price: 1.397,54 € &euro;</li>                     <li>Sqm: 55,15 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Schwabing-West:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_50550571bf8a44ada5a5b3e1b8f3c827.setContent(html_f6d2a8ea83684bfdb6bded83b2a7977f);
+            var html_5bbf81ece7fa4c08988292c88d09ded8 = $(`<div id="html_5bbf81ece7fa4c08988292c88d09ded8" style="width: 100.0%; height: 100.0%;">                                   <li>Schleißheimer Str. 258</li>             <li>Price: 1422 &euro;</li>             <li>Sqm: 55.15 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  25.78 &euro;</li>             <li>Mean price in Schwabing-West:  1157.00 &euro;</li>             <li>Difference:  265.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116357731 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_402d71c13fe040c1b3924ccc757cdcb4.setContent(html_5bbf81ece7fa4c08988292c88d09ded8);
         
 
-        marker_7f1456b8a41a40208d01f5fe64906b74.bindPopup(popup_50550571bf8a44ada5a5b3e1b8f3c827)
+        marker_2d0122c7de69448ca6032dac0331a474.bindPopup(popup_402d71c13fe040c1b3924ccc757cdcb4)
         ;
 
         
     
     
-            marker_7f1456b8a41a40208d01f5fe64906b74.bindTooltip(
+            marker_2d0122c7de69448ca6032dac0331a474.bindTooltip(
                 `<div>
                      Click for more info
                  </div>`,
@@ -226,65 +202,1517 @@
             );
         
     
-            var marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c = L.marker(
-                [48.1832875, 11.5632444],
-                {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
-        
-    
-            var icon_cddca365ad344b878c8c8da43f83621a = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.setIcon(icon_cddca365ad344b878c8c8da43f83621a);
-        
-    
-        var popup_c14ec66f01be4ddf963d9a969fcbb314 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_6110069fb807497d87f3b7e15ea9e1e3 = $(`<div id="html_6110069fb807497d87f3b7e15ea9e1e3" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/116607973 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Riesenfeldstr. 72</li>                     <li>Price: 1.600,70 € &euro;</li>                     <li>Sqm: 103,59 &#13217;</li>                     <li>Rooms: 3</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Milbertshofen:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_c14ec66f01be4ddf963d9a969fcbb314.setContent(html_6110069fb807497d87f3b7e15ea9e1e3);
-        
-
-        marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.bindPopup(popup_c14ec66f01be4ddf963d9a969fcbb314)
-        ;
-
-        
-    
-    
-            marker_4ae3a1d2fc2e4db8b45f6e48eb8df52c.bindTooltip(
-                `<div>
-                     Click for more info
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var marker_c6ad694f7bb74f31a53004675f45a747 = L.marker(
+            var marker_3a73b5f5f8554bd1a2c007258a79583b = L.marker(
                 [48.0959539, 11.5090984],
                 {}
-            ).addTo(map_810459fb7c4f4ed685636d4dff09b8a2);
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
         
     
-            var icon_81757d55706a4a42b6a9947ef614bbcc = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "leaf", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_b8061bb0e2a845a89e254bd4c2c48483 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
             );
-            marker_c6ad694f7bb74f31a53004675f45a747.setIcon(icon_81757d55706a4a42b6a9947ef614bbcc);
+            marker_3a73b5f5f8554bd1a2c007258a79583b.setIcon(icon_b8061bb0e2a845a89e254bd4c2c48483);
         
     
-        var popup_bdfd892623b04299b4a9463fcddb86fc = L.popup({"maxWidth": "100%"});
+        var popup_876ccd1010544992906e2a5c1a44871c = L.popup({"maxWidth": "100%"});
 
         
-            var html_e08ac365832d46029c89684fe3fd2ec7 = $(`<div id="html_e08ac365832d46029c89684fe3fd2ec7" style="width: 100.0%; height: 100.0%;">                   <h4><a href=https://www.immobilienscout24.de/expose/104048751 target='_blank'>Original listing</a></h4>                   <ul>                     <li>Constanze-Hallgarten-Str. 26</li>                     <li>Price: 1.009,54 € &euro;</li>                     <li>Sqm: 59,56 &#13217;</li>                     <li>Rooms: 2</li>                     <li>Price per Sqm:  6.69 &euro;</li>                     <li>Mean price per Sqm in Obersendling:  2.22 &euro;</li>                     <li>Difference:  2.22 &euro;</li>                   <ul>                   </div>`)[0];
-            popup_bdfd892623b04299b4a9463fcddb86fc.setContent(html_e08ac365832d46029c89684fe3fd2ec7);
+            var html_bab1f287adc145d590cd00c7bb5cdc3f = $(`<div id="html_bab1f287adc145d590cd00c7bb5cdc3f" style="width: 100.0%; height: 100.0%;">                                   <li>Constanze-Hallgarten-Str. 26</li>             <li>Price: 1009 &euro;</li>             <li>Sqm: 59.56 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  16.94 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference: -478.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/104048751 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_876ccd1010544992906e2a5c1a44871c.setContent(html_bab1f287adc145d590cd00c7bb5cdc3f);
         
 
-        marker_c6ad694f7bb74f31a53004675f45a747.bindPopup(popup_bdfd892623b04299b4a9463fcddb86fc)
+        marker_3a73b5f5f8554bd1a2c007258a79583b.bindPopup(popup_876ccd1010544992906e2a5c1a44871c)
         ;
 
         
     
     
-            marker_c6ad694f7bb74f31a53004675f45a747.bindTooltip(
+            marker_3a73b5f5f8554bd1a2c007258a79583b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa3165ea4f3744d8ac583097fd8c414c = L.marker(
+                [48.0959539, 11.5090984],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_9a5c28832a704691a22ff1b85cdd5315 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_fa3165ea4f3744d8ac583097fd8c414c.setIcon(icon_9a5c28832a704691a22ff1b85cdd5315);
+        
+    
+        var popup_24511a99cd654d03945b1f350cc02e7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f63a38b318441faaaaa82eb4d6a4cc6 = $(`<div id="html_7f63a38b318441faaaaa82eb4d6a4cc6" style="width: 100.0%; height: 100.0%;">                                   <li>Constanze-Hallgarten-Straße 26</li>             <li>Price: 2147 &euro;</li>             <li>Sqm: 141.57 &#13217;</li>             <li>Rooms: 5</li>             <li>Price per Sqm:  15.17 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference:  660.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/107624148 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_24511a99cd654d03945b1f350cc02e7a.setContent(html_7f63a38b318441faaaaa82eb4d6a4cc6);
+        
+
+        marker_fa3165ea4f3744d8ac583097fd8c414c.bindPopup(popup_24511a99cd654d03945b1f350cc02e7a)
+        ;
+
+        
+    
+    
+            marker_fa3165ea4f3744d8ac583097fd8c414c.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_72041289016540f381be62126193347f = L.marker(
+                [48.0959539, 11.5090984],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_587e5cc8e48c4a07879c3e9e19484bdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_72041289016540f381be62126193347f.setIcon(icon_587e5cc8e48c4a07879c3e9e19484bdd);
+        
+    
+        var popup_9f20709052ed40c28fe1dfd79f861a3e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cf03410acfc405588815665826666c3 = $(`<div id="html_0cf03410acfc405588815665826666c3" style="width: 100.0%; height: 100.0%;">                                   <li>Constanze-Hallgarten-Straße 26</li>             <li>Price: 1799 &euro;</li>             <li>Sqm: 106.19 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  16.94 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference:  312.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/107624066 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_9f20709052ed40c28fe1dfd79f861a3e.setContent(html_0cf03410acfc405588815665826666c3);
+        
+
+        marker_72041289016540f381be62126193347f.bindPopup(popup_9f20709052ed40c28fe1dfd79f861a3e)
+        ;
+
+        
+    
+    
+            marker_72041289016540f381be62126193347f.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_34f54321d6664e09aac9097fe5c57a18 = L.marker(
+                [48.1585875, 11.6402448],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_97cf3d61702449179121b371e7d6ef10 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_34f54321d6664e09aac9097fe5c57a18.setIcon(icon_97cf3d61702449179121b371e7d6ef10);
+        
+    
+        var popup_5c562b5d5f0243388e21fb0bdfac1d44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05399095bb7341b0829017304494a707 = $(`<div id="html_05399095bb7341b0829017304494a707" style="width: 100.0%; height: 100.0%;">                                   <li>Meistersingerstr. 81</li>             <li>Price: 3500  &euro;</li>             <li>Sqm: 140 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  25.00 &euro;</li>             <li>Mean price in Bogenhausen:  1816.25 &euro;</li>             <li>Difference:  1683.75 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116605429 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_5c562b5d5f0243388e21fb0bdfac1d44.setContent(html_05399095bb7341b0829017304494a707);
+        
+
+        marker_34f54321d6664e09aac9097fe5c57a18.bindPopup(popup_5c562b5d5f0243388e21fb0bdfac1d44)
+        ;
+
+        
+    
+    
+            marker_34f54321d6664e09aac9097fe5c57a18.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ad4fe7ee60d48f4ab21383c51d1483a = L.marker(
+                [48.09824685, 11.6279065754735],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_28f0f504e45b47af8b64cb87e8d4eec7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_5ad4fe7ee60d48f4ab21383c51d1483a.setIcon(icon_28f0f504e45b47af8b64cb87e8d4eec7);
+        
+    
+        var popup_5166c1bee335455b936e4dabc384adfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf1ac7d027a74516bfe0bd5a2d70934b = $(`<div id="html_bf1ac7d027a74516bfe0bd5a2d70934b" style="width: 100.0%; height: 100.0%;">                                   <li>Scherbaumstraße 19</li>             <li>Price: 1070  &euro;</li>             <li>Sqm: 65.17 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  16.42 &euro;</li>             <li>Mean price in Perlach:  1070.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116989947 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_5166c1bee335455b936e4dabc384adfb.setContent(html_bf1ac7d027a74516bfe0bd5a2d70934b);
+        
+
+        marker_5ad4fe7ee60d48f4ab21383c51d1483a.bindPopup(popup_5166c1bee335455b936e4dabc384adfb)
+        ;
+
+        
+    
+    
+            marker_5ad4fe7ee60d48f4ab21383c51d1483a.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8bcb1298e073404d8cace1edec5e5173 = L.marker(
+                [48.17048315, 11.5613139015823],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_58ff718b2a6b440ea66a8fe8be0a5a5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_8bcb1298e073404d8cace1edec5e5173.setIcon(icon_58ff718b2a6b440ea66a8fe8be0a5a5a);
+        
+    
+        var popup_d1db8750807340c6bfc6ac39236c08a9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b7eb13d05f4a403ab3dd1042e3563841 = $(`<div id="html_b7eb13d05f4a403ab3dd1042e3563841" style="width: 100.0%; height: 100.0%;">                                   <li>Winzererstr. 178</li>             <li>Price: 750  &euro;</li>             <li>Sqm: 21 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  35.71 &euro;</li>             <li>Mean price in Schwabing-West:  1157.00 &euro;</li>             <li>Difference: -407.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/113578753 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_d1db8750807340c6bfc6ac39236c08a9.setContent(html_b7eb13d05f4a403ab3dd1042e3563841);
+        
+
+        marker_8bcb1298e073404d8cace1edec5e5173.bindPopup(popup_d1db8750807340c6bfc6ac39236c08a9)
+        ;
+
+        
+    
+    
+            marker_8bcb1298e073404d8cace1edec5e5173.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9211efd542474bea97ed39fdb437426d = L.marker(
+                [48.16167205, 11.55960907734],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_5d8b051688014fa18a18974266d53cf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_9211efd542474bea97ed39fdb437426d.setIcon(icon_5d8b051688014fa18a18974266d53cf0);
+        
+    
+        var popup_3d9731b98a644144b2f02c7e56667ffb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06c26e5f5db441c6a61cfd4ab4997f05 = $(`<div id="html_06c26e5f5db441c6a61cfd4ab4997f05" style="width: 100.0%; height: 100.0%;">                                   <li>Schwere-Reiter-Straße  39</li>             <li>Price: 1299  &euro;</li>             <li>Sqm: 30 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  43.30 &euro;</li>             <li>Mean price in Schwabing-West:  1157.00 &euro;</li>             <li>Difference:  142.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115807979 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_3d9731b98a644144b2f02c7e56667ffb.setContent(html_06c26e5f5db441c6a61cfd4ab4997f05);
+        
+
+        marker_9211efd542474bea97ed39fdb437426d.bindPopup(popup_3d9731b98a644144b2f02c7e56667ffb)
+        ;
+
+        
+    
+    
+            marker_9211efd542474bea97ed39fdb437426d.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5fc29ff650ec4822b8db88e89f2097f3 = L.marker(
+                [48.1596393, 11.5579936],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_0330a22cd49e4a4a97de0ef9477208eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_5fc29ff650ec4822b8db88e89f2097f3.setIcon(icon_0330a22cd49e4a4a97de0ef9477208eb);
+        
+    
+        var popup_9d01a89326bf46d283ef1d2efca4e1b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa460530f4014370a947b454fe9b3055 = $(`<div id="html_fa460530f4014370a947b454fe9b3055" style="width: 100.0%; height: 100.0%;">                                   <li>Theo-Prosel-Weg 3</li>             <li>Price: 1945  &euro;</li>             <li>Sqm: 80 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  24.31 &euro;</li>             <li>Mean price in Neuhausen:  1611.00 &euro;</li>             <li>Difference:  334.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116455048 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_9d01a89326bf46d283ef1d2efca4e1b3.setContent(html_fa460530f4014370a947b454fe9b3055);
+        
+
+        marker_5fc29ff650ec4822b8db88e89f2097f3.bindPopup(popup_9d01a89326bf46d283ef1d2efca4e1b3)
+        ;
+
+        
+    
+    
+            marker_5fc29ff650ec4822b8db88e89f2097f3.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79a7dc3696764cf6b3de1932708ced55 = L.marker(
+                [48.099018, 11.5132456],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_4b7228a984d04ef4b7cfdb2797a81f71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_79a7dc3696764cf6b3de1932708ced55.setIcon(icon_4b7228a984d04ef4b7cfdb2797a81f71);
+        
+    
+        var popup_6b0e8ac11b304307a7924eabd7f370d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c88bb5dfabf249a7b628d97b8a1ab063 = $(`<div id="html_c88bb5dfabf249a7b628d97b8a1ab063" style="width: 100.0%; height: 100.0%;">                                   <li>Boschetsriederstr. 132</li>             <li>Price: 1195  &euro;</li>             <li>Sqm: 72.52 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  16.48 &euro;</li>             <li>Mean price in Obersendling:  1487.00 &euro;</li>             <li>Difference: -292.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/101291474 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_6b0e8ac11b304307a7924eabd7f370d5.setContent(html_c88bb5dfabf249a7b628d97b8a1ab063);
+        
+
+        marker_79a7dc3696764cf6b3de1932708ced55.bindPopup(popup_6b0e8ac11b304307a7924eabd7f370d5)
+        ;
+
+        
+    
+    
+            marker_79a7dc3696764cf6b3de1932708ced55.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d05153ee4dcf469995f463127c3bf14e = L.marker(
+                [48.1661212, 11.5819895],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_424cdf35128b4dba9ce2a236ba0de9de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_d05153ee4dcf469995f463127c3bf14e.setIcon(icon_424cdf35128b4dba9ce2a236ba0de9de);
+        
+    
+        var popup_ae0a168283d8408ca29fde3d843716b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a17624e79234432a4f76b9d064e51fe = $(`<div id="html_1a17624e79234432a4f76b9d064e51fe" style="width: 100.0%; height: 100.0%;">                                   <li>Karl-Theodor-Straße 53a</li>             <li>Price: 1575  &euro;</li>             <li>Sqm: 62.72 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  25.11 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference: -715.45 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116041443 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_ae0a168283d8408ca29fde3d843716b1.setContent(html_1a17624e79234432a4f76b9d064e51fe);
+        
+
+        marker_d05153ee4dcf469995f463127c3bf14e.bindPopup(popup_ae0a168283d8408ca29fde3d843716b1)
+        ;
+
+        
+    
+    
+            marker_d05153ee4dcf469995f463127c3bf14e.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8ee473f986641b0baab562d198cc84d = L.marker(
+                [48.18282835, 11.4779417497892],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_8150780abb7c45e2b834ebe285c33b49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f8ee473f986641b0baab562d198cc84d.setIcon(icon_8150780abb7c45e2b834ebe285c33b49);
+        
+    
+        var popup_92d556860d5243aa93425da3722236b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c92c3058d6c54d158f98d02c2c863d5c = $(`<div id="html_c92c3058d6c54d158f98d02c2c863d5c" style="width: 100.0%; height: 100.0%;">                                   <li>Josef-Führer-Straße 30</li>             <li>Price: 1000  &euro;</li>             <li>Sqm: 39 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  25.64 &euro;</li>             <li>Mean price in Untermenzing:  1000.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/111002525 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_92d556860d5243aa93425da3722236b1.setContent(html_c92c3058d6c54d158f98d02c2c863d5c);
+        
+
+        marker_f8ee473f986641b0baab562d198cc84d.bindPopup(popup_92d556860d5243aa93425da3722236b1)
+        ;
+
+        
+    
+    
+            marker_f8ee473f986641b0baab562d198cc84d.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a28da05b10dd4f1fb284f8cc46fb3e02 = L.marker(
+                [48.1295075, 11.5611265],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_f3f56acd971342aca8f187f39385038f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_a28da05b10dd4f1fb284f8cc46fb3e02.setIcon(icon_f3f56acd971342aca8f187f39385038f);
+        
+    
+        var popup_6eefbda2cabd424daf104523f143c769 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df69ce22c97f47b5b1be7644fe821f4c = $(`<div id="html_df69ce22c97f47b5b1be7644fe821f4c" style="width: 100.0%; height: 100.0%;">                                   <li>Ringseisstrasse 11a</li>             <li>Price: 1600  &euro;</li>             <li>Sqm: 46 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  34.78 &euro;</li>             <li>Mean price in Ludwigsvorstadt-Isarvorstadt:  1756.00 &euro;</li>             <li>Difference: -156.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117143911 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_6eefbda2cabd424daf104523f143c769.setContent(html_df69ce22c97f47b5b1be7644fe821f4c);
+        
+
+        marker_a28da05b10dd4f1fb284f8cc46fb3e02.bindPopup(popup_6eefbda2cabd424daf104523f143c769)
+        ;
+
+        
+    
+    
+            marker_a28da05b10dd4f1fb284f8cc46fb3e02.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_263e298be4d84b32946f4b210a82522b = L.marker(
+                [48.152126, 11.544467],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_b8c2178b377a45deb6de22dde579dcd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_263e298be4d84b32946f4b210a82522b.setIcon(icon_b8c2178b377a45deb6de22dde579dcd6);
+        
+    
+        var popup_299ad5a52dd449f8a4f8575fb74f5ecb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f802a92a355145528e1815ddbd789a9a = $(`<div id="html_f802a92a355145528e1815ddbd789a9a" style="width: 100.0%; height: 100.0%;">                                   <li>Vogelweiderstr. 3</li>             <li>Price: 2450  &euro;</li>             <li>Sqm: 107.35 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  22.82 &euro;</li>             <li>Mean price in Bogenhausen:  1816.25 &euro;</li>             <li>Difference:  633.75 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116699905 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_299ad5a52dd449f8a4f8575fb74f5ecb.setContent(html_f802a92a355145528e1815ddbd789a9a);
+        
+
+        marker_263e298be4d84b32946f4b210a82522b.bindPopup(popup_299ad5a52dd449f8a4f8575fb74f5ecb)
+        ;
+
+        
+    
+    
+            marker_263e298be4d84b32946f4b210a82522b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21030e9a083246e2900acbfd479ccf7b = L.marker(
+                [48.2581794, 11.7573284],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_7f204d306c3a4fa29c5bb49b5fb03df5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_21030e9a083246e2900acbfd479ccf7b.setIcon(icon_7f204d306c3a4fa29c5bb49b5fb03df5);
+        
+    
+        var popup_54e46185c4a348c4897ee0e598a9e64d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cae9aa1518af4ca6bef56e8d9abba19b = $(`<div id="html_cae9aa1518af4ca6bef56e8d9abba19b" style="width: 100.0%; height: 100.0%;">                                   <li>Ismaninger Str. 44/46</li>             <li>Price: 5000  &euro;</li>             <li>Sqm: 215.66 &#13217;</li>             <li>Rooms: 5</li>             <li>Price per Sqm:  23.18 &euro;</li>             <li>Mean price in Haidhausen:  2547.00 &euro;</li>             <li>Difference:  2453.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116649689 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_54e46185c4a348c4897ee0e598a9e64d.setContent(html_cae9aa1518af4ca6bef56e8d9abba19b);
+        
+
+        marker_21030e9a083246e2900acbfd479ccf7b.bindPopup(popup_54e46185c4a348c4897ee0e598a9e64d)
+        ;
+
+        
+    
+    
+            marker_21030e9a083246e2900acbfd479ccf7b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_41ccf118dfcf4c90b00ac5e2aac7c0ed = L.marker(
+                [48.1350138, 11.5252275],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_abad469c9f8d464e8cb0d87441480d52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_41ccf118dfcf4c90b00ac5e2aac7c0ed.setIcon(icon_abad469c9f8d464e8cb0d87441480d52);
+        
+    
+        var popup_4d25bba76df341e2bd38cbb1cacf9497 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_03e0b2fe81f84f1192fa76a9714c1327 = $(`<div id="html_03e0b2fe81f84f1192fa76a9714c1327" style="width: 100.0%; height: 100.0%;">                                   <li>Hansastraße 6</li>             <li>Price: 880  &euro;</li>             <li>Sqm: 52.08 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  16.90 &euro;</li>             <li>Mean price in Sendling-Westpark:  990.00 &euro;</li>             <li>Difference: -110.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116613431 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_4d25bba76df341e2bd38cbb1cacf9497.setContent(html_03e0b2fe81f84f1192fa76a9714c1327);
+        
+
+        marker_41ccf118dfcf4c90b00ac5e2aac7c0ed.bindPopup(popup_4d25bba76df341e2bd38cbb1cacf9497)
+        ;
+
+        
+    
+    
+            marker_41ccf118dfcf4c90b00ac5e2aac7c0ed.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d16df4133b6a4d30a8389ef7d458a328 = L.marker(
+                [48.0872854, 11.6001165],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_405e60d3479340b480ab4aa95b5c7ffe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_d16df4133b6a4d30a8389ef7d458a328.setIcon(icon_405e60d3479340b480ab4aa95b5c7ffe);
+        
+    
+        var popup_880915a390e244bda192cbf3d01651ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f473aa924de94c349dd7e50218bdf0ff = $(`<div id="html_f473aa924de94c349dd7e50218bdf0ff" style="width: 100.0%; height: 100.0%;">                                   <li>Minnewitstraße 37</li>             <li>Price: 2352  &euro;</li>             <li>Sqm: 112 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  21.00 &euro;</li>             <li>Mean price in Obergiesing:  2352.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/114983610 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_880915a390e244bda192cbf3d01651ce.setContent(html_f473aa924de94c349dd7e50218bdf0ff);
+        
+
+        marker_d16df4133b6a4d30a8389ef7d458a328.bindPopup(popup_880915a390e244bda192cbf3d01651ce)
+        ;
+
+        
+    
+    
+            marker_d16df4133b6a4d30a8389ef7d458a328.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f15d430e576f45bea065039826fced29 = L.marker(
+                [48.1267598, 11.5535119],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_af79147b481c41fc86b5a81715279f3f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f15d430e576f45bea065039826fced29.setIcon(icon_af79147b481c41fc86b5a81715279f3f);
+        
+    
+        var popup_ce247880c83e45679e3d3da849e87325 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19e0235656ee485c9c9d4df095f47fa1 = $(`<div id="html_19e0235656ee485c9c9d4df095f47fa1" style="width: 100.0%; height: 100.0%;">                                   <li>Lindwurmstraße 135</li>             <li>Price: 1912 &euro;</li>             <li>Sqm: 85 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  22.49 &euro;</li>             <li>Mean price in Ludwigsvorstadt-Isarvorstadt:  1756.00 &euro;</li>             <li>Difference:  156.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/96974553 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_ce247880c83e45679e3d3da849e87325.setContent(html_19e0235656ee485c9c9d4df095f47fa1);
+        
+
+        marker_f15d430e576f45bea065039826fced29.bindPopup(popup_ce247880c83e45679e3d3da849e87325)
+        ;
+
+        
+    
+    
+            marker_f15d430e576f45bea065039826fced29.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97a85e6cae034157baf883550b8151cb = L.marker(
+                [48.1350021, 11.5699125],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_eeb4b0003cd440df800ffe8119e4e9be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_97a85e6cae034157baf883550b8151cb.setIcon(icon_eeb4b0003cd440df800ffe8119e4e9be);
+        
+    
+        var popup_a37331e24d0941ca83d21f72438433fb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4744bc167e17490cb8fca2cf9e5031ee = $(`<div id="html_4744bc167e17490cb8fca2cf9e5031ee" style="width: 100.0%; height: 100.0%;">                                   <li>Sendlinger Straße 29</li>             <li>Price: 2825  &euro;</li>             <li>Sqm: 113 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  25.00 &euro;</li>             <li>Mean price in Altstadt:  2891.50 &euro;</li>             <li>Difference: -66.50 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/95399614 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_a37331e24d0941ca83d21f72438433fb.setContent(html_4744bc167e17490cb8fca2cf9e5031ee);
+        
+
+        marker_97a85e6cae034157baf883550b8151cb.bindPopup(popup_a37331e24d0941ca83d21f72438433fb)
+        ;
+
+        
+    
+    
+            marker_97a85e6cae034157baf883550b8151cb.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_564f0d8ea3a0426ab27ac05043515252 = L.marker(
+                [48.1759666, 11.5852664],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_14b25c6aad2b47099dbd2635020e22c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_564f0d8ea3a0426ab27ac05043515252.setIcon(icon_14b25c6aad2b47099dbd2635020e22c5);
+        
+    
+        var popup_60d522aed764418f9b94d7a2a0672284 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea241538ee1643b58181e72223f1f5e5 = $(`<div id="html_ea241538ee1643b58181e72223f1f5e5" style="width: 100.0%; height: 100.0%;">                                   <li>Wilhelm-Hertz-Straße 3</li>             <li>Price: 1800  &euro;</li>             <li>Sqm: 78.38 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  22.97 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference: -490.45 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115670702 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_60d522aed764418f9b94d7a2a0672284.setContent(html_ea241538ee1643b58181e72223f1f5e5);
+        
+
+        marker_564f0d8ea3a0426ab27ac05043515252.bindPopup(popup_60d522aed764418f9b94d7a2a0672284)
+        ;
+
+        
+    
+    
+            marker_564f0d8ea3a0426ab27ac05043515252.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_be762e0c71e0451c960b1ada7698e7f9 = L.marker(
+                [48.1759666, 11.5852664],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_b4f759a1a2e34758b8935f7b4dbd38a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_be762e0c71e0451c960b1ada7698e7f9.setIcon(icon_b4f759a1a2e34758b8935f7b4dbd38a4);
+        
+    
+        var popup_3e130fc781ed49449117de505fb37049 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0403637084ec432aa06c8b6ff3e9dd74 = $(`<div id="html_0403637084ec432aa06c8b6ff3e9dd74" style="width: 100.0%; height: 100.0%;">                                   <li>Wilhelm-Hertz-Straße 3</li>             <li>Price: 2550  &euro;</li>             <li>Sqm: 111.23 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  22.93 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  259.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115670703 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_3e130fc781ed49449117de505fb37049.setContent(html_0403637084ec432aa06c8b6ff3e9dd74);
+        
+
+        marker_be762e0c71e0451c960b1ada7698e7f9.bindPopup(popup_3e130fc781ed49449117de505fb37049)
+        ;
+
+        
+    
+    
+            marker_be762e0c71e0451c960b1ada7698e7f9.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e97ff9170235499f86e6cd8afc18eee0 = L.marker(
+                [48.1759666, 11.5852664],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_4568de7f38954c5d80f5d573a2b49892 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_e97ff9170235499f86e6cd8afc18eee0.setIcon(icon_4568de7f38954c5d80f5d573a2b49892);
+        
+    
+        var popup_f7eff58ef56749f186d10ac3340a7e9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4102c47ee7d94a28a80078540b7d95f8 = $(`<div id="html_4102c47ee7d94a28a80078540b7d95f8" style="width: 100.0%; height: 100.0%;">                                   <li>Wilhelm-Hertz-Straße 3</li>             <li>Price: 2550  &euro;</li>             <li>Sqm: 110.99 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  22.98 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  259.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115812972 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_f7eff58ef56749f186d10ac3340a7e9c.setContent(html_4102c47ee7d94a28a80078540b7d95f8);
+        
+
+        marker_e97ff9170235499f86e6cd8afc18eee0.bindPopup(popup_f7eff58ef56749f186d10ac3340a7e9c)
+        ;
+
+        
+    
+    
+            marker_e97ff9170235499f86e6cd8afc18eee0.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc8c5ed36dc84d948c580f4f97296bca = L.marker(
+                [48.1759666, 11.5852664],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_40d31e2ef61a4425a0e1b5cfc9cb50a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_dc8c5ed36dc84d948c580f4f97296bca.setIcon(icon_40d31e2ef61a4425a0e1b5cfc9cb50a3);
+        
+    
+        var popup_05dec3727e5241079ccc43bb424f567c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5e633526ada45ee8369863ab3e6af83 = $(`<div id="html_e5e633526ada45ee8369863ab3e6af83" style="width: 100.0%; height: 100.0%;">                                   <li>Wilhelm-Hertz-Straße 3</li>             <li>Price: 2550  &euro;</li>             <li>Sqm: 111.57 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  22.86 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  259.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115812973 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_05dec3727e5241079ccc43bb424f567c.setContent(html_e5e633526ada45ee8369863ab3e6af83);
+        
+
+        marker_dc8c5ed36dc84d948c580f4f97296bca.bindPopup(popup_05dec3727e5241079ccc43bb424f567c)
+        ;
+
+        
+    
+    
+            marker_dc8c5ed36dc84d948c580f4f97296bca.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_099f4a492d5a404d9d06e8d4ddf58a65 = L.marker(
+                [48.1647676, 11.5865302],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_e0a2210b24724f3eb08016877fe3b793 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_099f4a492d5a404d9d06e8d4ddf58a65.setIcon(icon_e0a2210b24724f3eb08016877fe3b793);
+        
+    
+        var popup_5543f804424041cc92f55f18144d85f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ffa30d0ceda47b58d751a65258f54ef = $(`<div id="html_6ffa30d0ceda47b58d751a65258f54ef" style="width: 100.0%; height: 100.0%;">                                   <li>Leopoldstraße 214</li>             <li>Price: 1810  &euro;</li>             <li>Sqm: 78.69 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  23.00 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference: -480.45 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115812980 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_5543f804424041cc92f55f18144d85f3.setContent(html_6ffa30d0ceda47b58d751a65258f54ef);
+        
+
+        marker_099f4a492d5a404d9d06e8d4ddf58a65.bindPopup(popup_5543f804424041cc92f55f18144d85f3)
+        ;
+
+        
+    
+    
+            marker_099f4a492d5a404d9d06e8d4ddf58a65.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ad0fb25c7fb4a5985ba3c59423f255f = L.marker(
+                [48.1647676, 11.5865302],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_38994288bf9147068ce5fd874690e07b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_1ad0fb25c7fb4a5985ba3c59423f255f.setIcon(icon_38994288bf9147068ce5fd874690e07b);
+        
+    
+        var popup_d9ec337d969f426d97703e5e3f05ee9b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83815b81be4945b086dcfa58dbf2aed0 = $(`<div id="html_83815b81be4945b086dcfa58dbf2aed0" style="width: 100.0%; height: 100.0%;">                                   <li>Leopoldstraße 214</li>             <li>Price: 3080  &euro;</li>             <li>Sqm: 133.88 &#13217;</li>             <li>Rooms: 5</li>             <li>Price per Sqm:  23.01 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  789.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115812982 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_d9ec337d969f426d97703e5e3f05ee9b.setContent(html_83815b81be4945b086dcfa58dbf2aed0);
+        
+
+        marker_1ad0fb25c7fb4a5985ba3c59423f255f.bindPopup(popup_d9ec337d969f426d97703e5e3f05ee9b)
+        ;
+
+        
+    
+    
+            marker_1ad0fb25c7fb4a5985ba3c59423f255f.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0164e163e82d49a7aa7dd40ed41e375e = L.marker(
+                [48.1117046, 11.6573529],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_30fea783cfb343c1a4e7c70457dd06e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_0164e163e82d49a7aa7dd40ed41e375e.setIcon(icon_30fea783cfb343c1a4e7c70457dd06e8);
+        
+    
+        var popup_b4f30fc061134ad084b0f98fdcfbeb8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f6366d657634ce0af5275875adaf8bc = $(`<div id="html_5f6366d657634ce0af5275875adaf8bc" style="width: 100.0%; height: 100.0%;">                                   <li>Bergerwaldstraße 10</li>             <li>Price: 1990  &euro;</li>             <li>Sqm: 131.56 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  15.13 &euro;</li>             <li>Mean price in Trudering:  1840.00 &euro;</li>             <li>Difference:  150.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116231706 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_b4f30fc061134ad084b0f98fdcfbeb8e.setContent(html_5f6366d657634ce0af5275875adaf8bc);
+        
+
+        marker_0164e163e82d49a7aa7dd40ed41e375e.bindPopup(popup_b4f30fc061134ad084b0f98fdcfbeb8e)
+        ;
+
+        
+    
+    
+            marker_0164e163e82d49a7aa7dd40ed41e375e.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4e8b48835f4243e08ae50433781b6c83 = L.marker(
+                [48.1746861, 11.5865541980544],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_5371dc59e71f420695b38da33d5af223 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_4e8b48835f4243e08ae50433781b6c83.setIcon(icon_5371dc59e71f420695b38da33d5af223);
+        
+    
+        var popup_bc1e2f9a84c442a88d009f129da568b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0cfce930a32f468996e85a144713d3aa = $(`<div id="html_0cfce930a32f468996e85a144713d3aa" style="width: 100.0%; height: 100.0%;">                                   <li>Leopoldstraße  204</li>             <li>Price: 950  &euro;</li>             <li>Sqm: 23.25 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  40.86 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference: -1340.45 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117116155 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_bc1e2f9a84c442a88d009f129da568b3.setContent(html_0cfce930a32f468996e85a144713d3aa);
+        
+
+        marker_4e8b48835f4243e08ae50433781b6c83.bindPopup(popup_bc1e2f9a84c442a88d009f129da568b3)
+        ;
+
+        
+    
+    
+            marker_4e8b48835f4243e08ae50433781b6c83.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_768e079f9c394f8e9613b05954e0b3f3 = L.marker(
+                [48.10499655, 11.5497816722602],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_cbfcee208f714c93813b178126af3497 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_768e079f9c394f8e9613b05954e0b3f3.setIcon(icon_cbfcee208f714c93813b178126af3497);
+        
+    
+        var popup_37a78ab82f11473d9f96997cd0606ee6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0d7284669834481aec0f4cda66d07a0 = $(`<div id="html_c0d7284669834481aec0f4cda66d07a0" style="width: 100.0%; height: 100.0%;">                                   <li>Schäftlarnstr. 135</li>             <li>Price: 1040  &euro;</li>             <li>Sqm: 37 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  28.11 &euro;</li>             <li>Mean price in Thalkirchen:  1040.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/77182111 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_37a78ab82f11473d9f96997cd0606ee6.setContent(html_c0d7284669834481aec0f4cda66d07a0);
+        
+
+        marker_768e079f9c394f8e9613b05954e0b3f3.bindPopup(popup_37a78ab82f11473d9f96997cd0606ee6)
+        ;
+
+        
+    
+    
+            marker_768e079f9c394f8e9613b05954e0b3f3.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_abf154fed56b4795a41fcbee830b774a = L.marker(
+                [48.1746861, 11.5865541980544],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_60c8a79d0c504e0b95c5049120879477 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_abf154fed56b4795a41fcbee830b774a.setIcon(icon_60c8a79d0c504e0b95c5049120879477);
+        
+    
+        var popup_302e2af7576748dfa31c04b33e9a032b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14eb641df71449d0b2cb8e6488e26347 = $(`<div id="html_14eb641df71449d0b2cb8e6488e26347" style="width: 100.0%; height: 100.0%;">                                   <li>Leopoldstraße 204</li>             <li>Price: 2380  &euro;</li>             <li>Sqm: 107.3 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  22.18 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  89.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116735648 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_302e2af7576748dfa31c04b33e9a032b.setContent(html_14eb641df71449d0b2cb8e6488e26347);
+        
+
+        marker_abf154fed56b4795a41fcbee830b774a.bindPopup(popup_302e2af7576748dfa31c04b33e9a032b)
+        ;
+
+        
+    
+    
+            marker_abf154fed56b4795a41fcbee830b774a.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e08837f355cc405eb42bd4954f340ab1 = L.marker(
+                [48.1091117, 11.6651697],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_5d6852be5d2c489783022b9a830e1086 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_e08837f355cc405eb42bd4954f340ab1.setIcon(icon_5d6852be5d2c489783022b9a830e1086);
+        
+    
+        var popup_420a52a7ffc649f08b9c1159cfa04931 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4623d5fbaead4959aa8f0bd483e8326f = $(`<div id="html_4623d5fbaead4959aa8f0bd483e8326f" style="width: 100.0%; height: 100.0%;">                                   <li>Dachsteinstraße 5</li>             <li>Price: 1690  &euro;</li>             <li>Sqm: 88.93 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  19.00 &euro;</li>             <li>Mean price in Trudering:  1840.00 &euro;</li>             <li>Difference: -150.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/114533724 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_420a52a7ffc649f08b9c1159cfa04931.setContent(html_4623d5fbaead4959aa8f0bd483e8326f);
+        
+
+        marker_e08837f355cc405eb42bd4954f340ab1.bindPopup(popup_420a52a7ffc649f08b9c1159cfa04931)
+        ;
+
+        
+    
+    
+            marker_e08837f355cc405eb42bd4954f340ab1.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ecd027b8d9c4d88ae8fa080047be93a = L.marker(
+                [48.1247722, 11.5992913],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_fdddf5b44a6d4aea8e5763996184cac7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_5ecd027b8d9c4d88ae8fa080047be93a.setIcon(icon_fdddf5b44a6d4aea8e5763996184cac7);
+        
+    
+        var popup_e6b4d26400ab41f8865d51fc4009ad04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6be94603c5354e1686e0368949a49141 = $(`<div id="html_6be94603c5354e1686e0368949a49141" style="width: 100.0%; height: 100.0%;">                                   <li>Orleansstraße 20</li>             <li>Price: 1600  &euro;</li>             <li>Sqm: 56.03 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  28.56 &euro;</li>             <li>Mean price in Haidhausen:  2547.00 &euro;</li>             <li>Difference: -947.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115992386 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_e6b4d26400ab41f8865d51fc4009ad04.setContent(html_6be94603c5354e1686e0368949a49141);
+        
+
+        marker_5ecd027b8d9c4d88ae8fa080047be93a.bindPopup(popup_e6b4d26400ab41f8865d51fc4009ad04)
+        ;
+
+        
+    
+    
+            marker_5ecd027b8d9c4d88ae8fa080047be93a.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_556ed04ee5a846a4966be1d43d1a4001 = L.marker(
+                [48.1705385, 11.5842965195404],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_c45ac1025fbf441a866a8ba111d8687b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_556ed04ee5a846a4966be1d43d1a4001.setIcon(icon_c45ac1025fbf441a866a8ba111d8687b);
+        
+    
+        var popup_41c05055a0184c2e8a5c4b62825b1ff5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2f14ca621744c188579bc44b1a9220a = $(`<div id="html_a2f14ca621744c188579bc44b1a9220a" style="width: 100.0%; height: 100.0%;">                                   <li>Tristanstr. 11</li>             <li>Price: 2350  &euro;</li>             <li>Sqm: 106 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  22.17 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  59.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/87232680 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_41c05055a0184c2e8a5c4b62825b1ff5.setContent(html_a2f14ca621744c188579bc44b1a9220a);
+        
+
+        marker_556ed04ee5a846a4966be1d43d1a4001.bindPopup(popup_41c05055a0184c2e8a5c4b62825b1ff5)
+        ;
+
+        
+    
+    
+            marker_556ed04ee5a846a4966be1d43d1a4001.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59ffab16709d42288dbe919e6bac3d82 = L.marker(
+                [48.1578271, 11.5484999],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_3d353b4a1a5440dfa2eab7d0f2483acf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_59ffab16709d42288dbe919e6bac3d82.setIcon(icon_3d353b4a1a5440dfa2eab7d0f2483acf);
+        
+    
+        var popup_3d70189e31c642f18972e3a86970f8f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_deef05f1092441a2b0312916e5caa757 = $(`<div id="html_deef05f1092441a2b0312916e5caa757" style="width: 100.0%; height: 100.0%;">                                   <li>Hilblestr. 7</li>             <li>Price: 1890  &euro;</li>             <li>Sqm: 116 &#13217;</li>             <li>Rooms: 4,5</li>             <li>Price per Sqm:  16.29 &euro;</li>             <li>Mean price in Neuhausen:  1611.00 &euro;</li>             <li>Difference:  279.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116020432 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_3d70189e31c642f18972e3a86970f8f7.setContent(html_deef05f1092441a2b0312916e5caa757);
+        
+
+        marker_59ffab16709d42288dbe919e6bac3d82.bindPopup(popup_3d70189e31c642f18972e3a86970f8f7)
+        ;
+
+        
+    
+    
+            marker_59ffab16709d42288dbe919e6bac3d82.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_638931f58be9490fab8da6cdbc4ba4bf = L.marker(
+                [48.1730248, 11.5868617],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_ca86bd76c281490cb9a647d38a3599f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_638931f58be9490fab8da6cdbc4ba4bf.setIcon(icon_ca86bd76c281490cb9a647d38a3599f0);
+        
+    
+        var popup_b57575431f42468cbb7a55227c9b6db6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e08ca4cf4a047eaaa6e6dd25b29315b = $(`<div id="html_8e08ca4cf4a047eaaa6e6dd25b29315b" style="width: 100.0%; height: 100.0%;">                                   <li>Leopoldstraße 180</li>             <li>Price: 3600  &euro;</li>             <li>Sqm: 109 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  33.03 &euro;</li>             <li>Mean price in Schwabing:  2290.45 &euro;</li>             <li>Difference:  1309.55 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/113390414 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_b57575431f42468cbb7a55227c9b6db6.setContent(html_8e08ca4cf4a047eaaa6e6dd25b29315b);
+        
+
+        marker_638931f58be9490fab8da6cdbc4ba4bf.bindPopup(popup_b57575431f42468cbb7a55227c9b6db6)
+        ;
+
+        
+    
+    
+            marker_638931f58be9490fab8da6cdbc4ba4bf.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_039b760ab627441e979f6ccdd63e1d56 = L.marker(
+                [48.1800987, 11.5034734],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_074c448fdcd34628a696248bb00cad4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_039b760ab627441e979f6ccdd63e1d56.setIcon(icon_074c448fdcd34628a696248bb00cad4d);
+        
+    
+        var popup_2d81e38e76fa4c8290aef00a56cc1ee6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a0ecfd01042485dbc1cf4f572d4160f = $(`<div id="html_8a0ecfd01042485dbc1cf4f572d4160f" style="width: 100.0%; height: 100.0%;">                                   <li>Berta-Hummel-Straße  6</li>             <li>Price: 1870  &euro;</li>             <li>Sqm: 92.85 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  20.14 &euro;</li>             <li>Mean price in Moosach:  1870.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116956303 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_2d81e38e76fa4c8290aef00a56cc1ee6.setContent(html_8a0ecfd01042485dbc1cf4f572d4160f);
+        
+
+        marker_039b760ab627441e979f6ccdd63e1d56.bindPopup(popup_2d81e38e76fa4c8290aef00a56cc1ee6)
+        ;
+
+        
+    
+    
+            marker_039b760ab627441e979f6ccdd63e1d56.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_66340cc2d97746c783c3e66c885c3ac8 = L.marker(
+                [48.1057461, 11.4735366],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_62fbf7cde0f549b6adb721bc7024c75d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_66340cc2d97746c783c3e66c885c3ac8.setIcon(icon_62fbf7cde0f549b6adb721bc7024c75d);
+        
+    
+        var popup_aeccc1f13dc04decbd1d6d0a4f9ce2bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc3fb57f453e4665a4d3336d385f98f8 = $(`<div id="html_cc3fb57f453e4665a4d3336d385f98f8" style="width: 100.0%; height: 100.0%;">                                   <li>Josef-Sterr-Str. 13</li>             <li>Price: 1200  &euro;</li>             <li>Sqm: 60 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  20.00 &euro;</li>             <li>Mean price in Hadern:  1200.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/115403268 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_aeccc1f13dc04decbd1d6d0a4f9ce2bf.setContent(html_cc3fb57f453e4665a4d3336d385f98f8);
+        
+
+        marker_66340cc2d97746c783c3e66c885c3ac8.bindPopup(popup_aeccc1f13dc04decbd1d6d0a4f9ce2bf)
+        ;
+
+        
+    
+    
+            marker_66340cc2d97746c783c3e66c885c3ac8.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_981a1599d7564790b807a99abb3009cd = L.marker(
+                [48.1140131, 11.5019819],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_2c482a2ae10f423d9733abf985139935 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_981a1599d7564790b807a99abb3009cd.setIcon(icon_2c482a2ae10f423d9733abf985139935);
+        
+    
+        var popup_2e10812897f3433992a1fb760965d0eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f4c712effe74b92b71ffd4f8b9e85f2 = $(`<div id="html_6f4c712effe74b92b71ffd4f8b9e85f2" style="width: 100.0%; height: 100.0%;">                                   <li>Fürstenriederstr. 278a</li>             <li>Price: 1100  &euro;</li>             <li>Sqm: 46.53 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  23.64 &euro;</li>             <li>Mean price in Sendling-Westpark:  990.00 &euro;</li>             <li>Difference:  110.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117017126 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_2e10812897f3433992a1fb760965d0eb.setContent(html_6f4c712effe74b92b71ffd4f8b9e85f2);
+        
+
+        marker_981a1599d7564790b807a99abb3009cd.bindPopup(popup_2e10812897f3433992a1fb760965d0eb)
+        ;
+
+        
+    
+    
+            marker_981a1599d7564790b807a99abb3009cd.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79d8d029e8c241e18177776386e2c726 = L.marker(
+                [48.1045446, 11.6043589],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_c97777e0055d4f9ab215c08eb654d728 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_79d8d029e8c241e18177776386e2c726.setIcon(icon_c97777e0055d4f9ab215c08eb654d728);
+        
+    
+        var popup_82160fcf6b7442c08c2c92fedbeb0dd7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_341285f763ca40a1b286a7f7ae52d610 = $(`<div id="html_341285f763ca40a1b286a7f7ae52d610" style="width: 100.0%; height: 100.0%;">                                   <li>Ständlerstraße 45</li>             <li>Price: 729  &euro;</li>             <li>Sqm: 24 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  30.38 &euro;</li>             <li>Mean price in Ramersdorf:  729.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/112746800 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_82160fcf6b7442c08c2c92fedbeb0dd7.setContent(html_341285f763ca40a1b286a7f7ae52d610);
+        
+
+        marker_79d8d029e8c241e18177776386e2c726.bindPopup(popup_82160fcf6b7442c08c2c92fedbeb0dd7)
+        ;
+
+        
+    
+    
+            marker_79d8d029e8c241e18177776386e2c726.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_24ff4467d3224260841f621ac74f32cb = L.marker(
+                [48.1582247, 11.6410588],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_b43beaaa7d8c419a9930981ab2863c6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_24ff4467d3224260841f621ac74f32cb.setIcon(icon_b43beaaa7d8c419a9930981ab2863c6e);
+        
+    
+        var popup_d9d8f99651c04c91b1a032c0a3530d25 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98fdd2982406400a89e95f27187f06f3 = $(`<div id="html_98fdd2982406400a89e95f27187f06f3" style="width: 100.0%; height: 100.0%;">                                   <li>Freischützstraße 17</li>             <li>Price: 1200  &euro;</li>             <li>Sqm: 63 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  19.05 &euro;</li>             <li>Mean price in Bogenhausen:  1816.25 &euro;</li>             <li>Difference: -616.25 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117035032 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_d9d8f99651c04c91b1a032c0a3530d25.setContent(html_98fdd2982406400a89e95f27187f06f3);
+        
+
+        marker_24ff4467d3224260841f621ac74f32cb.bindPopup(popup_d9d8f99651c04c91b1a032c0a3530d25)
+        ;
+
+        
+    
+    
+            marker_24ff4467d3224260841f621ac74f32cb.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69d1c152975047309d76f66f6acf1964 = L.marker(
+                [48.1599094, 11.5150311],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_10da200416984df3a2e3f1d81ea3741b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_69d1c152975047309d76f66f6acf1964.setIcon(icon_10da200416984df3a2e3f1d81ea3741b);
+        
+    
+        var popup_445a73f95ee54c5584a33f2320d56518 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f15a09af61b4d8aa6539efb2194fc28 = $(`<div id="html_0f15a09af61b4d8aa6539efb2194fc28" style="width: 100.0%; height: 100.0%;">                                   <li>Tintorettostraße 7</li>             <li>Price: 998  &euro;</li>             <li>Sqm: 59 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  16.92 &euro;</li>             <li>Mean price in Neuhausen:  1611.00 &euro;</li>             <li>Difference: -613.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117013768 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_445a73f95ee54c5584a33f2320d56518.setContent(html_0f15a09af61b4d8aa6539efb2194fc28);
+        
+
+        marker_69d1c152975047309d76f66f6acf1964.bindPopup(popup_445a73f95ee54c5584a33f2320d56518)
+        ;
+
+        
+    
+    
+            marker_69d1c152975047309d76f66f6acf1964.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e917f29a58e9467a9d4214937a0754f2 = L.marker(
+                [48.1338643, 11.5109822],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_003edd9582d64e47b820bc201dfcd1fa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_e917f29a58e9467a9d4214937a0754f2.setIcon(icon_003edd9582d64e47b820bc201dfcd1fa);
+        
+    
+        var popup_ee8ab2309c3246988d29dab41327b2a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_955eb567805642b6a39617daade881b0 = $(`<div id="html_955eb567805642b6a39617daade881b0" style="width: 100.0%; height: 100.0%;">                                   <li>Justinus-Kerner-Str. 5</li>             <li>Price: 1500  &euro;</li>             <li>Sqm: 98 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  15.31 &euro;</li>             <li>Mean price in Laim:  1310.00 &euro;</li>             <li>Difference:  190.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116457547 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_ee8ab2309c3246988d29dab41327b2a0.setContent(html_955eb567805642b6a39617daade881b0);
+        
+
+        marker_e917f29a58e9467a9d4214937a0754f2.bindPopup(popup_ee8ab2309c3246988d29dab41327b2a0)
+        ;
+
+        
+    
+    
+            marker_e917f29a58e9467a9d4214937a0754f2.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b49db7b01eae4884a5f2275de4893f66 = L.marker(
+                [48.1494092, 11.5531742],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_3b272bc42fb747209e7291723205ab32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_b49db7b01eae4884a5f2275de4893f66.setIcon(icon_3b272bc42fb747209e7291723205ab32);
+        
+    
+        var popup_a5712b4e463e47768a2a512ffe008d63 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_655bb4fc2b9e43d68aba39322aa058ce = $(`<div id="html_655bb4fc2b9e43d68aba39322aa058ce" style="width: 100.0%; height: 100.0%;">                                   <li>Erzgießereistraße 6</li>             <li>Price: 2150  &euro;</li>             <li>Sqm: 107 &#13217;</li>             <li>Rooms: 4</li>             <li>Price per Sqm:  20.09 &euro;</li>             <li>Mean price in Maxvorstadt:  2150.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/117013996 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_a5712b4e463e47768a2a512ffe008d63.setContent(html_655bb4fc2b9e43d68aba39322aa058ce);
+        
+
+        marker_b49db7b01eae4884a5f2275de4893f66.bindPopup(popup_a5712b4e463e47768a2a512ffe008d63)
+        ;
+
+        
+    
+    
+            marker_b49db7b01eae4884a5f2275de4893f66.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d468cc66f15746cebb446d511a6557b7 = L.marker(
+                [48.1301608, 11.483557],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_a0990c692a394c7db4b492bc0a7cca6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_d468cc66f15746cebb446d511a6557b7.setIcon(icon_a0990c692a394c7db4b492bc0a7cca6c);
+        
+    
+        var popup_2be4de06ef0c4dc18670631651394331 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b6be6fdfd124aca9ddd9af04b46329f = $(`<div id="html_8b6be6fdfd124aca9ddd9af04b46329f" style="width: 100.0%; height: 100.0%;">                                   <li>Senftenauerstraße 000</li>             <li>Price: 1120  &euro;</li>             <li>Sqm: 50 &#13217;</li>             <li>Rooms: 2</li>             <li>Price per Sqm:  22.40 &euro;</li>             <li>Mean price in Laim:  1310.00 &euro;</li>             <li>Difference: -190.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116175044 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_2be4de06ef0c4dc18670631651394331.setContent(html_8b6be6fdfd124aca9ddd9af04b46329f);
+        
+
+        marker_d468cc66f15746cebb446d511a6557b7.bindPopup(popup_2be4de06ef0c4dc18670631651394331)
+        ;
+
+        
+    
+    
+            marker_d468cc66f15746cebb446d511a6557b7.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_17f894f9119b4a688bfd9cb4e708b516 = L.marker(
+                [48.1350567, 11.5803375],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_19435669995e4a0991ab3603c3e4472f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_17f894f9119b4a688bfd9cb4e708b516.setIcon(icon_19435669995e4a0991ab3603c3e4472f);
+        
+    
+        var popup_53acf9caaeab44299a85f332837e3755 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ea4f39aa1404dd39c2ea3d05acd93a0 = $(`<div id="html_3ea4f39aa1404dd39c2ea3d05acd93a0" style="width: 100.0%; height: 100.0%;">                                   <li>Westenriederstr. 45</li>             <li>Price: 2958  &euro;</li>             <li>Sqm: 86 &#13217;</li>             <li>Rooms: 2,5</li>             <li>Price per Sqm:  34.40 &euro;</li>             <li>Mean price in Altstadt:  2891.50 &euro;</li>             <li>Difference:  66.50 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116918134 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_53acf9caaeab44299a85f332837e3755.setContent(html_3ea4f39aa1404dd39c2ea3d05acd93a0);
+        
+
+        marker_17f894f9119b4a688bfd9cb4e708b516.bindPopup(popup_53acf9caaeab44299a85f332837e3755)
+        ;
+
+        
+    
+    
+            marker_17f894f9119b4a688bfd9cb4e708b516.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f52c4fbb20074f98bb3c67b710b787c4 = L.marker(
+                [48.1507311, 11.4806515],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_82b9f4c3437042d49e834ddd12986806 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f52c4fbb20074f98bb3c67b710b787c4.setIcon(icon_82b9f4c3437042d49e834ddd12986806);
+        
+    
+        var popup_d7d292a2406b4fc9bb2eb52a1f0fae27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d186f4100b9e4384b707a289f4b35137 = $(`<div id="html_d186f4100b9e4384b707a289f4b35137" style="width: 100.0%; height: 100.0%;">                                   <li>Hermine-von-Parish-Straße 60</li>             <li>Price: 1975  &euro;</li>             <li>Sqm: 94 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  21.01 &euro;</li>             <li>Mean price in Obermenzing:  1975.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/116876815 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_d7d292a2406b4fc9bb2eb52a1f0fae27.setContent(html_d186f4100b9e4384b707a289f4b35137);
+        
+
+        marker_f52c4fbb20074f98bb3c67b710b787c4.bindPopup(popup_d7d292a2406b4fc9bb2eb52a1f0fae27)
+        ;
+
+        
+    
+    
+            marker_f52c4fbb20074f98bb3c67b710b787c4.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7a6cc057d5f44774932200b74f932a76 = L.marker(
+                [48.1428094, 11.5987892],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_d6a04f388b934986b7d15ea6d03018dc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_7a6cc057d5f44774932200b74f932a76.setIcon(icon_d6a04f388b934986b7d15ea6d03018dc);
+        
+    
+        var popup_6fa82f7d6df94ee1ae20c20c48ded7fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e58848eba354642891f59ab2d52e6a9 = $(`<div id="html_6e58848eba354642891f59ab2d52e6a9" style="width: 100.0%; height: 100.0%;">                                   <li>Maria-Theresia-Straße 20</li>             <li>Price: 115  &euro;</li>             <li>Sqm: 12 &#13217;</li>             <li>Rooms: 1</li>             <li>Price per Sqm:  9.58 &euro;</li>             <li>Mean price in Bogenhausen:  1816.25 &euro;</li>             <li>Difference: -1701.25 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/112799684 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_6fa82f7d6df94ee1ae20c20c48ded7fe.setContent(html_6e58848eba354642891f59ab2d52e6a9);
+        
+
+        marker_7a6cc057d5f44774932200b74f932a76.bindPopup(popup_6fa82f7d6df94ee1ae20c20c48ded7fe)
+        ;
+
+        
+    
+    
+            marker_7a6cc057d5f44774932200b74f932a76.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38fa1585ec90411297eda39bc054db42 = L.marker(
+                [48.2070973, 11.5602366],
+                {}
+            ).addTo(marker_cluster_309fc00d620748c697a342cc5377e67b);
+        
+    
+            var icon_e3befedc1482412fb39aaff38df957ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_38fa1585ec90411297eda39bc054db42.setIcon(icon_e3befedc1482412fb39aaff38df957ae);
+        
+    
+        var popup_6e0775e9c66f4aec810a12b1475dfec5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c2d8dd838c5e40b387fab8bf67351573 = $(`<div id="html_c2d8dd838c5e40b387fab8bf67351573" style="width: 100.0%; height: 100.0%;">                                   <li>Caracciolastraße 0</li>             <li>Price: 2300  &euro;</li>             <li>Sqm: 122 &#13217;</li>             <li>Rooms: 3</li>             <li>Price per Sqm:  18.85 &euro;</li>             <li>Mean price in Hasenbergl:  2300.00 &euro;</li>             <li>Difference:  0.00 &euro;</li>                                   <h4><a href=https://www.immobilienscout24.de/expose/112566463 target='_blank'>Original listing</a></h4>             </div>`)[0];
+            popup_6e0775e9c66f4aec810a12b1475dfec5.setContent(html_c2d8dd838c5e40b387fab8bf67351573);
+        
+
+        marker_38fa1585ec90411297eda39bc054db42.bindPopup(popup_6e0775e9c66f4aec810a12b1475dfec5)
+        ;
+
+        
+    
+    
+            marker_38fa1585ec90411297eda39bc054db42.bindTooltip(
                 `<div>
                      Click for more info
                  </div>`,

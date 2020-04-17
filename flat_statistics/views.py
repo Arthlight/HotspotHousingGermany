@@ -19,7 +19,7 @@ class ChartData(View):
     # TODO: that I'll need the berlin data
     def get(request, *args, **kwargs):
         labels = ['Prenzlauer Berg', 'Kreuzberg', 'Charlottenburg', 'Friedrichshain', 'Mitte', 'Neuköln']
-        items = [1000, 900, 600, 422, 400, 380]
+        items = [20, 18, 14, 12, 10, 7]
         data = {
             'labels': labels,
             'data': items,

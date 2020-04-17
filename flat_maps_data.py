@@ -14,23 +14,21 @@ cursor = connection.cursor()
 def data_for_berlin() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='Berlin'""")
 
-    print("before fetch")
-    for row in cursor.fetchmany(100):
-        print("fetch")
+    for row in cursor.fetchall():
         yield row
 
 
 def data_for_munich() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='München'""")
 
-    for row in cursor.fetchmany(100):
+    for row in cursor.fetchall():
         yield row
 
 
 def data_for_hamburg() -> tuple:
     cursor.execute("""SELECT * FROM flat_data WHERE city='Hamburg'""")
 
-    for row in cursor.fetchmany(100):
+    for row in cursor.fetchall():
         yield row
 
 
@@ -47,13 +45,16 @@ def get_lat_long_(street: str) -> tuple:
 
     # I can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
     # ( 60 requests per minute )
-    # TODO: Maybe put this in a try except block in case there are errors with the api or connection
-    time.sleep(2)
-    response = requests.get(url=url, params=data)
-    decoded_response = json.loads(response.content)
-    lat = decoded_response[0].get('lat')
-    long = decoded_response[0].get('lon')
+    try:
+        response = requests.get(url=url, params=data)
+    except Exception:
+        pass
+    else:
+        decoded_response = json.loads(response.content)
+        lat = decoded_response[0].get('lat')
+        long = decoded_response[0].get('lon')
 
-    return lat, long
+        time.sleep(2)
+        return lat, long
 
 
