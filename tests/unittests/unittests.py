@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+sys.path.append('$(pwd)/Flat_Crawler_Django')
 import unittest
 import flat_maps_comp
 

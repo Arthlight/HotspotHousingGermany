@@ -1,22 +1,23 @@
 import folium
 from folium.plugins import MarkerCluster
+import sys
+sys.path.append('$(pwd)/Flat_Crawler_Django')
 import flat_maps_data
 import flat_maps_comp
 
 data_html = """
-        
             
-            <li>{street}</li>
-            <li>Price: {price} &euro;</li>
-            <li>Sqm: {sqm} &#13217;</li>
-            <li>Rooms: {rooms}</li>
-            <li>Price per Sqm: {psqm: .2f} &euro;</li>
-            <li>Mean price in {area}: {mean: .2f} &euro;</li>
-            <li>Difference: {difference: .2f} &euro;</li>
+                <li>{street}</li>
+                <li>Price: {price} &euro;</li>
+                <li>Sqm: {sqm} &#13217;</li>
+                <li>Rooms: {rooms}</li>
+                <li>Price per Sqm: {psqm: .2f} &euro;</li>
+                <li>Mean price in {area}: {mean: .2f} &euro;</li>
+                <li>Difference: {difference: .2f} &euro;</li>
             
-        
-            <h4><a href={url} target='_blank'>Original listing</a></h4>
+                <h4><a href={url} target='_blank'>Original listing</a></h4>
             """
+
 
 def display_berlin_data():
 
@@ -35,11 +36,6 @@ def display_berlin_data():
         price_per_sqm = float(price) / float(sqm)
         difference = float(price) - mean_price_area
 
-
-        # TODO: Try to make the marker as good looking as poosible, maybe even with in-line css
-        # TODO: If you can't figure out how to format the HTML properly, look into folium marker docs and tutorials etc
-
-        #TODO: PUT THE MARKER HTML IN ONE PLACE, DON'T REPEAT IT THREE TIMES
         marker_html = data_html.format(
                         street=street,
                         price=price,
@@ -53,6 +49,8 @@ def display_berlin_data():
                     )
 
         lat, long = flat_maps_data.get_lat_long_(data[2] + ' ' + data[4])
+        if (lat, long) == (None, None):
+            continue
         print(lat, long)
         folium.Marker(
             location=(lat, long),
@@ -65,8 +63,6 @@ def display_berlin_data():
     print('out of the for loop')
     berlin_map.add_child(berlin_cluster)
     berlin_map.save('templates/berlin.html')
-
-
 
 
 def display_hamburg_data():
@@ -100,6 +96,9 @@ def display_hamburg_data():
                     )
 
         lat, long = flat_maps_data.get_lat_long_(data[2] + ' ' + data[4])
+        if (lat, long) == (None, None):
+            continue
+        print(lat, long)
         folium.Marker(
             location=(lat, long),
             popup=marker_html,
@@ -144,6 +143,9 @@ def display_munich_data():
                     )
 
         lat, long = flat_maps_data.get_lat_long_(data[2] + ' ' + data[4])
+        if (lat, long) == (None, None):
+            continue
+        print(lat, long)
         folium.Marker(
             location=(lat, long),
             popup=marker_html,
@@ -157,6 +159,6 @@ def display_munich_data():
 
 
 all_areas_data = flat_maps_comp.get_area_data()
-display_berlin_data()
-display_munich_data()
-display_hamburg_data()
+#display_berlin_data()
+#display_munich_data()
+#display_hamburg_data()

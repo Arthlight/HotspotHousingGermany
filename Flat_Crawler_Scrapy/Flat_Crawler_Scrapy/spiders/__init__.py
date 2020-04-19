@@ -19,8 +19,8 @@ class ImmobilienScoutSpider(scrapy.Spider):
         all_flats = response.xpath('//div[@class="result-list-entry__data"]')
 
         for flatdata in all_flats:
-            price = flatdata.xpath('.//dd[@class="font-nowrap font-highlight font-tabular"]/text()').get()
-            address = flatdata.xpath('.//button[@title="Auf der Karte anzeigen"]/text()').get().split(', ')
+            price = flatdata.get()
+            address = flatdata.get().split(', ')
             
             # If price is None we know this is not a normal listing, but a project still in progress or an ad so we
             # continue. If the length of the address is <= 2, we know we didn't get a street address and so ignore this
@@ -29,13 +29,13 @@ class ImmobilienScoutSpider(scrapy.Spider):
                 continue
 
             sqm = flatdata.xpath('.//dd[@class="font-nowrap font-highlight font-tabular"]/text()').getall()[1].split()[0]
-            street = flatdata.xpath('.//button[@title="Auf der Karte anzeigen"]/text()').get().split(', ')[0].strip()
-            area = flatdata.xpath('.//button[@title="Auf der Karte anzeigen"]/text()').get().split(', ')[1]
-            city = flatdata.xpath('.//button[@title="Auf der Karte anzeigen"]/text()').get().split(', ')[2]
-            rooms = flatdata.xpath('.//span[@class="onlyLarge"]/text()').get()
+            street = flatdata.get().split(', ')[0].strip()
+            area = flatdata.get().split(', ')[1]
+            city = flatdata.get().split(', ')[2]
+            rooms = flatdata.get()
             detail_view_url = (
                     'https://www.immobilienscout24.de/expose/' +
-                    flatdata.xpath('.//button[@aria-label="zum Merkzettel hinzufügen"]/@data-id').get()
+                    flatdata.get()
             )
 
             # Special case for price
@@ -71,7 +71,7 @@ class ImmobilienScoutSpider(scrapy.Spider):
 
             yield flat_items
 
-        next_page = response.xpath('//a[@data-nav-next-page="true"]/@href').get()
+        next_page = response.get()
         if next_page:
             yield response.follow(next_page, self.parse)
 
@@ -90,17 +90,15 @@ class HousinganywhereSpider(scrapy.Spider):
             '//div[@class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"]'
         )
         flat_items = FlatCrawlerScrapyItem()
-        city = response.xpath(
-            '//h1[@class="MuiTypography-root jss378 MuiTypography-subtitle1 MuiTypography-noWrap"]/text()'
-        ).get().split()[-2].replace(',', '')
+        city = response.get().split()[-2].replace(',', '')
 
         for flat in all_flats:
-            price = flat.xpath('.//span[@data-test-locator="Listing Card Rent"]/text()').get()
-            street = flat.xpath('.//h2[@data-test-locator="Listing Card Title"]/text()').get().split('at ')[1]
+            price = flat.get()
+            street = flat.get().split('at ')[1]
             sqm = flat.xpath('.//li[@data-test-locator="Listing Card Extra Info"]/text()').getall()[-1].split()[1]
             detail_view_url = (
                     'https://housinganywhere.com' +
-                    flat.xpath('.//a[@data-test-locator="Listing Card"]/@href').get()
+                    flat.get()
             )
 
             flat_items['price'] = price
@@ -111,7 +109,7 @@ class HousinganywhereSpider(scrapy.Spider):
 
             yield flat_items
 
-        next_page = response.xpath('//a[@data-test-locator="Pager Next Page"]/@href').get()
+        next_page = response.get()
 
         if next_page:
             yield response.follow(next_page, self.parse)

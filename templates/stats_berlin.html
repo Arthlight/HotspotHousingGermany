@@ -9,6 +9,7 @@
         $.ajax({
             method: "GET",
             url: endpoint,
+            data: {'city': 'Berlin'},
             success: function (response) {
                 defaultData = response.data;
                 labels = response.labels;
@@ -26,7 +27,7 @@
                 data: {
                     labels: labels,
                     datasets: [{
-                        label: 'MEAN PRICE PER SQM IN BERLIN',
+                        label: 'MEAN PRICE IN BERLIN',
                         data: defaultData,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.6)',

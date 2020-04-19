@@ -7,7 +7,7 @@ import time
 
 #TODO: TOWARDS THE END, CHANGE THE CODE IN THE WAY SO THAT IT CONFORMS TO GOOGLES STYLE GUIDELINE
 
-connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db')
+connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db', check_same_thread=False)
 cursor = connection.cursor()
 
 
@@ -48,13 +48,18 @@ def get_lat_long_(street: str) -> tuple:
     try:
         response = requests.get(url=url, params=data)
     except Exception:
-        pass
+        return (None, None)
     else:
-        decoded_response = json.loads(response.content)
-        lat = decoded_response[0].get('lat')
-        long = decoded_response[0].get('lon')
+        try:
+            decoded_response = json.loads(response.content)
+            lat = decoded_response[0].get('lat')
+            long = decoded_response[0].get('lon')
+        except KeyError:
+            return (None, None)
+        else:
+            time.sleep(2)
+            return (lat, long)
 
-        time.sleep(2)
-        return lat, long
+
 
 
