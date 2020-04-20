@@ -19,13 +19,13 @@ class HamburgStatsView(TemplateView):
 
 def get_stats(request, *args, **kwargs):
     # TODO: do error handling here
-    # TODO: You probably need to amend the chart configs since there are so many areas that it doesn't have enough
-    # TODO: room to display them all
     city = request.GET.get('city', '')
-    flat_data = flat_maps_comp.get_area_data()
-    area_table = flat_data.get_all_areas(city)
-    labels = [key for key in area_table]
-    items = [area_table[area][1] // area_table[area][0] for area in labels]
+    flat_data = flat_maps_comp.get_areas_by_city(city=city)
+    area_table = flat_data.get_all_areas(city=city)
+
+    # sorted such that the areas are being displayed from the most expensive one down to the least expensive one
+    labels = sorted([key for key in area_table], key=lambda key: area_table[key][1], reverse=True)
+    items = sorted([area_table[area][1] // area_table[area][0] for area in labels], reverse=True)
     data = {
         'labels': labels,
         'data': items,

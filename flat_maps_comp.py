@@ -37,9 +37,9 @@ class FlatData:
         return current_hash_table
 
 
-
 def get_area_data() -> FlatData:
-        # TODO: Put an additional flag so that you only query for specific cities in flat_statistics/views.py
+    # TODO: Put an additional flag so that you only query for specific cities in flat_statistics/views.py
+
 
         data_for_all_cities = FlatData()
         for munich_data in flat_maps_data.data_for_munich():
@@ -63,13 +63,37 @@ def get_area_data() -> FlatData:
             city = hamburg_data[4]
             data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
-
         return data_for_all_cities
 
 
+def get_areas_by_city(city):
 
+    if city == 'Berlin':
+        data_for_all_cities = FlatData()
+        for berlin_data in flat_maps_data.data_for_berlin():
+            area = berlin_data[3]
+            price = berlin_data[0]
+            city = berlin_data[4]
+            data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
+        return data_for_all_cities
 
+    if city == 'München':
+        data_for_all_cities = FlatData()
+        for munich_data in flat_maps_data.data_for_munich():
+            area = munich_data[3]
+            price = munich_data[0]
+            city = munich_data[4]
+            data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
+        return data_for_all_cities
 
+    if city == 'Hamburg':
+        data_for_all_cities = FlatData()
+        for hamburg_data in flat_maps_data.data_for_hamburg():
+            area = hamburg_data[3]
+            price = hamburg_data[0]
+            city = hamburg_data[4]
+            data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
+        return data_for_all_cities

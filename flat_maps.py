@@ -6,16 +6,15 @@ import flat_maps_data
 import flat_maps_comp
 
 data_html = """
+            <li>{street}</li>
+            <li>Price: {price} &euro;</li>
+            <li>Sqm: {sqm} &#13217;</li>
+            <li>Rooms: {rooms}</li>
+            <li>Price per Sqm: {psqm: .2f} &euro;</li>
+            <li>Mean price in {area}: {mean: .2f} &euro;</li>
+            <li>Difference: {difference: .2f} &euro;</li>
             
-                <li>{street}</li>
-                <li>Price: {price} &euro;</li>
-                <li>Sqm: {sqm} &#13217;</li>
-                <li>Rooms: {rooms}</li>
-                <li>Price per Sqm: {psqm: .2f} &euro;</li>
-                <li>Mean price in {area}: {mean: .2f} &euro;</li>
-                <li>Difference: {difference: .2f} &euro;</li>
-            
-                <h4><a href={url} target='_blank'>Original listing</a></h4>
+            <h6><a href={url} target='_blank'>Original listing</a></h6>
             """
 
 
