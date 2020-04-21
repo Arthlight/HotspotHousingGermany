@@ -44,7 +44,7 @@ def get_lat_long_(street: str) -> tuple:
     }
 
     # I can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
-    # ( 60 requests per minute )
+    # ( 60 requests per minute at most)
     try:
         response = requests.get(url=url, params=data)
     except Exception:

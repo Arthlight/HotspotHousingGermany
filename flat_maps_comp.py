@@ -1,6 +1,6 @@
-import flat_maps_data
 import sys
-sys.path.append('$(pwd)/Flat_Crawler_Django')
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+import flat_maps_data
 
 
 class FlatData:
@@ -29,7 +29,7 @@ class FlatData:
         current_hash_table = self.all_city_hash_tables.get(city)
 
         count, price = current_hash_table.get(area)
-        return price / count
+        return round(price / count, 2)
 
     def get_all_areas(self, city: str) -> dict:
         current_hash_table = self.all_city_hash_tables.get(city)
@@ -38,32 +38,29 @@ class FlatData:
 
 
 def get_area_data() -> FlatData:
-    # TODO: Put an additional flag so that you only query for specific cities in flat_statistics/views.py
+    data_for_all_cities = FlatData()
+    for munich_data in flat_maps_data.data_for_munich():
+        print('in get munich')
+        area = munich_data[3]
+        price = munich_data[0]
+        city = munich_data[4]
+        data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
+    for berlin_data in flat_maps_data.data_for_berlin():
+        print('in get berlin')
+        area = berlin_data[3]
+        price = berlin_data[0]
+        city = berlin_data[4]
+        data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
-        data_for_all_cities = FlatData()
-        for munich_data in flat_maps_data.data_for_munich():
-            print('in get munich')
-            area = munich_data[3]
-            price = munich_data[0]
-            city = munich_data[4]
-            data_for_all_cities.compute_mean_for_area([(area, price)], city)
+    for hamburg_data in flat_maps_data.data_for_hamburg():
+        print('in get hamburg')
+        area = hamburg_data[3]
+        price = hamburg_data[0]
+        city = hamburg_data[4]
+        data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
-        for berlin_data in flat_maps_data.data_for_berlin():
-            print('in get berlin')
-            area = berlin_data[3]
-            price = berlin_data[0]
-            city = berlin_data[4]
-            data_for_all_cities.compute_mean_for_area([(area, price)], city)
-
-        for hamburg_data in flat_maps_data.data_for_hamburg():
-            print('in get hamburg')
-            area = hamburg_data[3]
-            price = hamburg_data[0]
-            city = hamburg_data[4]
-            data_for_all_cities.compute_mean_for_area([(area, price)], city)
-
-        return data_for_all_cities
+    return data_for_all_cities
 
 
 def get_areas_by_city(city):

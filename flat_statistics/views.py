@@ -18,7 +18,6 @@ class HamburgStatsView(TemplateView):
 
 
 def get_stats(request, *args, **kwargs):
-    # TODO: do error handling here
     city = request.GET.get('city', '')
     flat_data = flat_maps_comp.get_areas_by_city(city=city)
     area_table = flat_data.get_all_areas(city=city)

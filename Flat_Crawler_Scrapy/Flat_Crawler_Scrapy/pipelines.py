@@ -35,7 +35,6 @@ class FlatCrawlerScrapyPipeline():
         return item
 
     def store_in_db(self, item):
-        # TODO: MAYBE DEFINE EXPLICIT DEFAULT VALUES SUCH AS 'NONE'
         self.cursor.execute('''INSERT INTO flat_data VALUES (?, ?, ?, ?, ?, ?, ?)''', (
             item['price'],
             item['sqm'],
