@@ -1,9 +1,13 @@
-import folium
-from folium.plugins import MarkerCluster
 import sys
 sys.path.append('$(pwd)/Flat_Crawler_Django')
+import decimal
+import folium
+from folium.plugins import MarkerCluster
 import flat_maps_data
 import flat_maps_comp
+
+# set the global decimal context to have a precision of 2
+decimal.getcontext().prec = 2
 
 data_html = """
             <li>{street}</li>

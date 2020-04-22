@@ -2,7 +2,8 @@ import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import flat_maps_data
 
-
+# For the Clean Code Assessment, change this class into a SupeClass and make 3 corresponding SubClasses for the
+# 3 cities (and it's also nice in general to refactor this to show that you can do Object Oriented Coding)
 class FlatData:
 
     def __init__(self):
@@ -10,10 +11,6 @@ class FlatData:
         self.mean_table_berlin = {}
         self.mean_table_munich = {}
         self.all_city_hash_tables = {'München': self.mean_table_munich, 'Berlin': self.mean_table_berlin, 'Hamburg': self.mean_table_hamburg}
-        self.avrg_berlin = {}
-        self.avrg_munich = {}
-        self.avrg_hamburg = {}
-        self.all_avrg_sqm = {'München': self.avrg_munich, 'Berlin': self.avrg_berlin, 'Hamburg': self.avrg_hamburg}
 
     def compute_mean_for_area(self, data: list, city: str):
         current_hash_table = self.all_city_hash_tables.get(city)
@@ -63,7 +60,7 @@ def get_area_data() -> FlatData:
     return data_for_all_cities
 
 
-def get_areas_by_city(city):
+def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'Berlin':
         data_for_all_cities = FlatData()
