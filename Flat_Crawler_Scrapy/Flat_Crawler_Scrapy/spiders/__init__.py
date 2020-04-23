@@ -1,5 +1,4 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
 
 
@@ -59,6 +58,8 @@ class ImmobilienScoutSpider(scrapy.Spider):
             if float(sqm) < 1:
                 continue
 
+            print(sqm)
+
             # Store the data in item containers instead of regular dicts in order to get access to their richer
             # interface, which supports tracking items to find memory leaks and allows customizing serialization
             flat_items['price'] = price
@@ -74,49 +75,3 @@ class ImmobilienScoutSpider(scrapy.Spider):
         next_page = response.get()
         if next_page:
             yield response.follow(next_page, self.parse)
-
-
-class HousinganywhereSpider(scrapy.Spider):
-    name = 'Housinganywhere'
-
-    start_urls = [
-        'https://housinganywhere.com/s/Berlin--Germany?page=1',
-        'https://housinganywhere.com/s/Munich--Germany?page=1',
-        'https://housinganywhere.com/s/Hamburg--Germany?page=1',
-    ]
-
-    def parse(self, response):
-        all_flats = response.xpath(
-            '//div[@class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"]'
-        )
-        flat_items = FlatCrawlerScrapyItem()
-        city = response.get().split()[-2].replace(',', '')
-
-        for flat in all_flats:
-            price = flat.get()
-            street = flat.get().split('at ')[1]
-            sqm = flat.xpath('.//li[@data-test-locator="Listing Card Extra Info"]/text()').getall()[-1].split()[1]
-            detail_view_url = (
-                    'https://housinganywhere.com' +
-                    flat.get()
-            )
-
-            flat_items['price'] = price
-            flat_items['street'] = street
-            flat_items['sqm'] = sqm
-            flat_items['city'] = city
-            flat_items['detail_view_url'] = detail_view_url
-
-            yield flat_items
-
-        next_page = response.get()
-
-        if next_page:
-            yield response.follow(next_page, self.parse)
-
-
-def start_crawling():
-    process = CrawlerProcess()
-    process.crawl(ImmobilienScoutSpider)
-    process.crawl(HousinganywhereSpider)
-    process.start()
