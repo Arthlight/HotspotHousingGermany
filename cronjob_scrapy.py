@@ -1,14 +1,16 @@
 from crontab import CronTab
 
+#abspath = os.path.abspath(__file__)
+#dname = os.path.dirname(abspath)
+#os.chdir(dname)
 
 cron = CronTab(user='arthred')
-job = cron.new(command='echo hello_world')
-job.minute.every(1)
+cron.env['SHELL'] = '/bin/bash'
+job = cron.new(command=' cd /Users/arthred/Documents/Flat_Crawler_Django/Flat_Crawler_Scrapy && scrapy crawl ImmobilienScout')
+job.minute.every(2)
 cron.write()
 
 
-
-#job = cron.new(command='cd Flat_Crawler_Scrapy/Flat_Crawler_Scrapy && scrapy crawl ImmobilienScout')
 
 
 
