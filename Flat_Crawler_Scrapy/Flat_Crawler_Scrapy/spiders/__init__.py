@@ -1,4 +1,9 @@
+#import os
+#abspath = os.path.abspath(__file__)
+#dname = os.path.dirname(abspath)
+#os.chdir(dname)
 import scrapy
+from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
 
 
@@ -75,3 +80,13 @@ class ImmobilienScoutSpider(scrapy.Spider):
         next_page = response.get()
         if next_page:
             yield response.follow(next_page, self.parse)
+
+
+def start_scrawling():
+    process = CrawlerProcess()
+    process.crawl(ImmobilienScoutSpider)
+    process.start()
+
+
+if __name__ == 'main':
+    start_scrawling()
