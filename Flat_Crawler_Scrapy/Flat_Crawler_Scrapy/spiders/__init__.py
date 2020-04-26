@@ -1,8 +1,11 @@
-#import os
+import os
+#os.chdir('/Users/arthred/Documents/Flat_Crawler_Django/Flat_Crawler_Scrapy/Flat_Crawler_Scrapy')
 #abspath = os.path.abspath(__file__)
 #dname = os.path.dirname(abspath)
 #os.chdir(dname)
 import scrapy
+from scrapy.utils.project import get_project_settings
+from apscheduler.schedulers.twisted import TwistedScheduler
 from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
 
@@ -82,11 +85,10 @@ class ImmobilienScoutSpider(scrapy.Spider):
             yield response.follow(next_page, self.parse)
 
 
-def start_scrawling():
-    process = CrawlerProcess()
-    process.crawl(ImmobilienScoutSpider)
-    process.start()
+def start_crawling():
+    process = CrawlerProcess(get_project_settings())
+    scheduler = TwistedScheduler()
+    #scheduler.add_job(func=process.crawl, trigger='interval', args=[ImmobilienScoutSpider], kwargs={'seconds': 180})
+    scheduler.start()
+    process.start(False)
 
-
-if __name__ == 'main':
-    start_scrawling()
