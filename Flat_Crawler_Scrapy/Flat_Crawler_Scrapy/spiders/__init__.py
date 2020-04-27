@@ -1,4 +1,8 @@
 import os
+import sys
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Scrapy/Flat_Crawler_Scrapy')
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Scrapy')
+print(sys.path)
 #os.chdir('/Users/arthred/Documents/Flat_Crawler_Django/Flat_Crawler_Scrapy/Flat_Crawler_Scrapy')
 #abspath = os.path.abspath(__file__)
 #dname = os.path.dirname(abspath)
@@ -92,3 +96,4 @@ def start_crawling():
     scheduler.start()
     process.start(False)
 
+print(sys.path)

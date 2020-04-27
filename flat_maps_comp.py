@@ -59,7 +59,7 @@ def get_area_data() -> FlatData:
 
     return data_for_all_cities
 
-
+# TODO: separate them into 3 different functions after you have refactored the above class
 def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'Berlin':
