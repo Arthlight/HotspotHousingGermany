@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import Flat_Crawler_Scrapy.Flat_Crawler_Scrapy.spiders.__init__ as scraper
+
 
 def main():
 
@@ -20,6 +20,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-    #scraper.start_crawling()
+
 
 
