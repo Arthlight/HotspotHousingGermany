@@ -1,7 +1,4 @@
 import scrapy
-from scrapy.utils.project import get_project_settings
-from apscheduler.schedulers.twisted import TwistedScheduler
-from scrapy.crawler import CrawlerProcess
 from ..items import FlatCrawlerScrapyItem
 
 
@@ -79,9 +76,9 @@ class ImmobilienScoutSpider(scrapy.Spider):
 
 
 #def start_crawling():
-#   process = CrawlerProcess(get_project_settings())
-#  scheduler = TwistedScheduler()
-# scheduler.add_job(func=process.crawl, trigger='cron', args=[ImmobilienScoutSpider], kwargs={'minute': 2})
+#process = CrawlerProcess(get_project_settings())
+#scheduler = TwistedScheduler()
+#scheduler.add_job(func=process.crawl, trigger='cron', args=[ImmobilienScoutSpider], kwargs={'minute': 2})
 #scheduler.start()
 #process.start(False)
 

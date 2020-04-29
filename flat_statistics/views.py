@@ -25,6 +25,7 @@ def get_stats(request, *args, **kwargs):
     # sorted such that the areas are being displayed from the most expensive one down to the least expensive one
     labels = sorted([key for key in area_table], key=lambda key: area_table[key][1], reverse=True)
     items = sorted([area_table[area][1] // area_table[area][0] for area in labels], reverse=True)
+    print(labels, items)
     data = {
         'labels': labels,
         'data': items,
