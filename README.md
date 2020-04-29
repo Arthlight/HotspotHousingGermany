@@ -10,6 +10,7 @@ You can visit the running live version here: **TODO: Add running live version**
 The main motivation for this project, besides learning and gaining experience, was the flat shortage in Germany, especially in the metropolises. I noticed this especially when I had to move from a smaller city to a big city like Berlin in order to study. By giving a pragmatic visual overview of the available flats on ImmobilienScout for the 3 biggest cities, accompanied by a bunch of crucial additional information you can use to quickly decide if the flat you are looking at fits your needs, I am hoping to render someone's searching for his or her new flat at least a little bit easier.
 
 # Demo :movie_camera:
+**TODO: CHANGE GIF TO A GIF WHERE THE POP UP MARKER IS PERFECTLY FORMATTED AS WELL AS THE HOTSPOTHOUSING PERFECTLY CENTRALIZED**
 
 
 # Frameworks & APIs :hammer_and_pick:
