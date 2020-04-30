@@ -1,5 +1,5 @@
 from django.urls import path
-from flats.views import BerlinPageView, MunichPageView, HamburgPageView
+from flats_map.views import BerlinPageView, MunichPageView, HamburgPageView
 
 
 urlpatterns = [

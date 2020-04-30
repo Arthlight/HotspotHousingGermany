@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from flats.views import HomePageView
+from flats_map.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePageView.as_view(), name='home'),
-    path('flats/', include('flats.urls')),
+    path('flats_map/', include('flats_map.urls')),
     path('stats/', include('flat_statistics.urls')),
     path('api/', include('flat_api.urls'))
 ]

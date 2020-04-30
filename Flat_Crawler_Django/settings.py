@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'flats.apps.FlatsConfig',
+    'flats_map.apps.FlatsConfig',
     'flat_api.apps.FlatApiConfig',
     'flat_statistics.apps.FlatStatisticsConfig',
     'django_extensions',

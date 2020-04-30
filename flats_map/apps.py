@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class FlatsConfig(AppConfig):
-    name = 'flats'
+    name = 'flats_map'

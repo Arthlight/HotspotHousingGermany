@@ -1,11 +1,11 @@
-from django.shortcuts import render
+import pickle
 from django.http import HttpResponse
 from rest_framework.decorators import api_view
 
 
 @api_view(['POST'])
 def flat_data(request):
-    print('This works, nice!')
+    print(pickle.loads(request.body))
 
     return HttpResponse(status=200)
 
