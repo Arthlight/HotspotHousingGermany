@@ -15,15 +15,15 @@ The main motivation for this project, besides learning and gaining experience, w
 # Directory Structure
 
 ```bash
-|-- Flat_Crawler_Django
-|-- flats_api
-|-- flats_statistics
-|-- flats_map
-|-- manage.py
-|-- static
-|-- templates
-|-- scripts
-|-- tests
+|-- Flat_Crawler_Django # main-app
+|-- flats_api # sub-app
+|-- flats_statistics # sub-app
+|-- flats_map # sub-app
+|-- manage.py # driver script for django
+|-- static # contains css files
+|-- templates # contains html files
+|-- scripts # contains python scripts to make sense of scraped data
+|-- tests # contains tests
 ```
 
 # Frameworks & APIs :hammer_and_pick:
