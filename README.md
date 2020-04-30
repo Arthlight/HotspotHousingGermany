@@ -12,7 +12,7 @@ The main motivation for this project, besides learning and gaining experience, w
 # Demo :movie_camera:
 ![](Demo/Demo.gif)
 
-# Structure
+# Structure :open_file_folder:
 
 ```bash
 |-- Flat_Crawler_Django # main-app
