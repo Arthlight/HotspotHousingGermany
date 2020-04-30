@@ -1,3 +1,14 @@
+"""This module contains the display logic for rendering the flat data onto the Folium Map.
+
+This module queries the scraped flat data for all three cities (Berlin, Munich, Hamburg)
+from a sqlite3 database via the flat_maps_data module and manages the display logic for the
+marker on the Folium Map. Furthermore, this module interacts with the locationiq API via the
+flat_maps_data module, in order to fetch the latitude and longitude for a given address.
+
+  Typical usage example if imported inside another module:
+  import flat_maps
+  flat_maps.display_data()
+"""
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import folium
@@ -20,6 +31,10 @@ data_html = """
             """
 
 
+# TODO: Change flat_maps_data.data_for_berlin (and the other similar ones) to one single function that takes in a
+# TODO: parameter, and decides for what city to query in that way. With that you can eliminate all the duplicated
+# TODO: code here. Make one single function where you do the computation and query stuff in this module and call that function
+# TODO: from display_berlin_data() and the two other city specific functions.
 def display_berlin_data():
 
     berlin_map = folium.Map(location=[52.520008, 13.404954], zoom_start=11)
@@ -159,6 +174,8 @@ def display_munich_data():
     print('out of munich for loop')
 
 
+
+#TODO: Ideally make a function here that you can call which iniates the display logic
 all_areas_data = flat_maps_comp.get_area_data()
 #display_berlin_data()
 #display_munich_data()

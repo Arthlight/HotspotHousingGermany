@@ -5,7 +5,6 @@ import dotenv
 import json
 import time
 
-#TODO: TOWARDS THE END, CHANGE THE CODE IN THE WAY SO THAT IT CONFORMS TO GOOGLES STYLE GUIDELINE
 
 connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db', check_same_thread=False)
 cursor = connection.cursor()
@@ -33,6 +32,27 @@ def data_for_hamburg() -> tuple:
 
 
 def get_lat_long_(street: str) -> tuple:
+    """Fetches latitude and longitude from locationiq API.
+
+    Given a string that represents a valid street address,
+    this function calls the locationiq.com API in order to
+    retrieve the latitude and longitude for that street.
+    In case the API is down, which may be reflected with
+    different Exceptions, this Exception will be caught
+    gracefully and a tuple "(None, None)" will be returned.
+
+    Args:
+        street: A string containing a valid street address
+
+    Returns:
+        lat, long: A tuple containing the latitude and
+                   longitude for the given street address,
+                   in that order. In case the input was
+                   invalid or the API happens to be down,
+                   a tuple containing two None values
+                   "(None, None)" will be returned.
+    """
+
     dotenv.read_dotenv()
     url = "https://eu1.locationiq.com/v1/search.php"
     print("waiting for api")
@@ -43,8 +63,8 @@ def get_lat_long_(street: str) -> tuple:
         'format': 'json',
     }
 
-    # I can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
-    # ( 60 requests per minute at most)
+    # can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
+    # ( 60 requests per minute at most, requirement by provider)
     try:
         response = requests.get(url=url, params=data)
     except Exception:
