@@ -36,21 +36,21 @@ class FlatData:
 
 def get_area_data() -> FlatData:
     data_for_all_cities = FlatData()
-    for munich_data in flat_maps_data.data_for_munich():
+    for munich_data in flat_maps_data.data_for('München'):
         print('in get munich')
         area = munich_data[3]
         price = munich_data[0]
         city = munich_data[4]
         data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
-    for berlin_data in flat_maps_data.data_for_berlin():
+    for berlin_data in flat_maps_data.data_for('Berlin'):
         print('in get berlin')
         area = berlin_data[3]
         price = berlin_data[0]
         city = berlin_data[4]
         data_for_all_cities.compute_mean_for_area([(area, price)], city)
 
-    for hamburg_data in flat_maps_data.data_for_hamburg():
+    for hamburg_data in flat_maps_data.data_for('Hamburg'):
         print('in get hamburg')
         area = hamburg_data[3]
         price = hamburg_data[0]
@@ -64,7 +64,7 @@ def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'Berlin':
         data_for_all_cities = FlatData()
-        for berlin_data in flat_maps_data.data_for_berlin():
+        for berlin_data in flat_maps_data.data_for('Berlin'):
             area = berlin_data[3]
             price = berlin_data[0]
             city = berlin_data[4]
@@ -74,7 +74,7 @@ def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'München':
         data_for_all_cities = FlatData()
-        for munich_data in flat_maps_data.data_for_munich():
+        for munich_data in flat_maps_data.data_for('München'):
             area = munich_data[3]
             price = munich_data[0]
             city = munich_data[4]
@@ -84,7 +84,7 @@ def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'Hamburg':
         data_for_all_cities = FlatData()
-        for hamburg_data in flat_maps_data.data_for_hamburg():
+        for hamburg_data in flat_maps_data.data_for('Hamburg'):
             area = hamburg_data[3]
             price = hamburg_data[0]
             city = hamburg_data[4]

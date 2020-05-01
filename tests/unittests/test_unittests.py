@@ -1,6 +1,8 @@
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import flat_maps_comp
+import flat_maps
+from folium.plugins import MarkerCluster
 
 
 class Test:
@@ -37,6 +39,15 @@ class Test:
 
         for i in range(3):
             assert dummy_areas[i] in dummy_instances[i]
+
+
+    def test_display(self):
+        dummy_cluster = MarkerCluster()
+
+        new_cluster = flat_maps.display_helper('Berlin', dummy_cluster)
+        print(new_cluster.to_dict())
+
+
 
 
 

@@ -10,22 +10,30 @@ connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data
 cursor = connection.cursor()
 
 
-def data_for_berlin() -> tuple:
-    cursor.execute("""SELECT * FROM flat_data WHERE city='Berlin'""")
+def data_for(city: str) -> tuple:
+    """Queries flat data from a sqlite3 database for a specific city
 
-    for row in cursor.fetchall():
-        yield row
+    Given a string that represents a city that is present in the
+    database (München, Berlin, Hamburg), this generator returns
+    one tuple of flat data at a time.
 
+    Args:
+        city: A string that represents a valid city
 
-def data_for_munich() -> tuple:
-    cursor.execute("""SELECT * FROM flat_data WHERE city='München'""")
-
-    for row in cursor.fetchall():
-        yield row
-
-
-def data_for_hamburg() -> tuple:
-    cursor.execute("""SELECT * FROM flat_data WHERE city='Hamburg'""")
+    Returns:
+        row: A tuple containing all the values from
+             every column in one row of the database.
+             The following order is guaranteed to be
+             the same every time:
+             0: price
+             1: sqm
+             2: street
+             3: area
+             4: city
+             5: rooms
+             6: detail_view_url
+    """
+    cursor.execute(f"""SELECT * FROM flat_data WHERE city='{city}'""")
 
     for row in cursor.fetchall():
         yield row
@@ -79,7 +87,4 @@ def get_lat_long_(street: str) -> tuple:
         else:
             time.sleep(2)
             return (lat, long)
-
-
-
 
