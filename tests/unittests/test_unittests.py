@@ -1,8 +1,7 @@
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import flat_maps_comp
-import flat_maps
-from folium.plugins import MarkerCluster
+import flat_maps_data
 
 
 class Test:
@@ -19,34 +18,23 @@ class Test:
             [('Charlottenburg', 200)],
             [('Mitte', 1033.88)],
             [('Mitte', 1405.60)],
-            'Berlin'
         ]
 
         for i in range(9):
-            flat_data.compute_mean_for_area(data=dummy_data[i], city=dummy_data[9])
+            flat_data.compute_mean_for_area(data=dummy_data[i])
 
-        assert flat_data.get_mean(area='Kreuzberg', city='Berlin') == 150.00
-        assert flat_data.get_mean(area='Friedrichshain', city='Berlin') == 119.00
-        assert flat_data.get_mean(area='Charlottenburg', city='Berlin') == 2250.00
-        assert flat_data.get_mean(area='Mitte', city='Berlin') == 923.67
+        assert flat_data.get_mean(area='Kreuzberg') == 150.00
+        assert flat_data.get_mean(area='Friedrichshain') == 119.00
+        assert flat_data.get_mean(area='Charlottenburg') == 2250.00
+        assert flat_data.get_mean(area='Mitte') == 923.67
 
-    def test_area_by_city(self):
-        berlin_areas = flat_maps_comp.get_areas_by_city(city='Berlin')
-        munich_areas = flat_maps_comp.get_areas_by_city(city='München')
-        hamburg_areas = flat_maps_comp.get_areas_by_city(city='Hamburg')
-        dummy_areas = ['Mitte (Mitte)', 'Bogenhausen', 'Winterhude']
-        dummy_instances = [berlin_areas.mean_table_berlin, munich_areas.mean_table_munich, hamburg_areas.mean_table_hamburg]
-
-        for i in range(3):
-            assert dummy_areas[i] in dummy_instances[i]
+    def test_lat_long(self):
+        assert flat_maps_data.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')
+        assert flat_maps_data.get_lat_long('Thi6s ST44et dües NOT exist5f') == (None, None)
 
 
-    def test_display(self):
-        pass
-        #dummy_cluster = MarkerCluster()
 
-        #new_cluster = flat_maps.display_helper('Berlin', dummy_cluster)
-        #print(new_cluster.to_dict())
+
 
 
 

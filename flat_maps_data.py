@@ -39,7 +39,7 @@ def data_for(city: str) -> tuple:
         yield row
 
 
-def get_lat_long_(street: str) -> tuple:
+def get_lat_long(street: str) -> tuple:
     """Fetches latitude and longitude from locationiq API.
 
     Given a string that represents a valid street address,

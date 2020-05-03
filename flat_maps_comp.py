@@ -1,3 +1,5 @@
+import sys
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import flat_maps_data
 
 

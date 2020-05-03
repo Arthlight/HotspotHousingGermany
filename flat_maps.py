@@ -9,6 +9,8 @@ via the flat_maps_data module, in order to fetch the latitude and longitude for 
   import flat_maps
   flat_maps.display_data()
 """
+import sys
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import folium
 from folium.plugins import MarkerCluster
 import flat_maps_data
@@ -29,28 +31,12 @@ data_html = """
             """
 
 
-def display_berlin_data():
-    berlin_map = folium.Map(location=[52.520008, 13.404954], zoom_start=11)
+def display_data_for(city: str, lat: float, long: float):
+    city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
-    berlin_cluster = display_helper('Berlin', cluster)
-    berlin_map.add_child(berlin_cluster)
-    berlin_map.save('templates/berlin.html')
-
-
-def display_hamburg_data():
-    hamburg_map = folium.Map(location=[53.551086, 9.993682], zoom_start=11)
-    cluster = MarkerCluster()
-    hamburg_cluster = display_helper('Hamburg', cluster)
-    hamburg_map.add_child(hamburg_cluster)
-    hamburg_map.save('templates/hamburg.html')
-
-
-def display_munich_data():
-    munich_map = folium.Map(location=[48.137154, 11.576124], zoom_start=11)
-    cluster = MarkerCluster()
-    munich_cluster = display_helper('München', cluster)
-    munich_map.add_child(munich_cluster)
-    munich_map.save('templates/munich.html')
+    cluster = display_helper(f'{city}', cluster)
+    city_map.add_child(cluster)
+    city_map.save(f'templates/{city}.html')
 
 
 def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
@@ -81,7 +67,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
                         difference=difference,
                     )
 
-        lat, long = flat_maps_data.get_lat_long_(data[2] + ' ' + data[4])
+        lat, long = flat_maps_data.get_lat_long(data[2] + ' ' + data[4])
         if (lat, long) == (None, None):
             continue
         folium.Marker(
@@ -97,7 +83,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
 
 def display_all_cities():
-    display_berlin_data()
-    display_munich_data()
-    display_hamburg_data()
+    display_data_for('berlin',  52.520008, 13.404954)
+    display_data_for('munich', 48.137154, 11.576124)
+    display_data_for('hamburg', 53.551086, 9.993682)
 
