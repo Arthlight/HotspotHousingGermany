@@ -9,8 +9,6 @@ via the flat_maps_data module, in order to fetch the latitude and longitude for 
   import flat_maps
   flat_maps.display_data()
 """
-import sys
-sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import folium
 from folium.plugins import MarkerCluster
 import flat_maps_data
@@ -56,8 +54,8 @@ def display_munich_data():
 
 
 def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
-    #TODO: Call the upcoming get_area_data_for(city: str) -> FlatData function here and use that
-    #TODO: instance below instead of "all_areas_data" which is absolutely not needed
+    city_data = flat_maps_comp.get_area_data_for(city)
+
     for data in flat_maps_data.data_for(city):
 
         street = data[2]
@@ -67,7 +65,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
         url = data[6]
         area = data[3]
         city = data[4]
-        mean_price_area = all_areas_data.get_mean(area=area, city=city)
+        mean_price_area = city_data.get_mean(area)
         price_per_sqm = float(price) / float(sqm)
         difference = float(price) - mean_price_area
 
@@ -98,10 +96,8 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     return cluster
 
 
-#TODO: Ideally make a function here that you can call which iniates the display logic
-#TODO: Scratch the function below here completely and instead put that logic into the display helper
-#TODO: function. look at the todo above
-all_areas_data = flat_maps_comp.get_area_data()
-#display_berlin_data()
-#display_munich_data()
-#display_hamburg_data()
+def display_all_cities():
+    display_berlin_data()
+    display_munich_data()
+    display_hamburg_data()
+

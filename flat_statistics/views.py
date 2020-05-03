@@ -1,5 +1,3 @@
-import sys
-sys.path.append('$(pwd)/Flat_Crawler_Django')
 import flat_maps_comp
 from django.http import JsonResponse
 from django.views.generic import TemplateView
@@ -19,14 +17,11 @@ class HamburgStatsView(TemplateView):
 
 def get_stats(request, *args, **kwargs):
     city = request.GET.get('city', '')
-    # TODO: change this call later to the refactored function get_area_data_for(city: str) -> FlatData
-    # TODO: in flat_maps_comp.py, get_areas_by_city is absolutely not needed and will be deleted
-    flat_data = flat_maps_comp.get_areas_by_city(city=city)
-    area_table = flat_data.get_all_areas(city=city)
+    flat_data = flat_maps_comp.get_area_data_for(city)
 
     # sorted such that the areas are being displayed from the most expensive one down to the least expensive one
-    labels = sorted([key for key in area_table], key=lambda key: area_table[key][1], reverse=True)
-    items = sorted([area_table[area][1] // area_table[area][0] for area in labels], reverse=True)
+    labels = sorted([key for key in flat_data.mean_table], key=lambda key: flat_data.mean_table[key][1], reverse=True)
+    items = sorted([flat_data.mean_table[area][1] // flat_data.mean_table[area][0] for area in labels], reverse=True)
     data = {
         'labels': labels,
         'data': items,
