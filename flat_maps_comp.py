@@ -2,8 +2,8 @@ import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 import flat_maps_data
 
-# For the Clean Code Assessment, change this class into a SupeClass and make 3 corresponding SubClasses for the
-# 3 cities (and it's also nice in general to refactor this to show that you can do Object Oriented Coding)
+# TODO: change this class so that it has only one hash table (1 different instance will be created for every city,
+# TODO: there's no need for subclasses or anything of the like since the all share the exact same behaviour)
 class FlatData:
 
     def __init__(self):
@@ -34,6 +34,18 @@ class FlatData:
         return current_hash_table
 
 
+# TODO: turn this into some sort of "get_area_data_for(city)" function which delegates the input string into the flat
+# TODO: maps data.data_for(city) function an populates only that single FlatData instance. No need for helper functions
+# TODO: for each city. it can look sth like this:
+
+#def get_area_data_for(city: str) -> FlatData:
+#    data = FlatData()
+#    for current_row in flat_maps_data.data_for(city):
+#        area = current_row[3]
+#        price = current_row[0]
+#        city = current_row[4]
+#        data.compute_mean_for_area([(area, price)])
+
 def get_area_data() -> FlatData:
     data_for_all_cities = FlatData()
     for munich_data in flat_maps_data.data_for('München'):
@@ -59,10 +71,19 @@ def get_area_data() -> FlatData:
 
     return data_for_all_cities
 
-# TODO: separate them into 3 different functions after you have refactored the above class
+# TODO: refactor this similiar to the function above. it can look sth like this:
+#def get_area_data_for(city) -> FlatData:
+#    data = FlatData()
+#    for current_row in flat_maps_data.data_for(city):
+#        area = current_row[3]
+#        price = current_row[0]
+#        city = current_row[4]
+#        data.compute_mean_for_area([(area, price)])
+
 def get_areas_by_city(city: str) -> FlatData:
 
     if city == 'Berlin':
+        # TODO: DATA FOR ALL CITIES is a wrong name here, you only get data for one specific city
         data_for_all_cities = FlatData()
         for berlin_data in flat_maps_data.data_for('Berlin'):
             area = berlin_data[3]

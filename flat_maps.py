@@ -56,7 +56,8 @@ def display_munich_data():
 
 
 def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
-
+    #TODO: Call the upcoming get_area_data_for(city: str) -> FlatData function here and use that
+    #TODO: instance below instead of "all_areas_data" which is absolutely not needed
     for data in flat_maps_data.data_for(city):
 
         street = data[2]
@@ -98,6 +99,8 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
 
 #TODO: Ideally make a function here that you can call which iniates the display logic
+#TODO: Scratch the function below here completely and instead put that logic into the display helper
+#TODO: function. look at the todo above
 all_areas_data = flat_maps_comp.get_area_data()
 #display_berlin_data()
 #display_munich_data()

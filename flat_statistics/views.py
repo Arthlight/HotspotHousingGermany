@@ -19,6 +19,8 @@ class HamburgStatsView(TemplateView):
 
 def get_stats(request, *args, **kwargs):
     city = request.GET.get('city', '')
+    # TODO: change this call later to the refactored function get_area_data_for(city: str) -> FlatData
+    # TODO: in flat_maps_comp.py, get_areas_by_city is absolutely not needed and will be deleted
     flat_data = flat_maps_comp.get_areas_by_city(city=city)
     area_table = flat_data.get_all_areas(city=city)
 
