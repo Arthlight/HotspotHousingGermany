@@ -1,3 +1,21 @@
+"""This module handles fetching data for geographical input.
+
+This module contains helper functions that query or fetch data
+for geographical input such as a city or street address.
+
+The following helper functions are contained within this module:
+
+    function data_for           - accepts a city name in form of
+                                  a string and queries the local
+                                  sqlite3 database for the
+                                  associated information.
+
+    function get_lat_long       - accepts a street address in form
+                                  of a string and requests the
+                                  corresponding latitude and longitude
+                                  from the locationIQ API.
+"""
+# Standard library
 import _sqlite3
 import requests
 import os
@@ -6,14 +24,10 @@ import json
 import time
 
 
-connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db', check_same_thread=False)
-cursor = connection.cursor()
-
-
 def data_for(city: str) -> tuple:
     """Queries flat data from a sqlite3 database for a specific city
 
-    Given a string that represents a city that is present in the
+    Given a string that represents a city, which is present in the
     database (München, Berlin, Hamburg), this generator returns
     one tuple of flat data at a time.
 
@@ -33,6 +47,8 @@ def data_for(city: str) -> tuple:
              5: rooms
              6: detail_view_url
     """
+    connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db', check_same_thread=False)
+    cursor = connection.cursor()
     cursor.execute(f"""SELECT * FROM flat_data WHERE city='{city}'""")
 
     for row in cursor.fetchall():
@@ -43,7 +59,7 @@ def get_lat_long(street: str) -> tuple:
     """Fetches latitude and longitude from locationiq API.
 
     Given a string that represents a valid street address,
-    this function calls the locationiq.com API in order to
+    this function calls the locationIQ.com API in order to
     retrieve the latitude and longitude for that street.
     In case the API is down, which may be reflected with
     different Exceptions, this Exception will be caught

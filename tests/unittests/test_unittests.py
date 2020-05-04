@@ -23,10 +23,10 @@ class Test:
         for i in range(9):
             flat_data.compute_mean_for_area(data=dummy_data[i])
 
-        assert flat_data.get_mean(area='Kreuzberg') == 150.00
-        assert flat_data.get_mean(area='Friedrichshain') == 119.00
-        assert flat_data.get_mean(area='Charlottenburg') == 2250.00
-        assert flat_data.get_mean(area='Mitte') == 923.67
+        assert flat_data.get_mean_for(area='Kreuzberg') == 150.00
+        assert flat_data.get_mean_for(area='Friedrichshain') == 119.00
+        assert flat_data.get_mean_for(area='Charlottenburg') == 2250.00
+        assert flat_data.get_mean_for(area='Mitte') == 923.67
 
     def test_lat_long(self):
         assert flat_maps_data.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')

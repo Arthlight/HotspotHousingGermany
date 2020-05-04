@@ -2,21 +2,26 @@
 
 This module queries the scraped flat data for all three cities (Berlin, Munich, Hamburg)
 from a sqlite3 database with help of the flat_maps_data module and manages the display logic
-for the marker on the Folium Map. Furthermore, this module interacts with the locationiq API
+for the marker on the Folium Map. Furthermore, this module interacts with the locationIQ API
 via the flat_maps_data module, in order to fetch the latitude and longitude for a given address.
 
   Typical usage example if imported inside another module:
+
   import flat_maps
   flat_maps.display_data()
 """
+# standard library
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+
+# third party
 import folium
 from folium.plugins import MarkerCluster
 import flat_maps_data
 import flat_maps_comp
 
 
+# Module level HTML template used for Folium Markers
 data_html = """
             <body style="font-family:courier" width="400">
                 <li>Street: {street}</li>
@@ -32,6 +37,7 @@ data_html = """
 
 
 def display_data_for(city: str, lat: float, long: float):
+    """Creates a map and populates it with scraped data"""
     city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
     cluster = display_helper(f'{city}', cluster)
@@ -40,6 +46,31 @@ def display_data_for(city: str, lat: float, long: float):
 
 
 def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
+    """Iterates through the flat data of a given city,
+       labels it and finalizes it for display on the
+       map.
+
+       Given a city and a MarkerCluster instance, this
+       function queries the complete sqlite3 table for
+       all rows where the city name matches the name in
+       the city column. After it received the data of
+       such a row, the HTML template for the Marker
+       will be popularized and finally added to the
+       MarkerCluster.
+
+
+      Args:
+          city: A string containing a valid city name.
+                Valid in this context means that it
+                must be present in the sqlite3 table
+                before calling this function.
+
+          cluster: A MarkerCluster instance.
+
+      Returns:
+          cluster: A populated MarkerCluster instance.
+
+    """
     city_data = flat_maps_comp.get_area_data_for(city)
 
     for data in flat_maps_data.data_for(city):
@@ -51,7 +82,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
         url = data[6]
         area = data[3]
         city = data[4]
-        mean_price_area = city_data.get_mean(area)
+        mean_price_area = city_data.get_mean_for(area)
         price_per_sqm = float(price) / float(sqm)
         difference = float(price) - mean_price_area
 
@@ -67,7 +98,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
                         difference=difference,
                     )
 
-        lat, long = flat_maps_data.get_lat_long(data[2] + ' ' + data[4])
+        lat, long = flat_maps_data.get_lat_long(street + ' ' + city)
         if (lat, long) == (None, None):
             continue
         folium.Marker(
@@ -83,6 +114,8 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
 
 def display_all_cities():
+    """Primer for displaying
+       flat data for all cities"""
     display_data_for('berlin',  52.520008, 13.404954)
     display_data_for('munich', 48.137154, 11.576124)
     display_data_for('hamburg', 53.551086, 9.993682)
