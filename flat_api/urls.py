@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import flat_data
+from .views import gather_data, update_data
 
 urlpatterns = [
-    path('flatData/', flat_data, name='flatData'),
+    path('flatData/', gather_data, name='flatData'),
+    path('primer/', update_data, name='primer'),
 ]

@@ -1,4 +1,4 @@
-import flat_maps_comp
+from scripts import flat_maps_comp
 from django.http import JsonResponse
 from django.views.generic import TemplateView
 
@@ -8,7 +8,7 @@ class BerlinStatsView(TemplateView):
 
 
 class MunichStatsView(TemplateView):
-    template_name = 'stats_munich.html'
+    template_name = 'stats_münchen.html'
 
 
 class HamburgStatsView(TemplateView):

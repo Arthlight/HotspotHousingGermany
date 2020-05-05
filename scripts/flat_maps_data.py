@@ -16,12 +16,17 @@ The following helper functions are contained within this module:
                                   from the locationIQ API.
 """
 # Standard library
+import sys
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 import _sqlite3
 import requests
 import os
-import dotenv
 import json
 import time
+
+# Third party
+import dotenv
 
 
 def data_for(city: str) -> tuple:
@@ -35,21 +40,22 @@ def data_for(city: str) -> tuple:
         city: A string that represents a valid city
 
     Returns:
-        row: A tuple containing all the values from
-             every column in one row of the database.
-             The following order is guaranteed to be
-             the same every time:
-             0: price
-             1: sqm
-             2: street
-             3: area
-             4: city
-             5: rooms
-             6: detail_view_url
+        row:  A tuple containing all the values from
+              every column in one row of the database.
+              The following order is guaranteed to be
+              the same every time:
+              0: price
+              1: sqm
+              2: street
+              3: area
+              4: city
+              5: rooms
+              6: detail_view_url
     """
-    connection = _sqlite3.connect('Flat_Crawler_Scrapy/Flat_Crawler_Scrapy/flat_data.db', check_same_thread=False)
+    print(city)
+    connection = _sqlite3.connect('flats_data.db', check_same_thread=False)
     cursor = connection.cursor()
-    cursor.execute(f"""SELECT * FROM flat_data WHERE city='{city}'""")
+    cursor.execute(f"""SELECT * FROM flats_data WHERE city='{city}'""")
 
     for row in cursor.fetchall():
         yield row
@@ -66,7 +72,7 @@ def get_lat_long(street: str) -> tuple:
     gracefully and a tuple "(None, None)" will be returned.
 
     Args:
-        street: A string containing a valid street address
+        street:    A string containing a valid street address
 
     Returns:
         lat, long: A tuple containing the latitude and

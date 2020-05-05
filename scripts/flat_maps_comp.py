@@ -13,9 +13,10 @@ of cities and computing the average prices for their residential areas.
 # standard library
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 
 # third party
-import flat_maps_data
+from scripts import flat_maps_data
 
 
 class FlatData:

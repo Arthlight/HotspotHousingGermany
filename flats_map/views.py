@@ -6,10 +6,10 @@ class HomePageView(TemplateView):
     template_name = 'home.html'
 
 class BerlinPageView(TemplateView):
-    template_name = 'berlin.html'
+    template_name = 'Berlin.html'
 
 class MunichPageView(TemplateView):
-    template_name = 'munich.html'
+    template_name = 'München.html'
 
 class HamburgPageView(TemplateView):
-    template_name = 'hamburg.html'
+    template_name = 'Hamburg.html'

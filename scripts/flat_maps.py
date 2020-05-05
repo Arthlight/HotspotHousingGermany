@@ -13,13 +13,12 @@ via the flat_maps_data module, in order to fetch the latitude and longitude for 
 # standard library
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
+sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 
 # third party
 import folium
 from folium.plugins import MarkerCluster
-import flat_maps_data
-import flat_maps_comp
-
+from scripts import flat_maps_comp, flat_maps_data
 
 # Module level HTML template used for Folium Markers
 data_html = """
@@ -60,10 +59,10 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
 
       Args:
-          city: A string containing a valid city name.
-                Valid in this context means that it
-                must be present in the sqlite3 table
-                before calling this function.
+          city:    A string containing a valid city name.
+                   Valid in this context means that it
+                   must be present in the sqlite3 table
+                   before calling this function.
 
           cluster: A MarkerCluster instance.
 
@@ -72,9 +71,9 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
     """
     city_data = flat_maps_comp.get_area_data_for(city)
-
+    print(city)
     for data in flat_maps_data.data_for(city):
-
+        print(data)
         street = data[2]
         price = data[0]
         sqm = data[1]
@@ -116,7 +115,10 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 def display_all_cities():
     """Primer for displaying
        flat data for all cities"""
-    display_data_for('berlin',  52.520008, 13.404954)
-    display_data_for('munich', 48.137154, 11.576124)
-    display_data_for('hamburg', 53.551086, 9.993682)
+    display_data_for('Berlin',  52.520008, 13.404954)
+    display_data_for('München', 48.137154, 11.576124)
+    display_data_for('Hamburg', 53.551086, 9.993682)
+
+
+display_all_cities()
 

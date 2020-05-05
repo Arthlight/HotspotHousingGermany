@@ -1,7 +1,6 @@
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
-import flat_maps_comp
-import flat_maps_data
+from scripts import flat_maps_comp, flat_maps_data
 
 
 class Test:

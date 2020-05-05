@@ -27,15 +27,15 @@ def insert_into_db(data):
 
 
 def establish_connection():
-    conn = _sqlite3.connect('test_data.db')
+    conn = _sqlite3.connect('flats_data.db')
     cursor = conn.cursor()
 
     return cursor, conn
 
 
 def create_db_table(cursor):
-    cursor.execute('''DROP TABLE IF EXISTS flat_data''')
-    cursor.execute('''CREATE TABLE flat_data(
+    cursor.execute('''DROP TABLE IF EXISTS flats_data''')
+    cursor.execute('''CREATE TABLE flats_data(
                             price text,
                             sqm text,
                             street text,
@@ -48,7 +48,7 @@ def create_db_table(cursor):
 
 
 def store_in_db(cursor, conn, data):
-    cursor.execute('''INSERT INTO flat_data VALUES (?, ?, ?, ?, ?, ?, ?)''', (
+    cursor.execute('''INSERT INTO flats_data VALUES (?, ?, ?, ?, ?, ?, ?)''', (
         data['price'],
         data['sqm'],
         data['street'],
