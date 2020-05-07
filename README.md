@@ -35,7 +35,7 @@ The main motivation for this project, besides learning and gaining experience, w
 
 # Installation :gear:
 - Python >=3.7
-- PyCharm
+- PyCharm >= 2019.0.0
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
 - Open the project with PyCharm
 - ```$ pip install -r requirements.txt```
