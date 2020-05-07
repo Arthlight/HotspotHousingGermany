@@ -34,10 +34,11 @@ The main motivation for this project, besides learning and gaining experience, w
 
 
 # Installation :gear:
-- Python >=3.7
-- PyCharm >= 2019.0.0
+If you are comfortable with setting up a virtual environment by yourself, you don't need to download and use PyCharm. Otherwise, using the PyCharm IDE is the most convenient alternative, since they set up a virtual environment automatically for you.
+- [Python](https://www.python.org) >=3.7
+- [PyCharm](https://www.jetbrains.com/pycharm/) >=2019.0.0
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
-- Open the project with PyCharm
+- Open the project with PyCharm and click on the attached Terminal on the bottom
 - ```$ pip install -r requirements.txt```
 - ```$ python manage.py runserver```
 
