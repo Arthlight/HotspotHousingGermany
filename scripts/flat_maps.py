@@ -28,7 +28,7 @@ data_html = """
                 <li>Sqm: {sqm} &#13217;</li>
                 <li>Rooms: {rooms}</li>
                 <li>Price per Sqm: {psqm: .2f} &euro;</li>
-                <li>Mean price in {area}: {mean: .2f} &euro</li>
+                <li>Mean price in {area}: {mean: .2f} &euro;</li>
                 <li>Difference: {difference: .2f} &euro;</li>
                 <li><a href={url} target='_blank'>Original listing</a>   </li>
             </body>
@@ -120,5 +120,5 @@ def display_all_cities():
     display_data_for('Hamburg', 53.551086, 9.993682)
 
 
-display_all_cities()
+#display_all_cities()
 

@@ -24,6 +24,7 @@ def insert_into_db(data):
     cursor, conn = establish_connection()
     create_db_table(cursor)
     store_in_db(cursor, conn, data)
+    print('stored')
 
 
 def establish_connection():
@@ -34,27 +35,31 @@ def establish_connection():
 
 
 def create_db_table(cursor):
-    cursor.execute('''DROP TABLE IF EXISTS flats_data''')
-    cursor.execute('''CREATE TABLE flats_data(
-                            price text,
-                            sqm text,
-                            street text,
-                            area text,
-                            city text,
-                            rooms text,
-                            detail_view_url text
-                            )
+    cursor.execute('''CREATE TABLE IF NOT EXISTS flats_data(
+                    price text,
+                    sqm text,
+                    street text,
+                    area text,
+                    city text,
+                    rooms text,
+                    detail_view_url text
+                    )
                     ''')
 
 
 def store_in_db(cursor, conn, data):
     cursor.execute('''INSERT INTO flats_data VALUES (?, ?, ?, ?, ?, ?, ?)''', (
-        data['price'],
-        data['sqm'],
-        data['street'],
-        data['area'],
-        data['city'],
-        data['rooms'],
-        data['detail_view'],
-    ))
+            data['price'],
+            data['sqm'],
+            data['street'],
+            data['area'],
+            data['city'],
+            data['rooms'],
+            data['detail_view'],
+            ))
     conn.commit()
+
+
+def reload_data():
+    cursor, _ = establish_connection()
+    cursor.execute('''DROP TABLE IF EXISTS flats_data''')

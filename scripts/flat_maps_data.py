@@ -58,6 +58,7 @@ def data_for(city: str) -> tuple:
     cursor.execute(f"""SELECT * FROM flats_data WHERE city='{city}'""")
 
     for row in cursor.fetchall():
+        print(row)
         yield row
 
 
