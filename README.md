@@ -43,6 +43,7 @@ The main motivation for this project, besides learning and gaining experience, w
 - Open the project with PyCharm and click on the attached Terminal on the bottom
 - ```$ pip install -r requirements.txt```
 - ```$ python manage.py runserver```
+- Open http://127.0.0.1:8000/
 
 **Without PyCharm**:
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
