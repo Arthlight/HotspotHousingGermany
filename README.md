@@ -34,7 +34,11 @@ The main motivation for this project, besides learning and gaining experience, w
 
 
 # Installation :gear:
-If you want to run this webapp locally, all you have to do is cloning this repository on your local machine and installing the dependencies in the `requirements.txt` file.
+- Python >=3.7
+- ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
+- ```$ pip install -r requirements.txt```
+- ```$ python manage.py runserver```
+
 
 
 
