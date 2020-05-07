@@ -47,7 +47,7 @@ The main motivation for this project, besides learning and gaining experience, w
 **Without PyCharm**:
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
 - ```$ cd HotspotHousingGermany```
-- ```$ pip install -r requirements.txt```
+- ```$ pip3 install -r requirements.txt```
 - ```$ python3 manage.py runserver```
 - Open http://127.0.0.1:8000/
 
