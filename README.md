@@ -34,6 +34,7 @@ The main motivation for this project, besides learning and gaining experience, w
 
 
 # Installation :gear:
+**Requirement**
 - [Python](https://www.python.org) >=3.7
 
 **With PyCharm**:
