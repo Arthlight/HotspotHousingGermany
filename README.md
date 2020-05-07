@@ -43,9 +43,9 @@ The main motivation for this project, besides learning and gaining experience, w
 - ```$ pip install -r requirements.txt```
 - ```$ python manage.py runserver```
 
-**Without PyCharm**
+**Without PyCharm**:
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
-- ```$ cd HotspotHousingGermany
+- ```$ cd HotspotHousingGermany```
 - ```$ pip install -r requirements.txt```
 - ```$ python3 manage.py runserver```
 - Open http://127.0.0.1:8000/
