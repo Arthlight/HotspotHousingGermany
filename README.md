@@ -34,14 +34,21 @@ The main motivation for this project, besides learning and gaining experience, w
 
 
 # Installation :gear:
-If you are comfortable with setting up a virtual environment for Django by yourself, you don't need to download and use PyCharm. Otherwise, using the PyCharm IDE is the most convenient alternative, since they set up a virtual environment automatically for you.
 - [Python](https://www.python.org) >=3.7
+
+**With PyCharm**:
 - [PyCharm](https://www.jetbrains.com/pycharm/) >=2019.0.0
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
 - Open the project with PyCharm and click on the attached Terminal on the bottom
 - ```$ pip install -r requirements.txt```
 - ```$ python manage.py runserver```
 
+**Without PyCharm**
+- ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
+- ```$ cd HotspotHousingGermany
+- ```$ pip install -r requirements.txt```
+- ```$ python3 manage.py runserver```
+- Open http://127.0.0.1:8000/
 
 
 
