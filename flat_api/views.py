@@ -29,6 +29,6 @@ def before(request):
 
 @api_view(['POST'])
 def after(request):
-    #flat_maps.display_all_cities()
+    flat_maps.display_all_cities()
 
     return HttpResponse(status=200)

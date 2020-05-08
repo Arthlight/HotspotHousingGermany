@@ -17,15 +17,18 @@ class Test:
             [('Charlottenburg', 200)],
             [('Mitte', 1033.88)],
             [('Mitte', 1405.60)],
+            [('Prenzlauer Berg', 700.60)],
+            [('Prenzlauer Berg', 1000.60)],
         ]
 
-        for i in range(9):
+        for i in range(len(dummy_data)):
             flat_data.compute_mean_for_area(data=dummy_data[i])
 
         assert flat_data.get_mean_for(area='Kreuzberg') == 150.00
         assert flat_data.get_mean_for(area='Friedrichshain') == 119.00
         assert flat_data.get_mean_for(area='Charlottenburg') == 2250.00
         assert flat_data.get_mean_for(area='Mitte') == 923.67
+        assert flat_data.get_mean_for(area='Prenzlauer Berg') != 820.33
 
     def test_lat_long(self):
         assert flat_maps_data.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')

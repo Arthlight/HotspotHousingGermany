@@ -10,12 +10,12 @@ of cities and computing the average prices for their residential areas.
   my_city.compute_mean_for([my_area, 500])
   my_city.get_mean_for(my_area) # returns 500 (mean of 500 + 500)
 """
-# standard library
+# Standard library
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 
-# third party
+# Third party
 from scripts import flat_maps_data
 
 

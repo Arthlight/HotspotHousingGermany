@@ -10,12 +10,12 @@ via the flat_maps_data module, in order to fetch the latitude and longitude for 
   import flat_maps
   flat_maps.display_data()
 """
-# standard library
+# Standard library
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 
-# third party
+# Third party
 import folium
 from folium.plugins import MarkerCluster
 from scripts import flat_maps_comp, flat_maps_data
@@ -33,9 +33,9 @@ data_html = """
                 <li><a href={url} target='_blank'>Original listing</a>   </li>
             </body>
             """
+# TODO: CHANGE LIST VIEW TO TABLE VIEW AND UPDATE THE GIF CORRESPONDIGNLY
 
-
-def display_data_for(city: str, lat: float, long: float):
+def display_data_for(city: str, *, lat: float, long: float):
     """Creates a map and populates it with scraped data"""
     city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
@@ -115,9 +115,9 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 def display_all_cities():
     """Primer for displaying
        flat data for all cities"""
-    display_data_for('Berlin',  52.520008, 13.404954)
-    display_data_for('München', 48.137154, 11.576124)
-    display_data_for('Hamburg', 53.551086, 9.993682)
+    display_data_for('Berlin',  lat=52.520008, long=13.404954)
+    display_data_for('München', lat=48.137154, long=11.576124)
+    display_data_for('Hamburg', lat=53.551086, long=9.993682)
 
 
 #display_all_cities()
