@@ -34,13 +34,23 @@ The main motivation for this project, besides learning and gaining experience, w
 
 
 # Installation :gear:
-- Python >=3.7
-- PyCharm >= 2019.0.0
+**Requirement**:
+- [Python](https://www.python.org) >=3.7
+
+**With PyCharm**:
+- [PyCharm](https://www.jetbrains.com/pycharm/) >=2019.0.0
 - ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
-- Open the project with PyCharm
+- Open the project with PyCharm and click on the attached Terminal on the bottom
 - ```$ pip install -r requirements.txt```
 - ```$ python manage.py runserver```
+- Open http://127.0.0.1:8000/
 
+**Without PyCharm**:
+- ```$ git clone https://github.com/Arthlight/HotspotHousingGermany.git```
+- ```$ cd HotspotHousingGermany```
+- ```$ pip3 install -r requirements.txt```
+- ```$ python3 manage.py runserver```
+- Open http://127.0.0.1:8000/
 
 
 
