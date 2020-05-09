@@ -22,7 +22,7 @@ from scripts import flat_maps_comp, flat_maps_data
 
 
 # Module level CSS template used for Folium Markers
-data_css = """
+DATA_CSS = """
             <html>
             <head>
             <style>
@@ -37,10 +37,10 @@ data_css = """
             </style>
             </head>
             <body>
-            """
+           """
 
 # Module level HTML template used for Folium Markers
-data_html = """
+DATA_HTML = """
             <table style="width:500px">
                 <tr>
                     <th>Street:</th>
@@ -74,24 +74,10 @@ data_html = """
                     <th>Original Listing:</th>
                     <td><a href={url} target='_blank'>Click here to see original offer</a></td>
                 </tr>
-                </table>
-                </body>
-                </html>
-                """
-
-#data_html = """
-#            <body style="font-family:courier" width="400">
-#                <li>Street: {street}</li>
-#                <li>Price: {price} &euro;</li>
-#                <li>Sqm: {sqm} &#13217;</li>
-#                <li>Rooms: {rooms}</li>
-#                <li>Price per Sqm: {psqm: .2f} &euro;</li>
-#                <li>Mean price in {area}: {mean: .2f} &euro;</li>
-#               <li>Difference: {difference: .2f} &euro;</li>
-#                <li><a href={url} target='_blank'>Original listing</a>   </li>
-#            </body>
-#            """
-# TODO: CHANGE LIST VIEW TO TABLE VIEW AND UPDATE THE GIF CORRESPONDIGNLY
+            </table>
+            </body>
+            </html>
+            """
 
 
 def display_data_for(city: str, *, lat: float, long: float):
@@ -131,7 +117,6 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     """
     city_data = flat_maps_comp.get_area_data_for(city)
     for data in flat_maps_data.data_for(city):
-        print(data)
         price = data[0]
         sqm = data[1]
         street = data[2]
@@ -143,7 +128,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
         price_per_sqm = float(price) / float(sqm)
         difference = float(price) - mean_price_area
 
-        marker_html = data_html.format(
+        marker_html = DATA_HTML.format(
                         street=street,
                         price=price,
                         sqm=sqm,
@@ -160,7 +145,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
             continue
         folium.Marker(
             location=(lat, long),
-            popup=data_css + marker_html,
+            popup=DATA_CSS + marker_html,
             tooltip='Click for more info',
             icon=folium.Icon(color='darkblue', icon='home', prefix='fa'),
         ).add_to(cluster)

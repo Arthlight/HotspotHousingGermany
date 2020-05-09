@@ -1,17 +1,11 @@
-FROM python:3.7-slim AS compile-image
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends build-essential gcc
+FROM python:3.7
+ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt .
-RUN pip install --user -r requirements.txt
+WORKDIR usr/src/app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY /Flat_Scraper_Scrapy .
+COPY . .
 
-FROM python:3.7-slim AS build-image
-ARG VERSION=V1.0
-LABEL com.HotspotHousing.version=$VERSION
-ENV STATUS="development"
-COPY --from=compile-image /root/.local /root/.local
-ENV PATH=/root/.local/bin:$PATH
-EXPOSE 3000
-ENTRYPOINT ['Flat_Crawler_Django/start_server.py']
+EXPOSE 2000
+ENTRYPOINT ["python", "manage.py", "runserver", "2000"]

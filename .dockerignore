@@ -1,0 +1,6 @@
+.pytest_cache/
+Demo/
+tests/
+.gitattributes
+.gitignore
+*.md

@@ -52,10 +52,9 @@ def data_for(city: str) -> tuple:
               5: rooms
               6: detail_view_url
     """
-    print(city)
     connection = _sqlite3.connect('flats_data.db', check_same_thread=False)
     cursor = connection.cursor()
-    cursor.execute(f"""SELECT * FROM flats_data WHERE city='{city}'""")
+    cursor.execute("""SELECT * FROM flats_data WHERE city=?""", (city,))
 
     for row in cursor.fetchall():
         print(row)

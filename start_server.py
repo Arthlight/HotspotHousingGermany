@@ -3,4 +3,4 @@
 import subprocess
 
 command = 'python manage.py runserver 2000'
-subprocess.run(command, shell=True)
+subprocess.call(command, executable='/bin/bash')
