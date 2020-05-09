@@ -20,20 +20,79 @@ import folium
 from folium.plugins import MarkerCluster
 from scripts import flat_maps_comp, flat_maps_data
 
+
+# Module level CSS template used for Folium Markers
+data_css = """
+            <html>
+            <head>
+            <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+            </style>
+            </head>
+            <body>
+            """
+
 # Module level HTML template used for Folium Markers
 data_html = """
-            <body style="font-family:courier" width="400">
-                <li>Street: {street}</li>
-                <li>Price: {price} &euro;</li>
-                <li>Sqm: {sqm} &#13217;</li>
-                <li>Rooms: {rooms}</li>
-                <li>Price per Sqm: {psqm: .2f} &euro;</li>
-                <li>Mean price in {area}: {mean: .2f} &euro;</li>
-                <li>Difference: {difference: .2f} &euro;</li>
-                <li><a href={url} target='_blank'>Original listing</a>   </li>
-            </body>
-            """
+            <table style="width:500px">
+                <tr>
+                    <th>Street:</th>
+                    <td>{street}</td>
+                </tr>
+                <tr>
+                    <th>Price:</th>
+                    <td>{price} &euro;</td>
+                </tr>
+                <tr>
+                    <th>Sqm:</th>
+                    <td>{sqm} &#13217;</td>
+                </tr>
+                <tr>
+                    <th>Rooms:</th>
+                    <td>{rooms}</td>
+                </tr>
+                <tr>
+                    <th>Price Per Sqm:</th>
+                    <td>{psqm: .2f} &euro;</td>
+                </tr>
+                <tr>
+                    <th>Mean price in {area}:</th>
+                    <td>{mean: .2f} &euro;</td>
+                </tr>
+                <tr>
+                    <th>Difference:</th>
+                    <td>{difference: .2f} &euro;</td>
+                </tr>
+                <tr>
+                    <th>Original Listing:</th>
+                    <td><a href={url} target='_blank'>Click here to see original offer</a></td>
+                </tr>
+                </table>
+                </body>
+                </html>
+                """
+
+#data_html = """
+#            <body style="font-family:courier" width="400">
+#                <li>Street: {street}</li>
+#                <li>Price: {price} &euro;</li>
+#                <li>Sqm: {sqm} &#13217;</li>
+#                <li>Rooms: {rooms}</li>
+#                <li>Price per Sqm: {psqm: .2f} &euro;</li>
+#                <li>Mean price in {area}: {mean: .2f} &euro;</li>
+#               <li>Difference: {difference: .2f} &euro;</li>
+#                <li><a href={url} target='_blank'>Original listing</a>   </li>
+#            </body>
+#            """
 # TODO: CHANGE LIST VIEW TO TABLE VIEW AND UPDATE THE GIF CORRESPONDIGNLY
+
 
 def display_data_for(city: str, *, lat: float, long: float):
     """Creates a map and populates it with scraped data"""
@@ -71,16 +130,15 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
     """
     city_data = flat_maps_comp.get_area_data_for(city)
-    print(city)
     for data in flat_maps_data.data_for(city):
         print(data)
-        street = data[2]
         price = data[0]
         sqm = data[1]
-        rooms = data[5]
-        url = data[6]
+        street = data[2]
         area = data[3]
         city = data[4]
+        rooms = data[5]
+        url = data[6]
         mean_price_area = city_data.get_mean_for(area)
         price_per_sqm = float(price) / float(sqm)
         difference = float(price) - mean_price_area
@@ -102,7 +160,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
             continue
         folium.Marker(
             location=(lat, long),
-            popup=marker_html,
+            popup=data_css + marker_html,
             tooltip='Click for more info',
             icon=folium.Icon(color='darkblue', icon='home', prefix='fa'),
         ).add_to(cluster)
@@ -121,4 +179,6 @@ def display_all_cities():
 
 
 #display_all_cities()
+
+
 
