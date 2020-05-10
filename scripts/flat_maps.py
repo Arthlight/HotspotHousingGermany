@@ -51,6 +51,14 @@ DATA_HTML = """
                     <td>{price} &euro;</td>
                 </tr>
                 <tr>
+                    <th>Mean price in {area}:</th>
+                    <td>{mean: .2f} &euro;</td>
+                </tr>
+                <tr>
+                    <th>Difference:</th>
+                    <td>{difference: .2f} &euro;</td>
+                </tr>
+                <tr>
                     <th>Sqm:</th>
                     <td>{sqm} &#13217;</td>
                 </tr>
@@ -61,14 +69,6 @@ DATA_HTML = """
                 <tr>
                     <th>Price Per Sqm:</th>
                     <td>{psqm: .2f} &euro;</td>
-                </tr>
-                <tr>
-                    <th>Mean price in {area}:</th>
-                    <td>{mean: .2f} &euro;</td>
-                </tr>
-                <tr>
-                    <th>Difference:</th>
-                    <td>{difference: .2f} &euro;</td>
                 </tr>
                 <tr>
                     <th>Original Listing:</th>

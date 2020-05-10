@@ -25,7 +25,7 @@ SECRET_KEY = 'bq^_6eb%xyky@%jiq1x_jzrzpk5*7uvbvt_@v1tzs2*m3teg@p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'flats_map.apps.FlatsConfig',
     'flat_api.apps.FlatApiConfig',
     'flat_statistics.apps.FlatStatisticsConfig',
-    'django_extensions',
     'rest_framework',
 ]
 

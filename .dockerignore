@@ -4,3 +4,8 @@ tests/
 .gitattributes
 .gitignore
 *.md
+venv/
+admin.py
+apps.py
+models.py
+tests.py
