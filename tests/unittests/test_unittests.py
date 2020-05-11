@@ -1,6 +1,6 @@
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
-from scripts import flat_maps_comp, flat_maps_data
+from scripts import flat_maps_comp
 
 
 class Test:
@@ -31,8 +31,8 @@ class Test:
         assert flat_data.get_mean_for(area='Prenzlauer Berg') != 820.33
 
     def test_lat_long(self):
-        assert flat_maps_data.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')
-        assert flat_maps_data.get_lat_long('Thi6s ST44et dües NOT exist5f') == (None, None)
+        assert flat_maps_comp.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')
+        assert flat_maps_comp.get_lat_long('Thi6s ST44et dües NOT exist5f') == (None, None)
 
 
 

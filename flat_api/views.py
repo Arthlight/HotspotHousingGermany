@@ -5,7 +5,7 @@ sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 import pickle
 from . import database
 from django.http import HttpResponse
-from scripts import flat_maps
+from scripts import flat_maps_display
 
 # Third party
 from rest_framework.decorators import api_view
@@ -29,6 +29,6 @@ def before(request):
 
 @api_view(['POST'])
 def after(request):
-    flat_maps.display_all_cities()
+    flat_maps_display.display_all_cities()
 
     return HttpResponse(status=200)

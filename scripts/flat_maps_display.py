@@ -18,7 +18,7 @@ sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 # Third party
 import folium
 from folium.plugins import MarkerCluster
-from scripts import flat_maps_comp, flat_maps_data
+from scripts import flat_maps_comp, flat_db
 
 
 # Module level CSS template used for Folium Markers
@@ -116,7 +116,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 
     """
     city_data = flat_maps_comp.get_area_data_for(city)
-    for data in flat_maps_data.data_for(city):
+    for data in flat_db.data_for(city):
         price = data[0]
         sqm = data[1]
         street = data[2]
@@ -140,7 +140,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
                         difference=difference,
                     )
 
-        lat, long = flat_maps_data.get_lat_long(street + ' ' + city)
+        lat, long = flat_maps_comp.get_lat_long(street + ' ' + city)
         if (lat, long) == (None, None):
             continue
         folium.Marker(
