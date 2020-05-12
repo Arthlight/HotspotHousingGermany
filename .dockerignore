@@ -9,3 +9,4 @@ admin.py
 apps.py
 models.py
 tests.py
+Dockerfile
