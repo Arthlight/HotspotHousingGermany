@@ -117,6 +117,7 @@ def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     """
     city_data = flat_maps_comp.get_area_data_for(city)
     for data in flat_db.data_for(city):
+        print(data)
         price = data[0]
         sqm = data[1]
         street = data[2]
@@ -161,9 +162,6 @@ def display_all_cities():
     display_data_for('Berlin',  lat=52.520008, long=13.404954)
     display_data_for('München', lat=48.137154, long=11.576124)
     display_data_for('Hamburg', lat=53.551086, long=9.993682)
-
-
-#display_all_cities()
 
 
 
