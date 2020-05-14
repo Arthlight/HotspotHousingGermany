@@ -84,12 +84,12 @@ def display_data_for(city: str, *, lat: float, long: float):
     """Creates a map and populates it with scraped data"""
     city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
-    cluster = display_helper(f'{city}', cluster)
+    cluster = _display_helper(f'{city}', cluster)
     city_map.add_child(cluster)
     city_map.save(f'templates/{city}.html')
 
 
-def display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
+def _display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     """Iterates through the flat data of a given city,
        labels it and finalizes it for display on the
        map.

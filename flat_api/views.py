@@ -13,7 +13,6 @@ from rest_framework.decorators import api_view
 
 @api_view(['POST'])
 def gather_data(request):
-    print('in here')
     decoded_data = pickle.loads(request.body)
     database.insert_into_db(decoded_data)
 

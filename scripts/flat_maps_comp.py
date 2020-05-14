@@ -1,14 +1,14 @@
 """This module handles computing the mean prices for areas in a given city.
 
-This module provides the FlatData class, which is used to create instances
+This module provides the City class, which is used to create instances
 of cities and computing the average prices for their residential areas.
 Furthermore one helper function is provided ("get_area_data_for()"), which is
 responsible for fetching all the areas for a given cities along with their mean
 prices.
 
-  Typical usage example of FlatData class:
+  Typical usage example of City class:
 
-  my_city = FlatData()
+  my_city = City()
   my_city.compute_mean_for([my_area, 500])
   my_city.compute_mean_for([my_area, 500])
   my_city.get_mean_for(my_area) # returns 500 (mean of 500 + 500)
@@ -26,7 +26,7 @@ sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django/scripts')
 from scripts import flat_db
 
 
-class FlatData:
+class City:
     """This Class computes and stores the average prices for
        each area in a given city.
 
@@ -70,10 +70,10 @@ class FlatData:
         return round(price / count, 2)
 
 
-def get_area_data_for(city: str) -> FlatData:
+def get_area_data_for(city: str) -> City:
     """computes the mean prices of all areas
        for a given city"""
-    data = FlatData()
+    data = City()
     for current_row in flat_db.data_for(city):
         area = current_row[3]
         price = current_row[0]
