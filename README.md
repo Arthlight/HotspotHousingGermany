@@ -31,6 +31,7 @@ The main motivation for this project, besides learning and gaining experience, w
 - For Map Generation: [Folium](https://python-visualization.github.io/folium/)
 - For Chart Generation: [Chart.js](https://www.chartjs.org/)
 - For GeoData: [LocationIQ](https://locationiq.com/)
+- For Deployment: [Docker](https://www.docker.com)
 
 
 # Installation :gear:
