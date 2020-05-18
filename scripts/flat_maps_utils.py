@@ -17,6 +17,7 @@ import requests
 import os
 import json
 import time
+from typing import Any
 
 # Third party
 import dotenv
@@ -70,3 +71,30 @@ def get_lat_long(street: str) -> tuple:
         else:
             time.sleep(2)
             return (lat, long)
+
+
+def get_attr_of_flat(data: tuple, key: int) -> Any:
+    """Returns item from a tuple at a specific index.
+       Should only be used for tuples that contain
+       city data from the flats_data database.
+
+        Args:
+            data:    A tuple that contains data about a
+                     flat in a city.
+            key:     An integer key in order to access
+                     data at a specific index in the
+                     data tuple.
+
+        Returns:
+            Any:     A value depicting one of the below
+                     attributes.
+                     The following allocation is guaranteed:
+                     0: price
+                     1: sqm
+                     2: street
+                     3: area
+                     4: city
+                     5: rooms
+                     6: detail_view_url
+        """
+    return data[key]

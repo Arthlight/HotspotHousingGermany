@@ -6,7 +6,7 @@ from scripts import flat_maps_comp, flat_maps_utils
 class Test:
 
     def test_mean(self):
-        flat_data = flat_maps_comp.FlatData()
+        flat_data = flat_maps_comp.City()
         dummy_data = [
             [('Kreuzberg', 100)],
             [('Friedrichshain', 150)],
@@ -29,7 +29,6 @@ class Test:
         assert flat_data.get_mean_for(area='Charlottenburg') == 2250.00
         assert flat_data.get_mean_for(area='Mitte') == 923.67
         assert flat_data.get_mean_for(area='Prenzlauer Berg') != 820.33
-        assert flat_data.get_mean_for(area='Non Existant') != 300.22
 
     def test_lat_long(self):
         assert flat_maps_utils.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')

@@ -80,7 +80,7 @@ DATA_HTML = """
             """
 
 
-def display_data_for(city: str, *, lat: float, long: float):
+def display_data_for(city: str, *, lat: float, long: float) -> None:
     """Creates a map and populates it with scraped data"""
     city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
@@ -118,30 +118,24 @@ def _display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     city_data = flat_maps_comp.get_area_data_for(city)
     for data in flat_db.data_for(city):
         print(data)
-        price = data[0]
-        sqm = data[1]
-        street = data[2]
-        area = data[3]
-        city = data[4]
-        rooms = data[5]
-        url = data[6]
-        mean_price_area = city_data.get_mean_for(area)
-        price_per_sqm = float(price) / float(sqm)
-        difference = float(price) - mean_price_area
+        city = flat_maps_utils.get_attr_of_flat(data, 4)
+        mean_price_area = city_data.get_mean_for(flat_maps_utils.get_attr_of_flat(data, 3))
+        price_per_sqm = float(flat_maps_utils.get_attr_of_flat(data, 0)) / float(flat_maps_utils.get_attr_of_flat(data, 1))
+        difference = float(flat_maps_utils.get_attr_of_flat(data, 0)) - mean_price_area
 
         marker_html = DATA_HTML.format(
-                        street=street,
-                        price=price,
-                        sqm=sqm,
-                        rooms=rooms,
-                        url=url,
+                        price=flat_maps_utils.get_attr_of_flat(data, 0),
+                        sqm=flat_maps_utils.get_attr_of_flat(data, 1),
+                        street=flat_maps_utils.get_attr_of_flat(data, 2),
+                        area=flat_maps_utils.get_attr_of_flat(data, 3),
+                        rooms=flat_maps_utils.get_attr_of_flat(data, 5),
+                        url=flat_maps_utils.get_attr_of_flat(data, 6),
                         psqm=price_per_sqm,
-                        area=area,
                         mean=mean_price_area,
                         difference=difference,
                     )
 
-        lat, long = flat_maps_utils.get_lat_long(street + ' ' + city)
+        lat, long = flat_maps_utils.get_lat_long(flat_maps_utils.get_attr_of_flat(data, 2) + ' ' + city)
         if (lat, long) == (None, None):
             continue
         folium.Marker(
@@ -156,7 +150,7 @@ def _display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
     return cluster
 
 
-def display_all_cities():
+def display_all_cities() -> None:
     """Primer for displaying
        flat data for all cities"""
     display_data_for('Berlin',  lat=52.520008, long=13.404954)

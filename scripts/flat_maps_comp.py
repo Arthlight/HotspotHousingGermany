@@ -39,7 +39,7 @@ class City:
     def __init__(self):
         self.mean_table = {}
 
-    def compute_mean_for_area(self, data: list):
+    def compute_mean_for_area(self, data: list) -> None:
         """Computes the mean price for an area
            for a given city.
 
