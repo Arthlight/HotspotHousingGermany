@@ -1,6 +1,6 @@
 import sys
 sys.path.append('/Users/arthred/Documents/Flat_Crawler_Django')
-from scripts import flat_maps_comp, flat_maps_utils
+from scripts import flat_maps_comp, flat_maps_utils, flat_db
 
 
 class Test:
@@ -33,6 +33,7 @@ class Test:
     def test_lat_long(self):
         assert flat_maps_utils.get_lat_long('Lohmühlenstraße 65') == ('52.4938798', '13.4467241')
         assert flat_maps_utils.get_lat_long('Thi6s ST44et dües NOT exist5f') == (None, None)
+
 
 
 

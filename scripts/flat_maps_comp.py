@@ -13,9 +13,9 @@ prices.
   my_city.compute_mean_for([my_area, 500])
   my_city.get_mean_for(my_area) # returns 500 (mean of 500 + 500)
 
-  Typical usage example of get_area_data_for:
+  Typical usage example of get_area_mean_prices_for:
 
-  area_data = get_area_data_for('Berlin')
+  area_data = get_area_mean_prices_for('Berlin')
 """
 # Standard library
 import sys
@@ -70,13 +70,14 @@ class City:
         return round(price / count, 2)
 
 
-def get_area_data_for(city: str) -> City:
+def get_area_mean_prices_for(city: str) -> City:
     """computes the mean prices of all areas
        for a given city"""
     data = City()
-    for current_row in flat_db.data_for(city):
-        area = current_row[3]
-        price = current_row[0]
+    for row in flat_db.data_for(city):
+        row = dict(row)
+        area = row['area']
+        price = row['price']
         data.compute_mean_for_area([(area, price)])
 
     return data

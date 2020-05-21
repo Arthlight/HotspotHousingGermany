@@ -41,6 +41,7 @@ def data_for(city: str) -> tuple:
               6: detail_view_url
     """
     connection = _sqlite3.connect('flats_data.db', check_same_thread=False)
+    connection.row_factory = _sqlite3.Row
     cursor = connection.cursor()
     cursor.execute("""SELECT * FROM flats_data WHERE city=?""", (city,))
 

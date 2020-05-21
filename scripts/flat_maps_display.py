@@ -22,7 +22,7 @@ from scripts import flat_maps_comp, flat_db, flat_maps_utils
 
 
 # Module level CSS template used for Folium Markers
-DATA_CSS = """
+CSS_TEMPLATE = """
             <html>
             <head>
             <style>
@@ -40,7 +40,7 @@ DATA_CSS = """
            """
 
 # Module level HTML template used for Folium Markers
-DATA_HTML = """
+HTML_TEMPLATE = """
             <table style="width:500px">
                 <tr>
                     <th>Street:</th>
@@ -80,7 +80,7 @@ DATA_HTML = """
             """
 
 
-def display_data_for(city: str, *, lat: float, long: float) -> None:
+def _display_data_for(city: str, *, lat: float, long: float) -> None:
     """Creates a map and populates it with scraped data"""
     city_map = folium.Map(location=[lat, long], zoom_start=11)
     cluster = MarkerCluster()
@@ -115,32 +115,33 @@ def _display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
           cluster: A populated MarkerCluster instance.
 
     """
-    city_data = flat_maps_comp.get_area_data_for(city)
-    for data in flat_db.data_for(city):
-        print(data)
-        city = flat_maps_utils.get_attr_of_flat(data, 4)
-        mean_price_area = city_data.get_mean_for(flat_maps_utils.get_attr_of_flat(data, 3))
-        price_per_sqm = float(flat_maps_utils.get_attr_of_flat(data, 0)) / float(flat_maps_utils.get_attr_of_flat(data, 1))
-        difference = float(flat_maps_utils.get_attr_of_flat(data, 0)) - mean_price_area
+    area_mean_prices = flat_maps_comp.get_area_mean_prices_for(city)
+    for row in flat_db.data_for(city):
+        row = dict(row)
+        print(row)
+        city = row['city']
+        mean_price_area = area_mean_prices.get_mean_for(row['area'])
+        price_per_sqm = float(row['price']) / float(row['sqm'])
+        difference = float(row['price']) - mean_price_area
 
-        marker_html = DATA_HTML.format(
-                        price=flat_maps_utils.get_attr_of_flat(data, 0),
-                        sqm=flat_maps_utils.get_attr_of_flat(data, 1),
-                        street=flat_maps_utils.get_attr_of_flat(data, 2),
-                        area=flat_maps_utils.get_attr_of_flat(data, 3),
-                        rooms=flat_maps_utils.get_attr_of_flat(data, 5),
-                        url=flat_maps_utils.get_attr_of_flat(data, 6),
+        marker_html = HTML_TEMPLATE.format(
+                        price=row['price'],
+                        sqm=row['sqm'],
+                        street=row['street'],
+                        area=row['area'],
+                        rooms=row['rooms'],
+                        url=row['detail_view_url'],
                         psqm=price_per_sqm,
                         mean=mean_price_area,
                         difference=difference,
                     )
 
-        lat, long = flat_maps_utils.get_lat_long(flat_maps_utils.get_attr_of_flat(data, 2) + ' ' + city)
+        lat, long = flat_maps_utils.get_lat_long(row['street'] + ' ' + city)
         if (lat, long) == (None, None):
             continue
         folium.Marker(
             location=(lat, long),
-            popup=DATA_CSS + marker_html,
+            popup=CSS_TEMPLATE + marker_html,
             tooltip='Click for more info',
             icon=folium.Icon(color='darkblue', icon='home', prefix='fa'),
         ).add_to(cluster)
@@ -153,9 +154,10 @@ def _display_helper(city: str, cluster: MarkerCluster) -> MarkerCluster:
 def display_all_cities() -> None:
     """Primer for displaying
        flat data for all cities"""
-    display_data_for('Berlin',  lat=52.520008, long=13.404954)
-    display_data_for('München', lat=48.137154, long=11.576124)
-    display_data_for('Hamburg', lat=53.551086, long=9.993682)
+    _display_data_for('Berlin',  lat=52.520008, long=13.404954)
+    _display_data_for('München', lat=48.137154, long=11.576124)
+    _display_data_for('Hamburg', lat=53.551086, long=9.993682)
+
 
 
 

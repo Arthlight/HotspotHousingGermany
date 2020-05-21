@@ -17,11 +17,11 @@ class HamburgStatsView(TemplateView):
 
 def get_stats(request, *args, **kwargs):
     city = request.GET.get('city', '')
-    flat_data = flat_maps_comp.get_area_data_for(city)
+    city = flat_maps_comp.get_area_mean_prices_for(city)
 
     # sorted such that the areas are being displayed from the most expensive one down to the least expensive one
-    labels = sorted([key for key in flat_data.mean_table], key=lambda key: flat_data.mean_table[key][1], reverse=True)
-    items = sorted([flat_data.mean_table[area][1] // flat_data.mean_table[area][0] for area in labels], reverse=True)
+    labels = sorted([key for key in city.mean_table], key=lambda key: city.mean_table[key][1], reverse=True)
+    items = sorted([city.mean_table[area][1] // city.mean_table[area][0] for area in labels], reverse=True)
     data = {
         'labels': labels,
         'data': items,
