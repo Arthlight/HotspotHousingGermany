@@ -10,6 +10,17 @@ The following functions are contained within this module:
                                       requests the corresponding
                                       latitude and longitude via
                                       the locationIQ API.
+
+  function get_response             - accepts an url in form of
+                                      a string together with a
+                                      dict containing parameters,
+                                      in order to make a HTTP
+                                      request.
+
+  function decode_response          - accepts a request.Response
+                                      object in binary form and
+                                      decodes it into a JSON
+                                      object.
 """
 
 # Standard library
@@ -17,12 +28,13 @@ import requests
 import os
 import json
 import time
+from typing import Union
 
 # Third party
 import dotenv
 
 
-def get_lat_long(street: str) -> tuple:
+def get_lat_long_with_timeout(streetaddress: str, timeout: int) -> tuple:
     """Fetches latitude and longitude from locationiq API.
 
     Given a string that represents a valid street address,
@@ -44,29 +56,63 @@ def get_lat_long(street: str) -> tuple:
                    "(None, None)" will be returned.
     """
 
+    # I have to block here, in order to not infringe the restrictions by the API provider
+    # ( 60 requests per minute at most )
+    time.sleep(timeout)
     dotenv.read_dotenv()
     url = "https://eu1.locationiq.com/v1/search.php"
-    print("waiting for api")
-
-    data = {
+    params = {
         'key': os.getenv('API_KEY'),
-        'q': street,
+        'q': streetaddress,
         'format': 'json',
     }
+    response = get_response(url, params)
+    if response is not None:
+        decoded_response = decode_response(response)
+        if decoded_response is not None:
+            return decoded_response
 
-    # can not use asyncio for asynchronous requests here because of the API limit and on top of it I have to block
-    # ( 60 requests per minute at most, requirement by provider)
+
+def get_response(url: str, params: dict) -> [requests.Response, None]:
+    """Calls the given url with the given parameters.
+
+    Args:
+        url:          A string depicting a valid URL address.
+
+        params:       A dictionary containing valid parameters
+                      for a HTTP request.
+
+    Returns:
+        At success:   A dictionary containing the response.
+
+        At failure:   A None object.
+    """
     try:
-        response = requests.get(url=url, params=data)
+        response = requests.get(url=url, params=params)
     except Exception:
-        return (None, None)
+        return None
     else:
-        try:
-            decoded_response = json.loads(response.content)
-            lat = decoded_response[0].get('lat')
-            long = decoded_response[0].get('lon')
-        except KeyError:
-            return (None, None)
-        else:
-            time.sleep(2)
-            return (lat, long)
+        return response
+
+
+def decode_response(response: requests.Response) -> Union[tuple, None]:
+    """decodes the given response from binary to json.
+
+        Args:
+            response:     A requests.Response object
+                          in binary representation.
+
+        Returns:
+            At success:   A tuple containing a latitude and
+                          longitude.
+
+            At failure:   A None object.
+        """
+    try:
+        decoded_response = json.loads(response.content)
+        lat = decoded_response[0].get('lat')
+        long = decoded_response[0].get('lon')
+    except KeyError:
+        return None
+    else:
+        return (lat, long)

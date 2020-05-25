@@ -28,17 +28,7 @@ def data_for(city: str) -> tuple:
         city: A string that represents a valid city
 
     Returns:
-        row:  A tuple containing all the values from
-              every column in one row of the database.
-              The following order is guaranteed to be
-              the same every time:
-              0: price
-              1: sqm
-              2: street
-              3: area
-              4: city
-              5: rooms
-              6: detail_view_url
+        row:  A sqlite.Row object
     """
     connection = _sqlite3.connect('flats_data.db', check_same_thread=False)
     connection.row_factory = _sqlite3.Row

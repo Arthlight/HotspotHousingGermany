@@ -2,20 +2,20 @@
 
 This module provides the City class, which is used to create instances
 of cities and computing the average prices for their residential areas.
-Furthermore one helper function is provided ("get_area_data_for()"), which is
-responsible for fetching all the areas for a given cities along with their mean
-prices.
+Furthermore one helper function is provided ("compute_area_mean_prices_for()"),
+which is responsible for fetching all the areas for a given cities along with
+their mean prices.
 
   Typical usage example of City class:
 
   my_city = City()
-  my_city.compute_mean_for([my_area, 500])
-  my_city.compute_mean_for([my_area, 500])
+  my_city.insert([my_area, 500])
+  my_city.insert([my_area, 500])
   my_city.get_mean_for(my_area) # returns 500 (mean of 500 + 500)
 
-  Typical usage example of get_area_mean_prices_for:
+  Typical usage example of compute_area_mean_prices_for:
 
-  area_data = get_area_mean_prices_for('Berlin')
+  area_data = compute_area_mean_prices_for('Berlin')
 """
 # Standard library
 import sys
@@ -39,16 +39,14 @@ class City:
     def __init__(self):
         self.mean_table = {}
 
-    def compute_mean_for_area(self, data: list) -> None:
-        """Computes the mean price for an area
-           for a given city.
+    def insert(self, data: list) -> None:
+        """Inserts the area and price for
+           a given flat.
 
         Given a list of data containing an area
-        and price, this method computes the
-        mean price for this area by keeping track
-        of how many flats we have in this area,
-        underneath represented as the variable
-        "count", and the accumulating price.
+        and price for a flat, this method inserts
+        this information into the mean_table
+        attribute of the current city instance.
 
         Args:
             data: A list containing the area name
@@ -70,14 +68,14 @@ class City:
         return round(price / count, 2)
 
 
-def get_area_mean_prices_for(city: str) -> City:
+def compute_area_mean_prices_for(city: str) -> City:
     """computes the mean prices of all areas
        for a given city"""
-    data = City()
+    current_city = City()
     for row in flat_db.data_for(city):
         row = dict(row)
         area = row['area']
         price = row['price']
-        data.compute_mean_for_area([(area, price)])
+        current_city.insert([(area, price)])
 
-    return data
+    return current_city
