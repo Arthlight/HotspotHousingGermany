@@ -1,6 +1,6 @@
 
 # HotspotHousingGermany :house:
-HotspotHousingGermany is a website aimed at giving you a convenient overview of the latest offers by ImmobilienScout ( The most popular flat website in Germany ) for Berlin, Hamburg and Munich.
+HotspotHousing is a website aimed at giving you a convenient overview of the latest offers by ImmobilienScout ( The most popular flat website in Germany ) for Berlin, Hamburg and Munich.
 
 The offers are being updated biweekly. Among other statistics, you can take a look at how a flat's price compares to the mean price in the area it is located in, coupled with a general overview of the most expensive to least expensive areas.
 
