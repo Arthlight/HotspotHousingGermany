@@ -9,7 +9,7 @@ The Scraper I have built for this website can be found [here](https://github.com
 You can visit the running live version here: **TODO: Add running live version**
 
 # Motivation :surfer:
-The primary motivation for this project, apart from learning and gaining experience, was the flat shortage in Germany, especially in the metropolises. I noticed this especially when I had to move from a smaller city to a big city like Berlin in order to study. By providng a pragmatic visual overview of the available flats on ImmobilienScout for the 3 biggest cities, accompanied by a bunch of crucial additional information you can use to quickly decide if the flat you are looking at fits your needs, I am hoping to render someone's searching for a new flat at least a little bit easier.
+The primary motivation for this project, apart from learning and gaining experience, was the flat shortage in Germany, especially in the metropolises. I noticed this especially when I had to move from a smaller city to a big city like Berlin in order to study. By providng a convenient visual overview of the available flats on ImmobilienScout for the 3 biggest cities, accompanied by a bunch of crucial additional information you can use to quickly decide if the flat you are looking at fits your needs, I am hoping to render someone's searching for a new flat at least a little bit easier.
 
 # Demo :movie_camera:
 ![](Demo/Demo.gif)
