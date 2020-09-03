@@ -2,7 +2,7 @@
 # HotspotHousingGermany :house:
 HotspotHousing is a website aimed at giving you a convenient overview of the latest offers by ImmobilienScout ( The most popular flat website in Germany ) for Berlin, Hamburg and Munich.
 
-The offers are being updated biweekly. Among other statistics, you can take a look at how a flat's price compares to the mean price in the area it is located in, coupled with a general overview of the most expensive to least expensive areas.
+The offers are being updated bi- to triweekly, because I can not go beyond the free-tier of the [LocationIQ-API](https://locationiq.com/) unfortunately. Among other statistics, you can take a look at how a flat's price compares to the mean price in the area it is located in, coupled with a general overview of the most expensive to least expensive areas.
 
 The Scraper I have built for this website can be found [here](https://github.com/Arthlight/Flat_Scraper).
 
