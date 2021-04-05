@@ -6,6 +6,8 @@ The offers are being updated bi- to triweekly, because I can not go beyond the f
 
 The Scraper I have built for this website can be found [here](https://github.com/Arthlight/Flat_Scraper).
 
+You can visit the live version [here](http://161.35.173.232:8080/).
+
 
 # Motivation :surfer:
 The primary motivation for this project, apart from learning and gaining experience, was the flat shortage in Germany, especially in the metropolises. I noticed this especially when I had to move from a smaller city to a big city like Berlin in order to study. By providng a convenient visual overview of the available flats on ImmobilienScout for the 3 biggest cities, accompanied by a bunch of crucial additional information you can use to quickly decide if the flat you are looking at fits your needs, I am hoping to render someone's searching for a new flat at least a little bit easier.
