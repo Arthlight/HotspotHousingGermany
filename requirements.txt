@@ -8,7 +8,7 @@ chardet==3.0.4
 constantly==15.1.0
 cryptography==2.8
 cssselect==1.1.0
-Django==3.0.3
+Django==3.0.14
 django-dotenv==1.4.2
 djangorestframework==3.11.0
 folium==0.10.1
